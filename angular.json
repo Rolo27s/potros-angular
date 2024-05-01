@@ -30,7 +30,9 @@
             "scripts": [
               "src/assets/js/carousel.js",
               "src/assets/js/footerDisplay.js",
-              "src/assets/js/toggleMenu.js"
+              "src/assets/js/toggleMenu.js",
+              "src/assets/js/videoLoader.js",
+              "src/assets/js/mapa.js"
             ]
           },
           "configurations": {

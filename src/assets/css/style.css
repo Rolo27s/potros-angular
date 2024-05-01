@@ -403,11 +403,7 @@ footer {
     border-bottom: 3px solid white;
 }
 
-.footer-container-1-FEFA {
-    border-bottom: 0px solid white;
-}
-
-.footer-container-1-MAS {
+.footer-container-1-EQUIPOS, .footer-container-1-FEFA {
     border-bottom: 0px solid white;
 }
 

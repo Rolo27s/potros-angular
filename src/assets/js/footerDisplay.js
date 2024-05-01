@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
 	const footerContainer11 = document.querySelector(".footer-container-1-CLUB");
-	const footerContainer12 = document.querySelector(".footer-container-1-FEFA");
-	const footerContainer13 = document.querySelector(".footer-container-1-MAS");
+	const footerContainer12 = document.querySelector(".footer-container-1-EQUIPOS");
+	const footerContainer13 = document.querySelector(".footer-container-1-FEFA");
 	const footerContainer2 = document.querySelector(".footer-container-2");
 
 	// Event listener para el primer enlace
@@ -35,15 +35,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
 		// Recargo el contenido
 		footerContainer2.innerHTML = `
-			<li><a href="assets/pages/equipo.html">EQUIPO</a></li>
-			<li><a href="assets/pages/noticias.html">NOTICIAS</a></li>
-			<li><a href="assets/pages/videos.html">VIDEOS</a></li>
-			<li><a href="assets/pages/fotos.html">FOTOS</a></li>
-			<li><a href="assets/pages/campo.html">POLIDEPORTIVO</a></li>
-			<li><a href="assets/pages/calendario.html">CALENDARIO</a></li>
-			<li><a href="assets/pages/comunidad.html">COMUNIDAD</a></li>
-			<li><a href="assets/pages/ver.html">DIA DE PARTIDO</a></li>
-			<li><a href="assets/pages/entradas.html">ENTRADAS</a></li>
+			<li><a routerLink="/equipo">EQUIPO</a></li>
+			<li><a routerLink="/noticias">NOTICIAS</a></li>
+			<li><a routerLink="/videos">VIDEOS</a></li>
+			<li><a routerLink="/fotos">FOTOS</a></li>
+			<li><a routerLink="/campo">POLIDEPORTIVO</a></li>
+			<li><a routerLink="/calendario">CALENDARIO</a></li>
+			<li><a routerLink="/comunidad">COMUNIDAD</a></li>
+			<li><a href="https://www.twitch.tv/100yardas" target="_blank">DIA DE PARTIDO</a></li>
+			<li><a routerLink="/entradas">ENTRADAS</a></li>
 		`;
 	});
 
@@ -157,10 +157,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
 		// Recargo el contenido
 		footerContainer2.innerHTML = `
-			<li><a href="https://www.fefa.es/">FEFA</a></li>
-			<li><a href="https://www.fefa.es/lnfa-serie-a/">FEFA SERIE A</a></li>
-			<li><a href="https://www.fefa.es/lnfa-serie-b/">FEFA SERIE B</a></li>
-			<li><a href="https://www.fefa.es/team-spain/">SELECCIÓN ESPAÑOLA</a></li>
+			<li><a href="https://www.fefa.es/" target="_blank">FEFA</a></li>
+			<li><a href="https://www.fefa.es/lnfa-serie-a/" target="_blank">FEFA SERIE A</a></li>
+			<li><a href="https://www.fefa.es/lnfa-serie-b/" target="_blank">FEFA SERIE B</a></li>
+			<li><a href="https://www.fefa.es/team-spain/" target="_blank">SELECCIÓN ESPAÑOLA</a></li>
 		`;
 	});
 });
