@@ -13,10 +13,6 @@ import { SociosComponent } from './components/socios/socios.component';
 import { EntradasComponent } from './components/entradas/entradas.component';
 import { TiendaComponent } from './components/tienda/tienda.component';
 
-// Importa las rutas del footer
-import { routes as footerRoutes } from './components/footer/footer.routes';
-
-
 export const routes: Routes = [
     // path del header (nav)
     { path: 'main', component: MainComponent },
@@ -31,9 +27,6 @@ export const routes: Routes = [
     { path: 'socios', component: SociosComponent },
     { path: 'entradas', component: EntradasComponent },
     { path: 'tienda', component: TiendaComponent },
-
-    // path del footer
-    ...footerRoutes,
 
     // Otras Rutas si es necesario
     { path: '', redirectTo: '/main', pathMatch: 'full' }
