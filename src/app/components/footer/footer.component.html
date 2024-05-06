@@ -1,18 +1,20 @@
 <footer>
     <ul class="footer-container-1">
         <li class="footer-container-1-CLUB">
-            <a>CLUB LINK</a>
+            <a (click)="loadComponent('club')">CLUB LINK</a>
         </li>
         <li class="footer-container-1-EQUIPOS">
-            <a>EQUIPOS LOCALES</a>
+            <a (click)="loadComponent('equipos')">EQUIPOS LOCALES</a>
         </li>
         <li class="footer-container-1-FEFA">
-            <a>MAS SITIOS FEFA</a>
+            <a (click)="loadComponent('fefa')">MAS SITIOS FEFA</a>
         </li>
     </ul>
 
     <!--  Dinamizar -->
-    <app-club></app-club>
+    <div id="footer-dynamic">
+        
+    </div>
 
     <!--  Componetizar -->
     <div class="footer-flex-container-column">
