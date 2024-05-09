@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, ViewChild, ViewContainerRef, AfterViewInit } from '@angular/core';
 
 import { ClubComponent } from './club/club.component';
 import { EquiposComponent }  from './equipos/equipos.component';
@@ -11,45 +11,68 @@ import { FefaComponent }    from './fefa/fefa.component';
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.css']
 })
-export class FooterComponent implements OnInit {
-  @ViewChild('footerDynamic', { static: true }) footerDynamic!: ElementRef;
+export class FooterComponent implements OnInit, AfterViewInit {
+  @ViewChild('contenedorComponentes', { read: ViewContainerRef }) contenedorComponentes: ViewContainerRef | null = null;
+  
+  footerStyles: { [key: string]: string } = {
+    'border-bottom': 'none' // Default: no border
+  };
 
-  currentComponent: any; // Track the currently loaded component
+  constructor() {}
 
-  ngOnInit() { }
+  ngOnInit() { 
+    // On init things 
+  }
 
-  loadComponent(componentName: string) {
-    // Clear existing component if present
-    if (this.currentComponent) {
-      this.footerDynamic.nativeElement.innerHTML = '';
-    }
+  ngAfterViewInit() {
+    // contenedorComponentes is guaranteed to be initialized after view init
+    this.cargarComponente(ClubComponent);
+    this.updateSelectedLi(ClubComponent);
+  }
 
-    let componentType: any;
-    switch (componentName) {
-      case 'club':
-        componentType = ClubComponent;
-        break;
-      case 'equipos':
-        componentType = EquiposComponent;
-        break;
-      case 'fefa':
-        componentType = FefaComponent;
-        break;
-      default:
-        // Handle default or error case (optional)
-        break;
-    }
+  cargarComponente1() {
+    this.cargarComponente(ClubComponent);
+  }
 
-    if (componentType) {
-      // Use Angular's ViewContainerRef for dynamic component creation (optional)
+  cargarComponente2() {
+    this.cargarComponente(EquiposComponent);
+  }
 
-      // Simpler approach: directly append HTML content
-      this.footerDynamic.nativeElement.innerHTML = `<${componentName}></${componentName}>`;
+  cargarComponente3() {
+    this.cargarComponente(FefaComponent);
+  }
+
+  private cargarComponente(componente: any) {
+    if (this.contenedorComponentes) { // Check if ViewContainerRef is initialized
+      this.contenedorComponentes.clear(); // Clear any existing component
+      this.contenedorComponentes.createComponent(componente);
+
+      // Update class on selected li element
+      this.updateSelectedLi(componente);
     }
   }
 
-  ngAfterViewInit(): void {
-    // Now you can safely access footerDynamic.nativeElement
-    this.loadComponent('club'); // Assuming you want to load the club component initially
+  private updateSelectedLi(componente: any) {
+    const selectedClass = 'footer-container-1-selected'; // Class for selected li
+  
+    // Remove selected class from all li elements
+    const allLiElements = document.querySelectorAll('.footer-container-1 li');
+    allLiElements.forEach(li => li?.classList?.remove(selectedClass));
+  
+    // Add selected class to the appropriate li based on component
+    switch (componente) {
+      case ClubComponent:
+        document.querySelector('.footer-container-1-CLUB')?.classList?.add(selectedClass);
+        break;
+      case EquiposComponent:
+        document.querySelector('.footer-container-1-EQUIPOS')?.classList?.add(selectedClass);
+        break;
+      case FefaComponent:
+        document.querySelector('.footer-container-1-FEFA')?.classList?.add(selectedClass);
+        break;
+      default:
+        document.querySelector('.footer-container-1-CLUB')?.classList?.add(selectedClass);
+        break;
+    }
   }
 }
