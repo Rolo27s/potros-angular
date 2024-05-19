@@ -1,35 +1,48 @@
 <header>
     <figure class="banner">
-        <img src="assets/assets/banner.png" alt="banner-img" class="banner-img" />
+      <img src="assets/assets/banner.png" alt="banner-img" class="banner-img" />
     </figure>
-    <!-- El nav debe ser sticky top -->
     <nav class="header-nav">
-        <ul>
-            <a href="#Top">
-            <li id="nav-logo">
-                <img src="./assets/assets/logoEdit.png" alt="logo" class="logo-nav" />
-            </li>
-            </a>
-            <li><a routerLink="/noticias">Noticias</a></li>
-            <li><a routerLink="/videos">Videos</a></li>
-            <li><a routerLink="/podcasts">Podcasts</a></li>
-            <li><a routerLink="/fotos">Fotos</a></li>
-            <li><a routerLink="/calendario">Calendario</a></li>
-            <li><a routerLink="/equipo">Equipo</a></li>
-            <li><a routerLink="/campo">Campo de Juego</a></li>
-            <li><a routerLink="/comunidad">Comunidad</a></li>
-        </ul>
-        <ul>
-            <li><a href="https://www.twitch.tv/100yardas" target="_blank">Ver</a></li>
-            <li><a routerLink="/socios">Socios</a></li>
-            <li id="nav-entradas"><a routerLink="/entradas">Entradas</a></li>
-            <li id="nav-tienda"><a routerLink="/tienda">Tienda</a></li>
-            <li class="hidden" id="li-hamburguer-btn">
-                <button id="hamburguer-btn" onclick="toggleMenu()">
-                    &nbsp;&nbsp;
-                </button>
-                <script src="assets/js/toggleMenu.js"></script>
-            </li>
-        </ul>
+      <ul>
+        <a href="#Top">
+          <li id="nav-logo">
+            <img src="./assets/assets/logoEdit.png" alt="logo" class="logo-nav" />
+          </li>
+        </a>
+        <li><a routerLink="/noticias">Noticias</a></li>
+        <li><a routerLink="/videos">Videos</a></li>
+        <li><a routerLink="/podcasts">Podcasts</a></li>
+        <li><a routerLink="/fotos">Fotos</a></li>
+        <li><a routerLink="/calendario">Calendario</a></li>
+        <li><a routerLink="/equipo">Equipo</a></li>
+        <li><a routerLink="/campo">Campo de Juego</a></li>
+        <li><a routerLink="/comunidad">Comunidad</a></li>
+      </ul>
+      <ul>
+        <li><a href="https://www.twitch.tv/100yardas" target="_blank">Ver</a></li>
+        <li><a routerLink="/socios">Socios</a></li>
+        <li id="nav-entradas"><a routerLink="/entradas">Entradas</a></li>
+        <li id="nav-tienda"><a routerLink="/tienda">Tienda</a></li>
+        <li id="li-hamburguer-btn">
+          <button id="hamburguer-btn" (click)="toggleMenu()">
+            &nbsp;&nbsp;
+          </button>
+        </li>
+      </ul>
     </nav>
-</header>
+    <div *ngIf="menuVisible" class="dropdown-menu">
+      <ul>
+        <li><a routerLink="/noticias"   (click)="closeMenu()">Noticia</a></li>
+        <li><a routerLink="/videos"     (click)="closeMenu()">Video</a></li>
+        <li><a routerLink="/podcasts"   (click)="closeMenu()">Podcasts</a></li>
+        <li><a routerLink="/fotos"      (click)="closeMenu()">Fotos</a></li>
+        <li><a routerLink="/calendario" (click)="closeMenu()">Calendario</a></li>
+        <li><a routerLink="/equipo"     (click)="closeMenu()">Equipo</a></li>
+        <li><a routerLink="/campo"      (click)="closeMenu()">Campo de Juego</a></li>
+        <li><a routerLink="/comunidad"  (click)="closeMenu()">Comunidad</a></li>
+        <li><a routerLink="/socios"     (click)="closeMenu()">Predicciones</a></li>
+        <li><a href="https://www.twitch.tv/100yardas" target="_blank" (click)="closeMenu()">Ver</a></li>
+        <li><a routerLink="/socios"     (click)="closeMenu()">Socios</a></li>
+      </ul>
+    </div>
+  </header>
