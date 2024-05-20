@@ -21,7 +21,7 @@ export class FooterComponent implements OnInit, AfterViewInit {
   constructor() {}
 
   ngOnInit() { 
-    // On init things 
+    // On init things. Empty by the moment.
   }
 
   ngAfterViewInit() {
@@ -73,6 +73,14 @@ export class FooterComponent implements OnInit, AfterViewInit {
       default:
         document.querySelector('.footer-container-1-CLUB')?.classList?.add(selectedClass);
         break;
+    }
+  }
+
+  // Metodo para scroll al header
+  scrollToTop(): void {
+    const headerElement = document.querySelector('app-header');
+    if (headerElement) {
+      headerElement.scrollIntoView({ behavior: 'smooth' });
     }
   }
 }

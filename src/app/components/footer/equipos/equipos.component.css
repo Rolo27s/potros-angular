@@ -4,7 +4,12 @@
     grid-template-rows: repeat(3, 1fr);
     justify-items: center;
     align-items: center;
+    background-color:#222222;
   }
+
+.footer-container-2 a img {
+ width: 125px;
+}
 
   /* Media query for screens 900px or less*/
 @media (max-width: 900px) {
