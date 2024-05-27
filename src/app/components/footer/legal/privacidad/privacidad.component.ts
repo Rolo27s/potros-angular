@@ -1,38 +1,61 @@
-import { Component, OnInit  } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { CookieService } from 'ngx-cookie-service';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-privacidad',
   standalone: true,
-  imports: [],
+  imports: [ReactiveFormsModule],
   templateUrl: './privacidad.component.html',
   styleUrl: './privacidad.component.css'
 })
+
 export class PrivacidadComponent implements OnInit {
-  // Estados de las cookies
+
   cookies = [
-    { categoria: 'Cookies Esenciales', estado: 'Aceptadas' },
-    { categoria: 'Cookies de Rendimiento', estado: 'Denegadas' },
-    { categoria: 'Cookies de Publicidad', estado: 'Permitidas' },
-    { categoria: 'Cookies de Redes Sociales', estado: 'Aceptadas' }
+    { categoria: 'cookies-esenciales', estado: 'aceptadas' },
+    { categoria: 'cookies-de-rendimiento', estado: 'denegadas' },
+    { categoria: 'cookies-de-publicidad', estado: 'permitidas' },
+    { categoria: 'cookies-de-redes-sociales', estado: 'aceptadas' }
   ];
 
+  constructor(private cookieService: CookieService) { }
+
   ngOnInit(): void {
-    this.cookies = [
-      { categoria: 'Cookies Esenciales', estado: 'Aceptadas' },
-      { categoria: 'Cookies de Rendimiento', estado: 'Denegadas' },
-      { categoria: 'Cookies de Publicidad', estado: 'Permitidas' },
-      { categoria: 'Cookies de Redes Sociales', estado: 'Aceptadas' }
-    ];
-    // Aquí puedes agregar lógica para establecer los valores de las cookies al inicio
-    // Por ejemplo, puedes recuperar valores de cookies existentes y actualizar el estado
-    // o puedes definir valores predeterminados para las cookies.
+    this.setInitialCookies();
   }
 
-  // Método para cambiar el estado de una cookie
-  cambiarEstado(categoria: string, nuevoEstado: string): void {
-    const cookie = this.cookies.find(c => c.categoria === categoria);
-    if (cookie) {
-      cookie.estado = nuevoEstado;
+  setInitialCookies() {
+    this.setCookieIfNotExists('cookies-esenciales', 'aceptadas');
+    this.setCookieIfNotExists('cookies-de-rendimiento', 'denegadas');
+    this.setCookieIfNotExists('cookies-de-publicidad', 'permitidas');
+    this.setCookieIfNotExists('cookies-de-redes-sociales', 'aceptadas');
+  }
+
+  setCookieIfNotExists(name: string, value: string) {
+    if (!this.cookieService.check(name)) {
+      this.cookieService.set(name, value);
+    }
+  }
+
+  updateCookie(name: string, event: Event) {
+    const value = (event.target as HTMLSelectElement).value;
+    this.cookieService.set(name, value);
+  }
+
+  submitForm(event: Event) {
+    event.preventDefault(); // Prevenir la recarga de la página
+
+    // No necesitamos eliminar todas las cookies aquí
+    // Solo actualizamos las que han cambiado en el formulario
+
+    const form = document.getElementById('cookie-form') as HTMLFormElement;
+    if (form) {
+      const formData = new FormData(form);
+
+      formData.forEach((value: { toString: () => any; }, name: any) => {
+        this.updateCookie.bind(this)(name, value.toString());
+      });
     }
   }
 }

@@ -1,36 +1,53 @@
-main {
-    margin: 0 auto;
-}
-
 .container {
-    margin: 20px;
-}
-
-table {
-    width: 450px;
-    border-collapse: collapse;
-    margin: 20px auto;
-}
-
-th, td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
-}
-
-th {
-    background-color: #f2f2f2;
-}
-
-/* Estilos para resaltar el estado de las cookies */
-.accepted {
-    color: green;
-}
-
-.denied {
-    color: red;
-}
-
-.allowed {
-    color: blue;
-}
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .cookie-config {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .cookie-config-item {
+    display: flex;
+    align-items: center;
+  }
+  
+  .cookie-config-item label {
+    width: 200px;
+  }
+  
+  .cookie-config-item select {
+    width: 150px;
+    padding: 5px;
+    border-radius: 5px;
+  }
+  
+  button[type="submit"] {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
+  .details {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666;
+  }
+  
