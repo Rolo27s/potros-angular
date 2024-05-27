@@ -4,10 +4,13 @@ import { ClubComponent } from './club/club.component';
 import { EquiposComponent }  from './equipos/equipos.component';
 import { FefaComponent }    from './fefa/fefa.component';
 
+// Parte legal
+import { LegalComponent } from './legal/legal.component';
+
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [ClubComponent, EquiposComponent, FefaComponent],
+  imports: [ClubComponent, EquiposComponent, FefaComponent, LegalComponent],
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.css']
 })

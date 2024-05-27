@@ -11,31 +11,10 @@
         </li>
     </ul>
 
-    <!--  Dinamizar -->
+    <!-- Parte dinámica del footer -->
     <div #contenedorComponentes></div>
 
-    <!--  Componetizar -->
-    <div class="footer-flex-container-column">
-        <a (click)="scrollToTop()">
-            <img src="./assets/assets/logoEdit.png" alt="Logo" />
-        </a>
-        <h5>COPYRIGHT © FUENGIROLA POTROS, INC.</h5>
-        <ul class="footer-container-3" id="footer-bottom">
-            <li>
-                <a href="./assets/pages/legal/politica_privacidad.html">
-                    POLÍTICA DE PRIVACIDAD
-                </a>
-            </li>
-            <li><a href="./assets/pages/legal/contacto.html">CONTÁCTENOS</a></li>
-            <li><a href="./assets/pages/legal/accesibilidad.html">ACCESIBILIDAD</a></li>
-            <li><a href="./assets/pages/legal/mapa.html">MAPA DEL SITIO</a></li>
-            <li><a href="./assets/pages/legal/anuncios.html">OPCIONES DE ANUNCIOS</a></li>
-            <li>
-                <a href="./assets/pages/legal/privacidad.html">
-                    TUS ELECCIONES DE PRIVACIDAD
-                </a>
-            </li>
-        </ul>
-    </div>
+    <!-- LEGAL -->
+    <app-legal></app-legal>
     
 </footer>

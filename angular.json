@@ -28,8 +28,7 @@
               "src/styles.css"
             ],
             "scripts": [
-              "src/assets/js/videoLoader.js",
-              "src/assets/js/mapa.js"
+              "src/assets/js/videoLoader.js"
             ]
           },
           "configurations": {
