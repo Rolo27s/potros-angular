@@ -1,29 +1,47 @@
 import { Component, OnInit, ViewChild, ViewContainerRef, AfterViewInit } from '@angular/core';
 
 import { ClubComponent } from './club/club.component';
-import { EquiposComponent }  from './equipos/equipos.component';
-import { FefaComponent }    from './fefa/fefa.component';
+import { EquiposComponent } from './equipos/equipos.component';
+import { FefaComponent } from './fefa/fefa.component';
 
 // Parte legal
 import { LegalComponent } from './legal/legal.component';
 
+import { PoliticaPrivacidadComponent } from './legal/politica-privacidad/politica-privacidad.component';
+import { ContactoComponent } from './legal/contacto/contacto.component';
+import { AccesibilidadComponent } from './legal/accesibilidad/accesibilidad.component';
+import { MapaComponent } from './legal/mapa/mapa.component';
+import { AnunciosComponent } from './legal/anuncios/anuncios.component';
+import { PrivacidadComponent } from './legal/privacidad/privacidad.component';
+
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [ClubComponent, EquiposComponent, FefaComponent, LegalComponent],
+  imports: [
+    ClubComponent, 
+    EquiposComponent, 
+    FefaComponent, 
+    LegalComponent, 
+    PoliticaPrivacidadComponent, 
+    ContactoComponent, 
+    AccesibilidadComponent, 
+    AccesibilidadComponent, 
+    MapaComponent, 
+    AnunciosComponent, 
+    PrivacidadComponent],
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.css']
 })
 export class FooterComponent implements OnInit, AfterViewInit {
   @ViewChild('contenedorComponentes', { read: ViewContainerRef }) contenedorComponentes: ViewContainerRef | null = null;
-  
+
   footerStyles: { [key: string]: string } = {
     'border-bottom': 'none' // Default: no border
   };
 
-  constructor() {}
+  constructor() { }
 
-  ngOnInit() { 
+  ngOnInit() {
     // On init things. Empty by the moment.
   }
 
@@ -57,11 +75,11 @@ export class FooterComponent implements OnInit, AfterViewInit {
 
   private updateSelectedLi(componente: any) {
     const selectedClass = 'footer-container-1-selected'; // Class for selected li
-  
+
     // Remove selected class from all li elements
     const allLiElements = document.querySelectorAll('.footer-container-1 li');
     allLiElements.forEach(li => li?.classList?.remove(selectedClass));
-  
+
     // Add selected class to the appropriate li based on component
     switch (componente) {
       case ClubComponent:

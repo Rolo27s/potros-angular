@@ -1,0 +1,5 @@
+#map, main {
+    max-width: none;
+    display: flex;
+    justify-content: center;
+}

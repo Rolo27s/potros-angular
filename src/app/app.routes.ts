@@ -14,7 +14,6 @@ import { EntradasComponent } from './components/entradas/entradas.component';
 import { TiendaComponent } from './components/tienda/tienda.component';
 
 // Imports de la parte legal (footer)
-import { LegalComponent } from './components/footer/legal/legal.component';
 import { PoliticaPrivacidadComponent } from './components/footer/legal/politica-privacidad/politica-privacidad.component';
 import { ContactoComponent } from './components/footer/legal/contacto/contacto.component';
 import { AccesibilidadComponent } from './components/footer/legal/accesibilidad/accesibilidad.component';
@@ -38,14 +37,13 @@ export const routes: Routes = [
     { path: 'tienda', component: TiendaComponent },
 
     // rutas para la parte legal (footer)
-    { path: 'legal', component: LegalComponent },
-    { path: 'legal/politica-privacidad', component: PoliticaPrivacidadComponent },
-    { path: 'legal/contacto', component: ContactoComponent },
-    { path: 'legal/accesibilidad', component: AccesibilidadComponent },
-    { path: 'legal/mapa', component: MapaComponent },
-    { path: 'legal/anuncios', component: AnunciosComponent },
-    { path: 'legal/privacidad', component: PrivacidadComponent },
-
+    { path: 'politica-privacidad', component: PoliticaPrivacidadComponent },
+    { path: 'contacto', component: ContactoComponent },
+    { path: 'accesibilidad', component: AccesibilidadComponent },
+    { path: 'mapa', component: MapaComponent },
+    { path: 'anuncios', component: AnunciosComponent },
+    { path: 'privacidad', component: PrivacidadComponent },
+    
     // Ruta de navegacion en caso de ruta vacia
     { path: '', redirectTo: '/main', pathMatch: 'full' }
 ];
