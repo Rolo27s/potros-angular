@@ -1,8 +1,0 @@
-#mapa {
-	width: 100%;
-}
-
-#mapa iframe {
-	width: 100%;
-	height: auto; /* Para mantener la proporción de aspecto */
-}

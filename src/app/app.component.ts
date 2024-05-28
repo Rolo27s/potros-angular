@@ -1,13 +1,11 @@
 import { Component } from '@angular/core';
-import { RouterLink, RouterOutlet, provideRouter } from '@angular/router';
+import { RouterLink, RouterOutlet, provideRouter, RouterModule } from '@angular/router';
 import { routes } from './app.routes'; // Assuming your routes are defined here
 
 // Import your components
 import { HeaderComponent } from './components/header/header.component';
 import { MainComponent } from './components/main/main.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { NoticiasComponent } from './components/noticias/noticias.component';
-import { CalendarioComponent } from './components/calendario/calendario.component';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -18,11 +16,10 @@ import { CommonModule } from '@angular/common';
     HeaderComponent,
     MainComponent,
     FooterComponent,
-    NoticiasComponent,
-    CalendarioComponent,
     // Add RouterOutlet for routing
     RouterOutlet,
-    RouterLink
+    RouterLink,
+    RouterModule
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']

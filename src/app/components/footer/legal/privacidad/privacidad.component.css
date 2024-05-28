@@ -1,53 +1,68 @@
 .container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    font-family: Arial, sans-serif;
-  }
-  
-  h1 {
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-  
-  .cookie-config {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  
-  .cookie-config-item {
-    display: flex;
-    align-items: center;
-  }
-  
-  .cookie-config-item label {
-    width: 200px;
-  }
-  
-  .cookie-config-item select {
-    width: 150px;
-    padding: 5px;
-    border-radius: 5px;
-  }
-  
-  button[type="submit"] {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  button[type="submit"]:hover {
-    background-color: #0056b3;
-  }
-  
-  .details {
-    margin-top: 20px;
-    font-size: 14px;
-    color: #666;
-  }
-  
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.cookie-config, form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.cookie-config-item {
+  display: flex;
+  align-items: center;
+}
+
+.cookie-config-item label {
+  width: 200px;
+}
+
+.cookie-config-item select {
+  max-width: 150px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+button[type="submit"] {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: var(--color-secundario-1);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: filter 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: var(--color-secundario-1);
+  filter: brightness(1.2);
+}
+
+button[type="submit"]:active {
+  background-color: var(--color-secundario-1);
+  filter: brightness(0.8);
+}
+
+.details {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #666;
+}
+
+main {
+  max-width: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

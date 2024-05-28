@@ -7,11 +7,9 @@ import { ReactiveFormsModule } from '@angular/forms';
   standalone: true,
   imports: [ReactiveFormsModule],
   templateUrl: './privacidad.component.html',
-  styleUrl: './privacidad.component.css'
+  styleUrls: ['./privacidad.component.css']
 })
-
 export class PrivacidadComponent implements OnInit {
-
   cookies = [
     { categoria: 'cookies-esenciales', estado: 'aceptadas' },
     { categoria: 'cookies-de-rendimiento', estado: 'denegadas' },
@@ -38,6 +36,10 @@ export class PrivacidadComponent implements OnInit {
     }
   }
 
+  getCookieValue(name: string): string {
+    return this.cookieService.get(name) ?? this.cookies.find(c => c.categoria === name)?.estado ?? '';
+  }
+
   updateCookie(name: string, event: Event) {
     const value = (event.target as HTMLSelectElement).value;
     this.cookieService.set(name, value);
@@ -46,15 +48,11 @@ export class PrivacidadComponent implements OnInit {
   submitForm(event: Event) {
     event.preventDefault(); // Prevenir la recarga de la página
 
-    // No necesitamos eliminar todas las cookies aquí
-    // Solo actualizamos las que han cambiado en el formulario
-
     const form = document.getElementById('cookie-form') as HTMLFormElement;
     if (form) {
       const formData = new FormData(form);
-
-      formData.forEach((value: { toString: () => any; }, name: any) => {
-        this.updateCookie.bind(this)(name, value.toString());
+      formData.forEach((value, name) => {
+        this.updateCookie(name, { target: { value: String(value) } } as unknown as Event);
       });
     }
   }

@@ -52,6 +52,12 @@ button {
     font-size: 16px;
 }
 
+main {
+    max-width: none;
+    display: flex;
+    justify-content: center;
+  }
+
 button:hover {
     background-color: var(--color-detalle-1);
     color: #111;

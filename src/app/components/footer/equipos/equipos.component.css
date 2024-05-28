@@ -1,17 +1,25 @@
 .footer-container-2 {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    justify-items: center;
-    align-items: center;
-    background-color:#222222;
-  }
-
-.footer-container-2 a img {
- width: 125px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  justify-items: center;
+  align-items: center;
+  background-color: #222222;
 }
 
-  /* Media query for screens 900px or less*/
+.footer-container-2 a img {
+  width: 125px;
+}
+
+img {
+  transition: filter 0.3s ease;
+}
+
+img:hover {
+  filter: brightness(1.5) drop-shadow(0 0 0.75rem var(--color-secundario-2));
+}
+
+/* Media query for screens 900px or less*/
 @media (max-width: 900px) {
   .footer-container-2 {
     grid-template-columns: repeat(3, 1fr);
