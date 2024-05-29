@@ -1,0 +1,48 @@
+/* Estilo principal para cada noticia */
+.news-item {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin: 10px 0;
+  padding: 15px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para el título de la noticia */
+.news-item h2 {
+  margin: 0 0 10px;
+  font-size: 1.5em;
+  color: #333;
+}
+
+/* Estilo para el cuerpo de la noticia */
+.news-item p {
+  margin: 0 0 10px;
+  font-size: 1em;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Estilo para la fecha de la noticia */
+.news-item span {
+  font-size: 0.9em;
+  color: #999;
+}
+
+/* Estilo para el separador */
+article hr {
+  border: 0;
+  border-top: 1px solid #ddd;
+  margin: 30px 0;
+}
+
+/* Estilo adicional para el texto truncado */
+.truncated {
+    max-width: 80vw; /* Ancho máximo del contenedor */
+    max-height: calc(3 * 1.5em); /* Altura máxima para tres líneas de texto */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Muestra solo tres líneas */
+    -webkit-box-orient: vertical;
+}

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterLink, RouterOutlet, provideRouter, RouterModule } from '@angular/router';
-import { routes } from './app.routes'; // Assuming your routes are defined here
+import { routes } from './app.routes';
 
 // Import your components
 import { HeaderComponent } from './components/header/header.component';
