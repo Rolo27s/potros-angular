@@ -11,13 +11,13 @@
 /* Estilo para el título de la noticia */
 .news-item h2 {
   margin: 0 0 10px;
-  font-size: 1.5em;
+  font-size: 2.5em;
   color: #333;
 }
 
 /* Estilo para el cuerpo de la noticia */
 .news-item p {
-  margin: 0 0 10px;
+  margin: 0 50px 50px 0;
   font-size: 1em;
   color: #555;
   line-height: 1.6;
@@ -43,4 +43,30 @@
 .flex-container{
   display: flex;
   justify-content: space-between;
+}
+
+.news-item img {
+  display: block; /* Hace que la imagen sea un bloque para que pueda centrarse */
+  margin: 25px auto; /* Auto-margen horizontal para centrar la imagen */
+  max-width: 100%; /* Asegura que la imagen no sea más ancha que su contenedor */
+  width: 75%;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px #999;
+}
+
+@media (max-width: 750px) {
+  .news-item h2 {
+    font-size: 1.5em;
+  }
+
+  .news-item p {
+    margin: 0 0 0 0;
+    font-size: .9em;
+  }
+
+  .news-item img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px #999;
+  }
 }

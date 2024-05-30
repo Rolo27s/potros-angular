@@ -128,7 +128,14 @@
   grid-gap: 20px;
 }
 
-/* 1115px */
+.mas-contenido {
+  margin: 50px 0;
+  text-align: center;
+}
+
+h3 {
+  padding: 0.5em;
+}
 @media (max-width: 1000px) {
   .next-mach {
     grid-template-columns: 1fr;
@@ -174,6 +181,13 @@
     font-size: 1rem;
   }
 
+  .news-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 10px;
+  }
+
   /* --- CAROUSEL --- */
   .carousel-container {
     position: relative;
@@ -184,7 +198,14 @@
   }
 }
 
-
+@media (max-width:725px) {
+  .news-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 5px;
+  }
+}
 
 .revisar {
   color: red;

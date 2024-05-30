@@ -1,2 +1,13 @@
-<p>(Mockup)</p>
-<img src="assets/assets/mockups/calendario.png" alt="calendario">
+<div class="dia_partido-item" *ngFor="let dia_partido of calendarList">
+    <strong>{{ dia_partido.fecha }}</strong>
+
+    <h3>{{ dia_partido.local }}</h3>
+    <img [src]="getImageUrl(dia_partido.logo_local)" alt="logo_local" />
+
+    <strong>{{ dia_partido.hora }}</strong>
+
+    <img [src]="getImageUrl(dia_partido.logo_visitante)" alt="logo_visitante" />
+    <h3>{{ dia_partido.visitante }}</h3>
+
+    <span>{{ dia_partido.jornada }}</span>
+</div>
