@@ -11,7 +11,7 @@
 /* Estilo para el título de la noticia */
 .news-item h2 {
   margin: 0 0 10px;
-  font-size: 1.5em;
+  font-size: 1.25em;
   color: #333;
 }
 
@@ -43,4 +43,31 @@
 .flex-container{
   display: flex;
   justify-content: space-between;
+}
+
+img {
+  width: 100%; /* Las imágenes ocupan todo el ancho del contenedor */
+  height: 150px; /* Altura fija para mantener las proporciones */
+  object-fit: cover; /* Ajusta la imagen para llenar el contenedor */
+  border-radius: 5px; /* Esquinas redondeadas */
+}
+
+.hidden{
+  display: none;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.noticia {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.noticia:hover {
+  filter: brightness(.9);
+  background-color: #EEE;
 }

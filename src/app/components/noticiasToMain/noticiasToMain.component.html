@@ -1,0 +1,11 @@
+<article class="news-item noticia" *ngFor="let news of newsList">
+  <div (click)="onSelectNews(news.id)" >
+    <div class="flex-container">
+      <h2>{{ news.titulo }}</h2>
+      <span class="hidden">Noticia nº{{ news.id }}</span>
+    </div>
+    <span>{{ news.fecha }}</span>
+    <p class="truncated" [innerHTML]="formatText(news.cuerpo1)"></p>
+    <img [src]="getImageUrl(news.imagen)" alt="Noticia" />
+  </div>
+</article>

@@ -120,6 +120,14 @@
   display: none;
 }
 
+/* NOTICIAS */
+.news-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 20px;
+}
+
 /* 1115px */
 @media (max-width: 1000px) {
   .next-mach {
@@ -174,4 +182,12 @@
     background-color: white;
     margin: 2rem auto;
   }
+}
+
+
+
+.revisar {
+  color: red;
+  font-weight: 600;
+
 }

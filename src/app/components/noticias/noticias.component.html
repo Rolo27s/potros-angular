@@ -1,77 +1,10 @@
-<article id="noticiaEjemplo">
-  <h2>Derrota con mejoría</h2>
-  <h3>10 febrero, 2019</h3>
-  <p>
-    Segunda cita de altura en una semana para los Fuengirola Potros, que en esta
-    ocasión visitaron el José Barnés de Murcia para medirse contra los locales
-    Cobras. Los actuales subcampeones de España vencieron por 41-0 a unos Potros
-    que fueron de menos a más y dieron mejores sensaciones que en su último
-    compromiso ante LG OLED Las Rozas Black Demons.
-
-    <br />
-    <br />
-
-    Los ajustes a un lado y otro del balón realizados durante la semana dieron
-    frutos desde el inicio, cerrando bien la carrera interior murciana durante
-    todo el partido y utilizando un buen balance de carrera y pase en ataque
-    para moverse con mejor fluidez que en otras citas. Sin embargo, la ofensiva
-    negra, liderada por el quarterback norteamericano Adam Salvadori, no tardó
-    en encontrar la zona de anotación con un pase a Francisco Javier Martínez y
-    el posterior punto extra (7-0).
-  </p>
-  <img src="assets/assets/noticias/img1.png" alt="" />
-  <div>
-    En el segundo cuarto los Potros, ayer de blanco por primera vez en su
-    historia, transmitieron sus peores sensaciones de la tarde. A pesar de que
-    el cuarto comenzó con la intercepción de Manu Carrizosa y anulando el juego
-    de carrera de Cobras, los Potros encontraban dificultades para replicar en
-    el marcador. Salvadori, ya fuera por vía aérea o improvisando con la carrera
-    encontraba el hueco en la malla defensiva malagueña que lidera el panameño
-    Eduardo Simon. En este cuarto el espigado quarterback encontraría la zona de
-    anotación con dos carreras, y conectó con su compatriota Alex Holmes para
-    otros siete puntos más (27-0).
-
-    <br />
-    <br />
-
-    A la vuelta de la caseta, los costasoleños recobraron sensaciones y pusieron
-    las cosas más duras sobre el césped. Ismael Boumhir forzó otra recuperación
-    de balón en defensa, pero en ataque a menudo contaron con una posición de
-    campo comprometida con la que encontraron dificultades para anotar. Con el
-    reloj a cero en este parcial, Murcia sumó siete puntos más al electrónico
-    con la recepción de Alex Holmes y la patada de Francisco Javier Martínez.
-
-    <img src="assets/assets/noticias/img2.png" alt="" />
-
-    <br /><br />
-
-    <p>
-      En el cuarto y último período se vieron los mejores minutos en ataque de
-      los Potros. A lomos de las carreras de Juanki Cortés y Gabriel Cantero,
-      movieron la pelota en un drive largo y persistente hasta las inmediaciones
-      de la red zone rival, pero una pérdida de balón frustró la ocasión más
-      clara de la tarde para sumar puntos. Cobras en el turno siguiente replicó
-      llegando a la zona de anotación, y convirtiendo un cuarto y goal con la
-      tercera recepción para touchdown de Alex Holmes (41-0). Los malagueños aún
-      tuvieron una última bala para no irse de vacío, con una bonita jugada de
-      engaño que recepcionó David Chaves para más de 30 yardas, pero la última
-      jugada con el reloj agotado fue parada por la línea defensiva local.
-      <br /><br />
-      La Marea Verde tendrá una semana de descanso para recuperar fuerzas y
-      preparar su próximo encuentro. La cuarta jornada se celebrará dentro de
-      dos semanas, el 24 de febrero, y los Potros recibirán en casa a Mallorca
-      Voltors, rival de la Conferencia Noreste que llegará a Fuengirola con
-      idéntico balance de victorias y derrotas (1-2), tras haber cedido en sus
-      dos últimos partidos contra Valencia Firebats (14-13) y Badalona Dracs
-      (7-48).
-    </p>
-  </div>
-
-  <hr />
-
-  <div class="news-item" *ngFor="let news of newsList">
+<article class="news-item" *ngFor="let news of newsList" [id]="'news-' + news.id">
+  <div class="flex-container">
     <h2>{{ news.titulo }}</h2>
-    <p class="truncated">{{ news.cuerpo }}</p>
-    <span>{{ news.fecha }}</span>
+    <span>Noticia numero {{ news.id }}</span>
   </div>
+  <span>{{ news.fecha }}</span>
+  <p [innerHTML]="formatText(news.cuerpo1)"></p>
+  <img [src]="getImageUrl(news.imagen)" alt="Noticia" />
+  <p [innerHTML]="formatText(news.cuerpo2)"></p>
 </article>

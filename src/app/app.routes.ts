@@ -24,6 +24,7 @@ export const routes: Routes = [
     // path del header (nav)
     { path: 'main', component: MainComponent },
     { path: 'noticias', component: NoticiasComponent },
+    { path: 'noticia/:id', component: NoticiasComponent },
     { path: 'videos', component: VideosComponent },
     { path: 'fotos', component: FotosComponent },
     { path: 'calendario', component: CalendarioComponent },
