@@ -1,13 +1,27 @@
-<div class="dia_partido-item" *ngFor="let dia_partido of calendarList">
-    <strong>{{ dia_partido.fecha }}</strong>
-
-    <h3>{{ dia_partido.local }}</h3>
-    <img [src]="getImageUrl(dia_partido.logo_local)" alt="logo_local" />
-
-    <strong>{{ dia_partido.hora }}</strong>
-
-    <img [src]="getImageUrl(dia_partido.logo_visitante)" alt="logo_visitante" />
-    <h3>{{ dia_partido.visitante }}</h3>
-
-    <span>{{ dia_partido.jornada }}</span>
+<div class="center-calendario">
+  <div class="calendario-item" *ngFor="let partido of calendarList">
+    <div class="partido-content">
+      <div class="info-local">
+        <img
+          [src]="getImageUrl(partido.logo_local)"
+          alt="logo_local"
+          class="logo"
+        />
+        <h3>{{ partido.local }}</h3>
+      </div>
+      <div class="info-partido">
+        <strong class="fecha">{{ partido.fecha }}</strong>
+        <strong class="hora">{{ partido.hora }}</strong>
+        <span class="jornada">{{ partido.jornada }}</span>
+      </div>
+      <div class="info-visitante">
+        <h3>{{ partido.visitante }}</h3>
+        <img
+          [src]="getImageUrl(partido.logo_visitante)"
+          alt="logo_visitante"
+          class="logo"
+        />
+      </div>
+    </div>
+  </div>
 </div>

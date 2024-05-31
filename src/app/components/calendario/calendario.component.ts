@@ -58,43 +58,10 @@ export class CalendarioComponent implements OnInit {
       }
     });
 
-    // Serivico local con filtro por id (sin usar pero util a futuro)
-    // this.route.paramMap.subscribe(params => {
-    //   const id = params.get('id');
-    //   this.calendarService.getCalendar().subscribe({
-    //     next: (data: Calendar[]) => {
-    //       this.calendarList = data;
-
-    //       if (id) {
-    //         // Filtrar la lista de noticias para encontrar la que coincida con el ID
-    //         this.selectedNews = this.calendarList.find(news => news.id === +id);
-    //         // Hacer scroll hacia la noticia seleccionada
-    //         if (this.selectedNews) {
-    //           const element = document.getElementById(`news-${this.selectedNews.id}`);
-    //           if (element) {
-    //             element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    //           }
-    //         }
-    //       }
-    //     },
-    //     error: error => {
-    //       console.error('Error fetching news, using default data', error);
-    //       this.calendarList = this.defaultNewsList;
-    //     }
-    //   });
-      
-      
-    // });
-
   }
 
   getImageUrl(imagePath: string): string {
     return `${this.URL_BASE}${imagePath}`;
-  }
-
-  // Se guarda el formato almacenado en la base de datos (saltos de linea)
-  formatText(text: string): string {
-    return text.replace(/\n/g, '<br>');
   }
 
 }
