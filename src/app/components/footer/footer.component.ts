@@ -7,13 +7,6 @@ import { FefaComponent } from './fefa/fefa.component';
 // Parte legal
 import { LegalComponent } from './legal/legal.component';
 
-import { PoliticaPrivacidadComponent } from './legal/politica-privacidad/politica-privacidad.component';
-import { ContactoComponent } from './legal/contacto/contacto.component';
-import { AccesibilidadComponent } from './legal/accesibilidad/accesibilidad.component';
-import { MapaComponent } from './legal/mapa/mapa.component';
-import { AnunciosComponent } from './legal/anuncios/anuncios.component';
-import { PrivacidadComponent } from './legal/privacidad/privacidad.component';
-
 @Component({
   selector: 'app-footer',
   standalone: true,
@@ -21,14 +14,7 @@ import { PrivacidadComponent } from './legal/privacidad/privacidad.component';
     ClubComponent, 
     EquiposComponent, 
     FefaComponent, 
-    LegalComponent, 
-    PoliticaPrivacidadComponent, 
-    ContactoComponent, 
-    AccesibilidadComponent, 
-    AccesibilidadComponent, 
-    MapaComponent, 
-    AnunciosComponent, 
-    PrivacidadComponent],
+    LegalComponent],
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.css']
 })

@@ -15,13 +15,10 @@
       <li><a routerLink="/calendario">Calendario</a></li>
       <li><a routerLink="/equipo">Equipo</a></li>
       <li><a routerLink="/campo">Campo de Juego</a></li>
-      <li><a routerLink="/comunidad">Comunidad</a></li>
     </ul>
     <ul>
       <li><a href="https://www.twitch.tv/100yardas" target="_blank">Ver</a></li>
-      <li><a routerLink="/socios">Socios</a></li>
       <li id="nav-entradas"><a routerLink="/entradas">Entradas</a></li>
-      <li id="nav-tienda"><a routerLink="/tienda">Tienda</a></li>
       <li id="li-hamburguer-btn">
         <button id="hamburguer-btn" (click)="toggleMenu()">&nbsp;&nbsp;</button>
       </li>
@@ -36,17 +33,15 @@
       <li><a routerLink="/calendario" (click)="closeMenu()">Calendario</a></li>
       <li><a routerLink="/equipo" (click)="closeMenu()">Equipo</a></li>
       <li><a routerLink="/campo" (click)="closeMenu()">Campo de Juego</a></li>
-      <li><a routerLink="/comunidad" (click)="closeMenu()">Comunidad</a></li>
       <li><a routerLink="/mapa" (click)="closeMenu()">Mapa</a></li>
       <li>
         <a
           href="https://www.twitch.tv/100yardas"
           target="_blank"
           (click)="closeMenu()"
-          >Ver</a
+          >Ver en Twitch</a
         >
       </li>
-      <li><a routerLink="/socios" (click)="closeMenu()">Socios</a></li>
       <li><a (click)="closeMenu()">- Volver -</a></li>
     </ul>
   </div>

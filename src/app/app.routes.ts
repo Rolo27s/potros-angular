@@ -7,10 +7,7 @@ import { FotosComponent } from './components/fotos/fotos.component';
 import { CalendarioComponent } from './components/calendario/calendario.component';
 import { EquipoComponent } from './components/equipo/equipo.component';
 import { CampoComponent } from './components/campo/campo.component';
-import { ComunidadComponent } from './components/comunidad/comunidad.component';
-import { SociosComponent } from './components/socios/socios.component';
 import { EntradasComponent } from './components/entradas/entradas.component';
-import { TiendaComponent } from './components/tienda/tienda.component';
 
 // Imports de la parte legal (footer)
 import { PoliticaPrivacidadComponent } from './components/footer/legal/politica-privacidad/politica-privacidad.component';
@@ -30,10 +27,7 @@ export const routes: Routes = [
     { path: 'calendario', component: CalendarioComponent },
     { path: 'equipo', component: EquipoComponent },
     { path: 'campo', component: CampoComponent },
-    { path: 'comunidad', component: ComunidadComponent },
-    { path: 'socios', component: SociosComponent },
     { path: 'entradas', component: EntradasComponent },
-    { path: 'tienda', component: TiendaComponent },
 
     // rutas para la parte legal (footer)
     { path: 'politica-privacidad', component: PoliticaPrivacidadComponent },
