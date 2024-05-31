@@ -1,0 +1,114 @@
+h2 {
+    margin-top: 2em;
+    margin-bottom: 0.25em;
+}
+
+table {
+    margin-bottom: 2em;
+}
+
+.team-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.team-table th,
+.team-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.team-table td:nth-of-type(2),
+.team-table td:nth-of-type(9) {
+  text-align: left;
+}
+
+.team-table th {
+  background-color: #f2f2f2;
+}
+
+.team-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.team-table tbody tr:hover {
+  background-color: var(--color-detalle-2);
+}
+
+.player-image {
+  width: 75px;
+  height: auto;
+  border-radius: 20%;
+}
+
+@media (max-width: 900px) {
+  .team-table th:nth-of-type(5),
+  .team-table th:nth-of-type(6),
+  .team-table th:nth-of-type(7),
+  .team-table th:nth-of-type(8),
+  .team-table td:nth-of-type(5),
+  .team-table td:nth-of-type(6),
+  .team-table td:nth-of-type(7),
+  .team-table td:nth-of-type(8) {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .team-table th:nth-of-type(3),
+  .team-table th:nth-of-type(4),
+  .team-table th:nth-of-type(5),
+  .team-table th:nth-of-type(6),
+  .team-table th:nth-of-type(7),
+  .team-table th:nth-of-type(8),
+  .team-table td:nth-of-type(3),
+  .team-table td:nth-of-type(4),
+  .team-table td:nth-of-type(5),
+  .team-table td:nth-of-type(6),
+  .team-table td:nth-of-type(7),
+  .team-table td:nth-of-type(8) {
+    display: none;
+  }
+
+  .team-table th,
+  .team-table td,
+  .info-table th,
+  .info-table td {
+    font-size: 0.85em;
+  }
+
+  .player-image {
+    width: 52px;
+    border-radius: 10%;
+  }
+}
+
+.info-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.info-table th,
+.info-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.info-table th:nth-of-type(2),
+.info-table td:nth-of-type(2) {
+    text-align: center;
+}
+
+.info-table th {
+  background-color: #f2f2f2;
+}
+
+.info-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.info-table tbody tr:hover {
+  background-color: var(--color-detalle-2);
+}

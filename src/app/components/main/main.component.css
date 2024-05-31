@@ -133,6 +133,18 @@
   text-align: center;
 }
 
+#insta-container {
+  transition: all .3s ease;
+}
+
+#insta-container:hover {
+   filter: brightness(1.2) contrast(1.2) drop-shadow(0 0 .25rem var(--color-secundario-1));
+}
+
+#instagram {
+  width: 125px;
+}
+
 h3 {
   padding: 0.5em;
 }

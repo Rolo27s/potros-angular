@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CalendarService, Calendar } from '../../services/calendar.service';
 import { CommonModule } from '@angular/common';
-import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-calendario',
@@ -19,9 +18,8 @@ export class CalendarioComponent implements OnInit {
   }
 
   calendarList: Calendar[] = [];
-  selectedNews: Calendar | undefined;
 
-  defaultNewsList: Calendar[] = [
+  defaultCalendarList: Calendar[] = [
     {
       id: 1,
       fecha: '2024-06-01',
@@ -44,7 +42,7 @@ export class CalendarioComponent implements OnInit {
     }
   ];
 
-  constructor(private route: ActivatedRoute, private calendarService: CalendarService) { }
+  constructor(private calendarService: CalendarService) { }
 
   ngOnInit(): void {
     // Servicio completo
@@ -53,8 +51,8 @@ export class CalendarioComponent implements OnInit {
         this.calendarList = data;
       },
       error: error => {
-        console.error('Error fetching news, using default data', error);
-        this.calendarList = this.defaultNewsList;
+        console.error('Error fetching calendar, using default data', error);
+        this.calendarList = this.defaultCalendarList;
       }
     });
 

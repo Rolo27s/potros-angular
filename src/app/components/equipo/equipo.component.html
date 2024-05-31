@@ -1,9 +1,68 @@
-<h1>Plantilla de equipo</h1>
-<hr />
-<br />
-<p>(Mockup)</p>
-<br />
-<img
-  src="assets/mockups/PlantillaJugadores.png"
-  alt="plantillaJugadores"
-/>
+<h1>Plantilla</h1>
+
+<h2>Jugadores en Activo</h2>
+<table class="team-table">
+  <thead>
+    <tr>
+      <th>Foto</th>
+      <th>Nombre</th>
+      <th>Dorsal</th>
+      <th>Posición</th>
+      <th>Estadística 1</th>
+      <th>Estadística 2</th>
+      <th>Edad</th>
+      <th>Experiencia</th>
+      <th>Estado</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let jugador of teamList">
+      <td>
+        <img
+          [src]="getImageUrl(jugador.foto_jugador)"
+          alt="foto_jugador"
+          class="player-image"
+        />
+      </td>
+      <td>{{ jugador.nombre_jugador }}</td>
+      <td>{{ jugador.dorsal }}</td>
+      <td>{{ jugador.posicion }}</td>
+      <td>{{ jugador.estadistica1 }}</td>
+      <td>{{ jugador.estadistica2 }}</td>
+      <td>{{ jugador.edad }}</td>
+      <td>{{ jugador.experiencia }}</td>
+      <td>{{ jugador.estado }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Cuerpo Técnico</h2>
+<table class="info-table">
+  <tbody>
+    <tr>
+      <th>Nombre</th>
+      <th>Posición</th>
+      <th>País</th>
+    </tr>
+    <tr>
+      <td>Brian Ortegren</td>
+      <td>Head Coach</td>
+      <td>EE.UU.</td>
+    </tr>
+    <tr>
+      <td>Eduardo Simon</td>
+      <td>Entrenador Asistente (Defensa)</td>
+      <td>Panamá</td>
+    </tr>
+    <tr>
+      <td>Ian Froment</td>
+      <td>Entrenador Asistente (Líneas)</td>
+      <td>Reino Unido</td>
+    </tr>
+    <tr>
+      <td>Nacho Ponce</td>
+      <td>Entrenador Asistente (Equipo junior)</td>
+      <td>España</td>
+    </tr>
+  </tbody>
+</table>
