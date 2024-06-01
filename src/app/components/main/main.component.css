@@ -148,6 +148,14 @@
 h3 {
   padding: 0.5em;
 }
+.Instagram-container, .noticias-container-padre {
+  margin: 4em 0;
+}
+
+.Instagram-container h2, .noticias-container-padre h2 {
+  color: #252525;
+}
+
 @media (max-width: 1000px) {
   .next-mach {
     grid-template-columns: 1fr;
@@ -217,10 +225,4 @@ h3 {
     grid-template-rows: auto;
     grid-gap: 5px;
   }
-}
-
-.revisar {
-  color: red;
-  font-weight: 600;
-
 }
