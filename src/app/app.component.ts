@@ -7,6 +7,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { MainComponent } from './components/main/main.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { CommonModule } from '@angular/common';
+import { CookieModalComponent } from './components/cookie-modal/cookie-modal.component';
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-root',
@@ -16,13 +18,15 @@ import { CommonModule } from '@angular/common';
     HeaderComponent,
     MainComponent,
     FooterComponent,
+    CookieModalComponent,
     // Add RouterOutlet for routing
     RouterOutlet,
     RouterLink,
     RouterModule
   ],
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  providers:[CookieService]
 })
 export class AppComponent {
   title = 'potros-angular';

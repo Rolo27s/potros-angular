@@ -1,0 +1,42 @@
+.cookie-modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 2000;
+  }
+  
+  .cookie-modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  button {
+    padding: 1em 2em;
+    margin: 1em;
+    cursor: pointer;
+  }
+
+  button:nth-of-type(1) {
+    background-color: var(--color-principal);
+    color: white;
+  }
+
+  button:nth-of-type(2) {
+    background-color: var(--color-secundario-1);
+    color: white;
+  }
+
+  button:nth-of-type(3) {
+    background-color: var(--color-apoyo-2);
+    color: black;
+    border: 0;
+    opacity: 0.8;
+  }
