@@ -1,0 +1,734 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>potros-angular documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+          <script>
+               // Blocking script to avoid flickering dark mode
+               // Dark mode toggle button
+               var useDark = window.matchMedia('(prefers-color-scheme: dark)');
+               var darkModeState = useDark.matches;
+               var $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               var $darkModeToggles = document.querySelectorAll('.dark-mode-switch');
+               var darkModeStateLocal = localStorage.getItem('compodoc_darkmode-state');
+
+               function checkToggle(check) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].checked = check;
+                    }
+               }
+
+               function toggleDarkMode(state) {
+                    if (window.localStorage) {
+                         localStorage.setItem('compodoc_darkmode-state', state);
+                    }
+
+                    checkToggle(state);
+
+                    const hasClass = document.body.classList.contains('dark');
+
+                    if (state) {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.add('dark');
+                         }
+                         if (!hasClass) {
+                              document.body.classList.add('dark');
+                         }
+                    } else {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.remove('dark');
+                         }
+                         if (hasClass) {
+                              document.body.classList.remove('dark');
+                         }
+                    }
+               }
+
+               useDark.addEventListener('change', function (evt) {
+                    toggleDarkMode(evt.matches);
+               });
+               if (darkModeStateLocal) {
+                    darkModeState = darkModeStateLocal === 'true';
+               }
+               toggleDarkMode(darkModeState);
+          </script>
+
+        <div class="navbar navbar-default navbar-fixed-top d-md-none p-0">
+               <div class="d-flex">
+                    <a href="../" class="navbar-brand">potros-angular documentation</a>
+                    <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+               </div>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="d-none d-md-block menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Components</li>
+  <li class="breadcrumb-item"
+  >
+  HeaderComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" class="nav-link"
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li class="nav-item">
+            <a href="#templateData" class="nav-link"
+                role="tab" id="templateData-tab" data-bs-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li class="nav-item">
+            <a href="#styleData" class="nav-link"
+                role="tab" id="styleData-tab" data-bs-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li class="nav-item">
+            <a href="#tree" class="nav-link"
+                role="tab" id="tree-tab" data-bs-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/components/header/header.component.ts</code>
+</p>
+
+
+
+
+
+
+<section data-compodoc="block-metadata">
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-header</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">standalone</td>
+                <td class="col-md-9"><code>true</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">imports</td>
+                <td class="col-md-9">
+                            <code>RouterLink</code>
+                            <code>RouterOutlet</code>
+                            <code>CommonModule</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./header.component.css</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./header.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-index">
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#menuVisible" >menuVisible</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#closeMenu" >closeMenu</a>
+                            </li>
+                            <li>
+                                <a href="#toggleMenu" >toggleMenu</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+
+
+
+
+
+    <section data-compodoc="block-methods">
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="closeMenu"></a>
+                    <span class="name">
+                        <span ><b>closeMenu</b></span>
+                        <a href="#closeMenu"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>closeMenu()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="19"
+                                    class="link-to-prism">src/app/components/header/header.component.ts:19</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="toggleMenu"></a>
+                    <span class="name">
+                        <span ><b>toggleMenu</b></span>
+                        <a href="#toggleMenu"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>toggleMenu()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="15"
+                                    class="link-to-prism">src/app/components/header/header.component.ts:15</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section data-compodoc="block-properties">
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="menuVisible"></a>
+                    <span class="name">
+                        <span ><b>menuVisible</b></span>
+                        <a href="#menuVisible"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/components/header/header.component.ts:13</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component } from &#x27;@angular/core&#x27;;
+import { RouterLink, RouterOutlet } from &#x27;@angular/router&#x27;;
+import { CommonModule } from &#x27;@angular/common&#x27;;
+
+@Component({
+  selector: &#x27;app-header&#x27;,
+  standalone: true,
+  imports: [RouterLink, RouterOutlet, CommonModule],
+  templateUrl: &#x27;./header.component.html&#x27;,
+  styleUrls: [&#x27;./header.component.css&#x27;]
+})
+export class HeaderComponent {
+  menuVisible &#x3D; false;
+
+  toggleMenu(): void {
+    this.menuVisible &#x3D; !this.menuVisible;
+  }
+
+  closeMenu(): void {
+    this.menuVisible &#x3D; false;
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;header&gt;
+  &lt;figure class&#x3D;&quot;banner&quot;&gt;
+    &lt;img src&#x3D;&quot;assets/banner.png&quot; alt&#x3D;&quot;banner-img&quot; class&#x3D;&quot;banner-img&quot; title&#x3D;&quot;FUENGIROLA POTROS&quot;/&gt;
+  &lt;/figure&gt;
+  &lt;nav class&#x3D;&quot;header-nav&quot;&gt;
+    &lt;ul&gt;
+      &lt;li id&#x3D;&quot;nav-logo&quot;&gt;
+        &lt;a routerLink&#x3D;&quot;/main&quot; id&#x3D;&quot;pagInicio&quot;&gt;
+          &lt;img src&#x3D;&quot;./assets/logoEdit.png&quot; alt&#x3D;&quot;logo&quot; class&#x3D;&quot;logo-nav&quot; title&#x3D;&quot;Pagina Principal&quot; /&gt;
+        &lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;a routerLink&#x3D;&quot;/noticias&quot;&gt;Noticias&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a routerLink&#x3D;&quot;/videos&quot;&gt;Videos&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a routerLink&#x3D;&quot;/fotos&quot;&gt;Fotos&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a routerLink&#x3D;&quot;/calendario&quot;&gt;Calendario&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a routerLink&#x3D;&quot;/equipo&quot;&gt;Equipo&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a routerLink&#x3D;&quot;/campo&quot;&gt;Campo de Juego&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href&#x3D;&quot;https://www.twitch.tv/100yardas&quot; target&#x3D;&quot;_blank&quot;&gt;Ver&lt;/a&gt;&lt;/li&gt;
+      &lt;li id&#x3D;&quot;nav-entradas&quot;&gt;&lt;a routerLink&#x3D;&quot;/entradas&quot;&gt;Entradas&lt;/a&gt;&lt;/li&gt;
+      &lt;li id&#x3D;&quot;li-hamburguer-btn&quot;&gt;
+        &lt;button id&#x3D;&quot;hamburguer-btn&quot; (click)&#x3D;&quot;toggleMenu()&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;/button&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/nav&gt;
+  &lt;div *ngIf&#x3D;&quot;menuVisible&quot; class&#x3D;&quot;dropdown-menu&quot;&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a routerLink&#x3D;&quot;/main&quot; (click)&#x3D;&quot;closeMenu()&quot;&gt;Inicio&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a routerLink&#x3D;&quot;/noticias&quot; (click)&#x3D;&quot;closeMenu()&quot;&gt;Noticia&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a routerLink&#x3D;&quot;/videos&quot; (click)&#x3D;&quot;closeMenu()&quot;&gt;Video&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a routerLink&#x3D;&quot;/fotos&quot; (click)&#x3D;&quot;closeMenu()&quot;&gt;Fotos&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a routerLink&#x3D;&quot;/calendario&quot; (click)&#x3D;&quot;closeMenu()&quot;&gt;Calendario&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a routerLink&#x3D;&quot;/equipo&quot; (click)&#x3D;&quot;closeMenu()&quot;&gt;Equipo&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a routerLink&#x3D;&quot;/campo&quot; (click)&#x3D;&quot;closeMenu()&quot;&gt;Campo de Juego&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a routerLink&#x3D;&quot;/mapa&quot; (click)&#x3D;&quot;closeMenu()&quot;&gt;Mapa&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;
+        &lt;a
+          href&#x3D;&quot;https://www.twitch.tv/100yardas&quot;
+          target&#x3D;&quot;_blank&quot;
+          (click)&#x3D;&quot;closeMenu()&quot;
+          &gt;Ver en Twitch&lt;/a
+        &gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;a (click)&#x3D;&quot;closeMenu()&quot;&gt;- Volver -&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/header&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="styleData">
+                <p class="comment">
+                    <code>./header.component.css</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">:host {
+  display: block;
+  width: 100%;
+}
+
+header {
+  width: 100%;
+}
+
+figure {
+  transition: all .3s ease;
+}
+figure:hover {
+  filter: brightness(0.9);
+}
+
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px;
+  background-color: var(--color-principal);
+  padding: 0 2rem;
+}
+
+.header-nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 0 1rem;
+}
+
+.header-nav ul li a {
+  color: var(--color-apoyo-2);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.header-nav ul li .btn-header-nav {
+  color: var(--color-apoyo-2);
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+.header-nav ul li a:hover,
+.header-nav ul li .btn-header-nav:hover {
+  border-bottom: 2px solid var(--color-detalle-2);
+}
+
+#pagInicio {
+  width: 100px;
+  transition: filter 0.3s ease;
+}
+
+#pagInicio:hover {
+  border-bottom: none;
+  filter: brightness(1.5) drop-shadow(0 0 .5rem var(--color-secundario-2));
+}
+
+.banner {
+  width: 100%;
+  height: 175px;
+  overflow: hidden;
+}
+
+.banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.logo-nav {
+  width: 48px;
+  transition: filter 0.5s ease;
+}
+
+.logo-nav:hover {
+  filter: brightness(1.3);
+  cursor: pointer;
+}
+
+.btn-header-nav {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+
+
+#hamburguer-btn {
+  border: none;
+  background-color: transparent;
+  background-image: url(../../../assets/hamburguer-btn.png);
+  background-size: cover;
+  background-position: center;
+  height: 28px;
+  width: 28px;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(5, 51, 44, 0.95);
+  z-index: 999;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropdown-menu ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 15px;
+  color: var(--color-detalle-1);
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.dropdown-menu a:hover {
+  background-color: rgba(0, 87, 36, 0.8);
+}
+
+.hidden {
+  display: none;
+}
+
+#li-hamburguer-btn {
+  display: none;
+}
+
+@media (max-width: 1115px) {
+  .header-nav {
+    padding: 0rem 1rem;
+  }
+  .header-nav ul {
+    padding: 0;
+  }
+  .header-nav ul li {
+    display: none;
+  }
+  .dropdown-menu {
+    display: block;
+  }
+  .banner {
+    display: none;
+  }
+
+  #nav-logo {
+    display: block;
+  }
+  #nav-tienda {
+    order: 1;
+    display: block;
+  }
+  #nav-entradas {
+    order: 2;
+    display: block;
+  }
+  #li-hamburguer-btn {
+    order: 3;
+    display: block;
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><header>  <figure class="banner">    <img src="assets/banner.png" alt="banner-img" class="banner-img" title="FUENGIROLA POTROS"/>  </figure>  <nav class="header-nav">    <ul>      <li id="nav-logo">        <a routerLink="/main" id="pagInicio">          <img src="./assets/logoEdit.png" alt="logo" class="logo-nav" title="Pagina Principal" />        </a>      </li>      <li><a routerLink="/noticias">Noticias</a></li>      <li><a routerLink="/videos">Videos</a></li>      <li><a routerLink="/fotos">Fotos</a></li>      <li><a routerLink="/calendario">Calendario</a></li>      <li><a routerLink="/equipo">Equipo</a></li>      <li><a routerLink="/campo">Campo de Juego</a></li>    </ul>    <ul>      <li><a href="https://www.twitch.tv/100yardas" target="_blank">Ver</a></li>      <li id="nav-entradas"><a routerLink="/entradas">Entradas</a></li>      <li id="li-hamburguer-btn">        <button id="hamburguer-btn" (click)="toggleMenu()">&nbsp;&nbsp;</button>      </li>    </ul>  </nav>  <div *ngIf="menuVisible" class="dropdown-menu">    <ul>      <li><a routerLink="/main" (click)="closeMenu()">Inicio</a></li>      <li><a routerLink="/noticias" (click)="closeMenu()">Noticia</a></li>      <li><a routerLink="/videos" (click)="closeMenu()">Video</a></li>      <li><a routerLink="/fotos" (click)="closeMenu()">Fotos</a></li>      <li><a routerLink="/calendario" (click)="closeMenu()">Calendario</a></li>      <li><a routerLink="/equipo" (click)="closeMenu()">Equipo</a></li>      <li><a routerLink="/campo" (click)="closeMenu()">Campo de Juego</a></li>      <li><a routerLink="/mapa" (click)="closeMenu()">Mapa</a></li>      <li>        <a          href="https://www.twitch.tv/100yardas"          target="_blank"          (click)="closeMenu()"          >Ver en Twitch</a        >      </li>      <li><a (click)="closeMenu()">- Volver -</a></li>    </ul>  </div></header></div>'
+    var COMPONENTS = [{'name': 'AccesibilidadComponent', 'selector': 'app-accesibilidad'},{'name': 'AnunciosComponent', 'selector': 'app-anuncios'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CalendarioComponent', 'selector': 'app-calendario'},{'name': 'CampoComponent', 'selector': 'app-campo'},{'name': 'CarouselComponent', 'selector': 'app-carousel'},{'name': 'ClubComponent', 'selector': 'app-club'},{'name': 'ContactoComponent', 'selector': 'app-contacto'},{'name': 'CookieModalComponent', 'selector': 'app-cookie-modal'},{'name': 'EntradasComponent', 'selector': 'app-entradas'},{'name': 'EquipoComponent', 'selector': 'app-equipo'},{'name': 'EquiposComponent', 'selector': 'app-equipos'},{'name': 'FefaComponent', 'selector': 'app-fefa'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'FotosComponent', 'selector': 'app-fotos'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'LegalComponent', 'selector': 'app-legal'},{'name': 'MainComponent', 'selector': 'app-main'},{'name': 'MapaComponent', 'selector': 'app-mapa'},{'name': 'NoticiasComponent', 'selector': 'app-noticias'},{'name': 'NoticiasToMainComponent', 'selector': 'app-noticias-to-main'},{'name': 'PoliticaPrivacidadComponent', 'selector': 'app-politica-privacidad'},{'name': 'PrivacidadComponent', 'selector': 'app-privacidad'},{'name': 'VideosComponent', 'selector': 'app-videos'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'HeaderComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'HeaderComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script>
+               $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               checkToggle(darkModeState);
+               if ($darkModeToggleSwitchers.length > 0) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].addEventListener('change', function (event) {
+                              darkModeState = !darkModeState;
+                              toggleDarkMode(darkModeState);
+                         });
+                    }
+               }
+          </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

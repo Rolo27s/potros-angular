@@ -1,0 +1,1024 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>potros-angular documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+          <script>
+               // Blocking script to avoid flickering dark mode
+               // Dark mode toggle button
+               var useDark = window.matchMedia('(prefers-color-scheme: dark)');
+               var darkModeState = useDark.matches;
+               var $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               var $darkModeToggles = document.querySelectorAll('.dark-mode-switch');
+               var darkModeStateLocal = localStorage.getItem('compodoc_darkmode-state');
+
+               function checkToggle(check) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].checked = check;
+                    }
+               }
+
+               function toggleDarkMode(state) {
+                    if (window.localStorage) {
+                         localStorage.setItem('compodoc_darkmode-state', state);
+                    }
+
+                    checkToggle(state);
+
+                    const hasClass = document.body.classList.contains('dark');
+
+                    if (state) {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.add('dark');
+                         }
+                         if (!hasClass) {
+                              document.body.classList.add('dark');
+                         }
+                    } else {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.remove('dark');
+                         }
+                         if (hasClass) {
+                              document.body.classList.remove('dark');
+                         }
+                    }
+               }
+
+               useDark.addEventListener('change', function (evt) {
+                    toggleDarkMode(evt.matches);
+               });
+               if (darkModeStateLocal) {
+                    darkModeState = darkModeStateLocal === 'true';
+               }
+               toggleDarkMode(darkModeState);
+          </script>
+
+        <div class="navbar navbar-default navbar-fixed-top d-md-none p-0">
+               <div class="d-flex">
+                    <a href="../" class="navbar-brand">potros-angular documentation</a>
+                    <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+               </div>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="d-none d-md-block menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Components</li>
+  <li class="breadcrumb-item"
+  >
+  NoticiasToMainComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" class="nav-link"
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li class="nav-item">
+            <a href="#templateData" class="nav-link"
+                role="tab" id="templateData-tab" data-bs-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li class="nav-item">
+            <a href="#styleData" class="nav-link"
+                role="tab" id="styleData-tab" data-bs-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li class="nav-item">
+            <a href="#tree" class="nav-link"
+                role="tab" id="tree-tab" data-bs-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/components/noticiasToMain/noticiasToMain.component.ts</code>
+</p>
+
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                <code>OnInit</code>
+    </p>
+
+
+<section data-compodoc="block-metadata">
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-noticias-to-main</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">standalone</td>
+                <td class="col-md-9"><code>true</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">imports</td>
+                <td class="col-md-9">
+                            <code>CommonModule</code>
+                            <code>RouterModule</code>
+                                <code><a href="../components/NoticiasComponent.html" target="_self" >NoticiasComponent</a></code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./noticiasToMain.component.css</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./noticiasToMain.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-index">
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#defaultNewsList" >defaultNewsList</a>
+                            </li>
+                            <li>
+                                <a href="#newsList" >newsList</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#URL_BASE" >URL_BASE</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#formatText" >formatText</a>
+                            </li>
+                            <li>
+                                <a href="#getImageUrl" >getImageUrl</a>
+                            </li>
+                            <li>
+                                <a href="#getURLBASE" >getURLBASE</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#onSelectNews" >onSelectNews</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-constructor">
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(newsService: <a href="../injectables/NewsService.html" target="_self">NewsService</a>, router: Router)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="41" class="link-to-prism">src/app/components/noticiasToMain/noticiasToMain.component.ts:41</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>newsService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/NewsService.html" target="_self" >NewsService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                    <code>Router</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section data-compodoc="block-methods">
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="formatText"></a>
+                    <span class="name">
+                        <span ><b>formatText</b></span>
+                        <a href="#formatText"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>formatText(text: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="62"
+                                    class="link-to-prism">src/app/components/noticiasToMain/noticiasToMain.component.ts:62</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>text</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getImageUrl"></a>
+                    <span class="name">
+                        <span ><b>getImageUrl</b></span>
+                        <a href="#getImageUrl"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getImageUrl(imagePath: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="57"
+                                    class="link-to-prism">src/app/components/noticiasToMain/noticiasToMain.component.ts:57</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>imagePath</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getURLBASE"></a>
+                    <span class="name">
+                        <span ><b>getURLBASE</b></span>
+                        <a href="#getURLBASE"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getURLBASE()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="17"
+                                    class="link-to-prism">src/app/components/noticiasToMain/noticiasToMain.component.ts:17</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="45"
+                                    class="link-to-prism">src/app/components/noticiasToMain/noticiasToMain.component.ts:45</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onSelectNews"></a>
+                    <span class="name">
+                        <span ><b>onSelectNews</b></span>
+                        <a href="#onSelectNews"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onSelectNews(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="67"
+                                    class="link-to-prism">src/app/components/noticiasToMain/noticiasToMain.component.ts:67</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>id</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section data-compodoc="block-properties">
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="defaultNewsList"></a>
+                    <span class="name">
+                        <span ><b>defaultNewsList</b></span>
+                        <a href="#defaultNewsList"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/News.html" target="_self" >News[]</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[
+    {
+      id: 1,
+      titulo: &quot;TRIPLE CORONA&quot;,
+      cuerpo1: &quot;Segunda cita de altura en una semana para los Fuengirola Potros ...&quot;,
+      cuerpo2: &quot;En el segundo cuarto los Potros, ayer de blanco por primera vez en su historia ...&quot;,
+      fecha: &quot;2018-02-22&quot;,
+      imagen: &quot;/media/imagenes/noticias/img1.png&quot;
+    },
+    {
+      id: 2,
+      titulo: &quot;TRIPLE CORONA&quot;,
+      cuerpo1: &quot;Los Fuengirola Potros renovaron su título de campeones de la Liga Andaluza de Fútbol Americano ...&quot;,
+      cuerpo2: &quot;El partido dio comienzo con posesión para los locales ...&quot;,
+      fecha: &quot;2022-04-12&quot;,
+      imagen: &quot;/media/imagenes/noticias/img2.png&quot;
+    }
+  ]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/components/noticiasToMain/noticiasToMain.component.ts:24</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="newsList"></a>
+                    <span class="name">
+                        <span ><b>newsList</b></span>
+                        <a href="#newsList"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/News.html" target="_self" >News[]</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="21" class="link-to-prism">src/app/components/noticiasToMain/noticiasToMain.component.ts:21</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="URL_BASE"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>URL_BASE</b></span>
+                        <a href="#URL_BASE"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;http://127.0.0.1:8000&#x27;</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/components/noticiasToMain/noticiasToMain.component.ts:15</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+import { NewsService, News } from &#x27;../../services/news.service&#x27;;
+import { CommonModule } from &#x27;@angular/common&#x27;;
+import { NoticiasComponent } from &#x27;../noticias/noticias.component&#x27;;
+import { RouterModule, Router } from &#x27;@angular/router&#x27;;
+
+@Component({
+  selector: &#x27;app-noticias-to-main&#x27;,
+  standalone: true,
+  templateUrl: &#x27;./noticiasToMain.component.html&#x27;,
+  styleUrls: [&#x27;./noticiasToMain.component.css&#x27;],
+  imports: [CommonModule, RouterModule, NoticiasComponent]
+})
+export class NoticiasToMainComponent implements OnInit {
+  private URL_BASE &#x3D; &#x27;http://127.0.0.1:8000&#x27;;
+
+  getURLBASE(): string {
+    return this.URL_BASE;
+  }
+
+  newsList: News[] &#x3D; [];
+
+  // En caso de fallo de conexion con API, se usará esta información (consistencia)
+  defaultNewsList: News[] &#x3D; [
+    {
+      id: 1,
+      titulo: &quot;TRIPLE CORONA&quot;,
+      cuerpo1: &quot;Segunda cita de altura en una semana para los Fuengirola Potros ...&quot;,
+      cuerpo2: &quot;En el segundo cuarto los Potros, ayer de blanco por primera vez en su historia ...&quot;,
+      fecha: &quot;2018-02-22&quot;,
+      imagen: &quot;/media/imagenes/noticias/img1.png&quot;
+    },
+    {
+      id: 2,
+      titulo: &quot;TRIPLE CORONA&quot;,
+      cuerpo1: &quot;Los Fuengirola Potros renovaron su título de campeones de la Liga Andaluza de Fútbol Americano ...&quot;,
+      cuerpo2: &quot;El partido dio comienzo con posesión para los locales ...&quot;,
+      fecha: &quot;2022-04-12&quot;,
+      imagen: &quot;/media/imagenes/noticias/img2.png&quot;
+    }
+  ];
+
+  constructor(private newsService: NewsService, private router: Router) { }
+
+  ngOnInit(): void {
+    this.newsService.getNews().subscribe({
+      next: (data: News[]) &#x3D;&gt; {
+        this.newsList &#x3D; data;
+      },
+      error: error &#x3D;&gt; {
+        console.error(&#x27;Error fetching news, using default data&#x27;, error);
+        this.newsList &#x3D; this.defaultNewsList;
+      }
+    });
+  }
+
+  getImageUrl(imagePath: string): string {
+    return &#x60;${this.URL_BASE}${imagePath}&#x60;;
+  }
+
+  // Se guarda el formato almacenado en la base de datos (saltos de linea)
+  formatText(text: string): string {
+    return text.replace(/\n/g, &#x27;&lt;br&gt;&#x27;);
+  }
+
+  // navegacion hasta la noticia seleccionada
+  onSelectNews(id: number): void {
+    this.router.navigate([&#x27;/noticia&#x27;, id]);
+  }
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;article class&#x3D;&quot;news-item noticia&quot; *ngFor&#x3D;&quot;let news of newsList&quot;&gt;
+  &lt;div (click)&#x3D;&quot;onSelectNews(news.id)&quot; &gt;
+    &lt;div class&#x3D;&quot;flex-container&quot;&gt;
+      &lt;h2&gt;{{ news.titulo }}&lt;/h2&gt;
+      &lt;span class&#x3D;&quot;hidden&quot;&gt;Noticia nº{{ news.id }}&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;span&gt;{{ news.fecha }}&lt;/span&gt;
+    &lt;p class&#x3D;&quot;truncated&quot; [innerHTML]&#x3D;&quot;formatText(news.cuerpo1)&quot;&gt;&lt;/p&gt;
+    &lt;img [src]&#x3D;&quot;getImageUrl(news.imagen)&quot; alt&#x3D;&quot;Noticia&quot; /&gt;
+  &lt;/div&gt;
+&lt;/article&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="styleData">
+                <p class="comment">
+                    <code>./noticiasToMain.component.css</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">/* Estilo principal para cada noticia */
+.news-item {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin: 10px 0;
+  padding: 15px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para el título de la noticia */
+.news-item h2 {
+  margin: 0 0 10px;
+  font-size: 1.25em;
+  color: #333;
+  height: 2.5em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Estilo para el cuerpo de la noticia */
+.news-item p {
+  margin: 0 0 10px;
+  font-size: 1em;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Estilo para la fecha de la noticia */
+.news-item span {
+  font-size: 0.9em;
+  color: #999;
+}
+
+/* Estilo adicional para el texto truncado */
+.truncated {
+  max-width: 80vw; /* Ancho máximo del contenedor */
+  max-height: calc(3 * 1.5em); /* Altura máxima para tres líneas de texto */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Muestra solo tres líneas */
+  -webkit-box-orient: vertical;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.hidden {
+  display: none;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.noticia {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.noticia:hover {
+  filter: brightness(0.9);
+  background-color: #eee;
+}
+
+@media (max-width: 1100px) {
+  img {
+    width: 100%;
+    height: 125px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><article class="news-item noticia" *ngFor="let news of newsList">  <div (click)="onSelectNews(news.id)" >    <div class="flex-container">      <h2>{{ news.titulo }}</h2>      <span class="hidden">Noticia nº{{ news.id }}</span>    </div>    <span>{{ news.fecha }}</span>    <p class="truncated" [innerHTML]="formatText(news.cuerpo1)"></p>    <img [src]="getImageUrl(news.imagen)" alt="Noticia" />  </div></article></div>'
+    var COMPONENTS = [{'name': 'AccesibilidadComponent', 'selector': 'app-accesibilidad'},{'name': 'AnunciosComponent', 'selector': 'app-anuncios'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CalendarioComponent', 'selector': 'app-calendario'},{'name': 'CampoComponent', 'selector': 'app-campo'},{'name': 'CarouselComponent', 'selector': 'app-carousel'},{'name': 'ClubComponent', 'selector': 'app-club'},{'name': 'ContactoComponent', 'selector': 'app-contacto'},{'name': 'CookieModalComponent', 'selector': 'app-cookie-modal'},{'name': 'EntradasComponent', 'selector': 'app-entradas'},{'name': 'EquipoComponent', 'selector': 'app-equipo'},{'name': 'EquiposComponent', 'selector': 'app-equipos'},{'name': 'FefaComponent', 'selector': 'app-fefa'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'FotosComponent', 'selector': 'app-fotos'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'LegalComponent', 'selector': 'app-legal'},{'name': 'MainComponent', 'selector': 'app-main'},{'name': 'MapaComponent', 'selector': 'app-mapa'},{'name': 'NoticiasComponent', 'selector': 'app-noticias'},{'name': 'NoticiasToMainComponent', 'selector': 'app-noticias-to-main'},{'name': 'PoliticaPrivacidadComponent', 'selector': 'app-politica-privacidad'},{'name': 'PrivacidadComponent', 'selector': 'app-privacidad'},{'name': 'VideosComponent', 'selector': 'app-videos'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'NoticiasToMainComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'NoticiasToMainComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script>
+               $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               checkToggle(darkModeState);
+               if ($darkModeToggleSwitchers.length > 0) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].addEventListener('change', function (event) {
+                              darkModeState = !darkModeState;
+                              toggleDarkMode(darkModeState);
+                         });
+                    }
+               }
+          </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

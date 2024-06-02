@@ -1,0 +1,818 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>potros-angular documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+          <script>
+               // Blocking script to avoid flickering dark mode
+               // Dark mode toggle button
+               var useDark = window.matchMedia('(prefers-color-scheme: dark)');
+               var darkModeState = useDark.matches;
+               var $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               var $darkModeToggles = document.querySelectorAll('.dark-mode-switch');
+               var darkModeStateLocal = localStorage.getItem('compodoc_darkmode-state');
+
+               function checkToggle(check) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].checked = check;
+                    }
+               }
+
+               function toggleDarkMode(state) {
+                    if (window.localStorage) {
+                         localStorage.setItem('compodoc_darkmode-state', state);
+                    }
+
+                    checkToggle(state);
+
+                    const hasClass = document.body.classList.contains('dark');
+
+                    if (state) {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.add('dark');
+                         }
+                         if (!hasClass) {
+                              document.body.classList.add('dark');
+                         }
+                    } else {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.remove('dark');
+                         }
+                         if (hasClass) {
+                              document.body.classList.remove('dark');
+                         }
+                    }
+               }
+
+               useDark.addEventListener('change', function (evt) {
+                    toggleDarkMode(evt.matches);
+               });
+               if (darkModeStateLocal) {
+                    darkModeState = darkModeStateLocal === 'true';
+               }
+               toggleDarkMode(darkModeState);
+          </script>
+
+        <div class="navbar navbar-default navbar-fixed-top d-md-none p-0">
+               <div class="d-flex">
+                    <a href="../" class="navbar-brand">potros-angular documentation</a>
+                    <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+               </div>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="d-none d-md-block menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Components</li>
+  <li class="breadcrumb-item"
+  >
+  CalendarioComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" class="nav-link"
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li class="nav-item">
+            <a href="#templateData" class="nav-link"
+                role="tab" id="templateData-tab" data-bs-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li class="nav-item">
+            <a href="#tree" class="nav-link"
+                role="tab" id="tree-tab" data-bs-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/components/calendario/calendario.component.ts</code>
+</p>
+
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                <code>OnInit</code>
+    </p>
+
+
+<section data-compodoc="block-metadata">
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-calendario</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">standalone</td>
+                <td class="col-md-9"><code>true</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">imports</td>
+                <td class="col-md-9">
+                            <code>CommonModule</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./calendario.component.html</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">styleUrl</td>
+                <td class="col-md-9"><code>./calendario.component.css</code></td>
+            </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-index">
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#calendar" >calendar</a>
+                            </li>
+                            <li>
+                                <a href="#calendarList" >calendarList</a>
+                            </li>
+                            <li>
+                                <a href="#defaultCalendarList" >defaultCalendarList</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#URL_BASE" >URL_BASE</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#getImageUrl" >getImageUrl</a>
+                            </li>
+                            <li>
+                                <a href="#getURLBASE" >getURLBASE</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-constructor">
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(calendarService: <a href="../injectables/CalendarService.html" target="_self">CalendarService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="43" class="link-to-prism">src/app/components/calendario/calendario.component.ts:43</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>calendarService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/CalendarService.html" target="_self" >CalendarService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section data-compodoc="block-methods">
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getImageUrl"></a>
+                    <span class="name">
+                        <span ><b>getImageUrl</b></span>
+                        <a href="#getImageUrl"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getImageUrl(imagePath: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="61"
+                                    class="link-to-prism">src/app/components/calendario/calendario.component.ts:61</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>imagePath</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getURLBASE"></a>
+                    <span class="name">
+                        <span ><b>getURLBASE</b></span>
+                        <a href="#getURLBASE"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getURLBASE()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="16"
+                                    class="link-to-prism">src/app/components/calendario/calendario.component.ts:16</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="47"
+                                    class="link-to-prism">src/app/components/calendario/calendario.component.ts:47</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section data-compodoc="block-properties">
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="calendar"></a>
+                    <span class="name">
+                        <span ><b>calendar</b></span>
+                        <a href="#calendar"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/Calendar.html" target="_self" >Calendar</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/components/calendario/calendario.component.ts:14</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="calendarList"></a>
+                    <span class="name">
+                        <span ><b>calendarList</b></span>
+                        <a href="#calendarList"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/Calendar.html" target="_self" >Calendar[]</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/components/calendario/calendario.component.ts:20</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="defaultCalendarList"></a>
+                    <span class="name">
+                        <span ><b>defaultCalendarList</b></span>
+                        <a href="#defaultCalendarList"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/Calendar.html" target="_self" >Calendar[]</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[
+    {
+      id: 1,
+      fecha: &#x27;2024-06-01&#x27;,
+      local: &#x27;Equipo A&#x27;,
+      logo_local: &#x27;imagenes/calendario/logo1.png&#x27;,
+      hora: &#x27;09:00&#x27;,
+      logo_visitante: &#x27;imagenes/calendario/logo2.png&#x27;,
+      visitante: &#x27;Equipo B&#x27;,
+      jornada: &#x27;Jornada-1&#x27;
+    },
+    {
+      id: 2,
+      fecha: &#x27;2024-06-02&#x27;,
+      local: &#x27;Equipo C&#x27;,
+      logo_local: &#x27;imagenes/calendario/logo3.png&#x27;,
+      hora: &#x27;16:00&#x27;,
+      logo_visitante: &#x27;imagenes/calendario/logo4.png&#x27;,
+      visitante: &#x27;Equipo D&#x27;,
+      jornada: &#x27;Jornada-2&#x27;
+    }
+  ]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/app/components/calendario/calendario.component.ts:22</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="URL_BASE"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>URL_BASE</b></span>
+                        <a href="#URL_BASE"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;http://127.0.0.1:8000&#x27;</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/components/calendario/calendario.component.ts:13</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+import { CalendarService, Calendar } from &#x27;../../services/calendar.service&#x27;;
+import { CommonModule } from &#x27;@angular/common&#x27;;
+
+@Component({
+  selector: &#x27;app-calendario&#x27;,
+  standalone: true,
+  imports: [CommonModule],
+  templateUrl: &#x27;./calendario.component.html&#x27;,
+  styleUrl: &#x27;./calendario.component.css&#x27;
+})
+export class CalendarioComponent implements OnInit {
+  private URL_BASE &#x3D; &#x27;http://127.0.0.1:8000&#x27;;
+  calendar!: Calendar;
+
+  getURLBASE(): string {
+    return this.URL_BASE;
+  }
+
+  calendarList: Calendar[] &#x3D; [];
+
+  defaultCalendarList: Calendar[] &#x3D; [
+    {
+      id: 1,
+      fecha: &#x27;2024-06-01&#x27;,
+      local: &#x27;Equipo A&#x27;,
+      logo_local: &#x27;imagenes/calendario/logo1.png&#x27;,
+      hora: &#x27;09:00&#x27;,
+      logo_visitante: &#x27;imagenes/calendario/logo2.png&#x27;,
+      visitante: &#x27;Equipo B&#x27;,
+      jornada: &#x27;Jornada-1&#x27;
+    },
+    {
+      id: 2,
+      fecha: &#x27;2024-06-02&#x27;,
+      local: &#x27;Equipo C&#x27;,
+      logo_local: &#x27;imagenes/calendario/logo3.png&#x27;,
+      hora: &#x27;16:00&#x27;,
+      logo_visitante: &#x27;imagenes/calendario/logo4.png&#x27;,
+      visitante: &#x27;Equipo D&#x27;,
+      jornada: &#x27;Jornada-2&#x27;
+    }
+  ];
+
+  constructor(private calendarService: CalendarService) { }
+
+  ngOnInit(): void {
+    // Servicio completo
+    this.calendarService.getCalendar().subscribe({
+      next: (data: Calendar[]) &#x3D;&gt; {
+        this.calendarList &#x3D; data;
+      },
+      error: error &#x3D;&gt; {
+        console.error(&#x27;Error fetching calendar, using default data&#x27;, error);
+        this.calendarList &#x3D; this.defaultCalendarList;
+      }
+    });
+
+  }
+
+  getImageUrl(imagePath: string): string {
+    return &#x60;${this.URL_BASE}${imagePath}&#x60;;
+  }
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;center-calendario&quot;&gt;
+  &lt;div class&#x3D;&quot;calendario-item&quot; *ngFor&#x3D;&quot;let partido of calendarList&quot;&gt;
+    &lt;div class&#x3D;&quot;partido-content&quot;&gt;
+      &lt;div class&#x3D;&quot;info-local&quot;&gt;
+        &lt;img
+          [src]&#x3D;&quot;getImageUrl(partido.logo_local)&quot;
+          alt&#x3D;&quot;logo_local&quot;
+          class&#x3D;&quot;logo&quot;
+        /&gt;
+        &lt;h3&gt;{{ partido.local }}&lt;/h3&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;info-partido&quot;&gt;
+        &lt;strong class&#x3D;&quot;fecha&quot;&gt;{{ partido.fecha }}&lt;/strong&gt;
+        &lt;strong class&#x3D;&quot;hora&quot;&gt;{{ partido.hora }}&lt;/strong&gt;
+        &lt;span class&#x3D;&quot;jornada&quot;&gt;{{ partido.jornada }}&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;info-visitante&quot;&gt;
+        &lt;h3&gt;{{ partido.visitante }}&lt;/h3&gt;
+        &lt;img
+          [src]&#x3D;&quot;getImageUrl(partido.logo_visitante)&quot;
+          alt&#x3D;&quot;logo_visitante&quot;
+          class&#x3D;&quot;logo&quot;
+        /&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+    </div>
+
+
+    <div class="tab-pane fade " id="tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="center-calendario">  <div class="calendario-item" *ngFor="let partido of calendarList">    <div class="partido-content">      <div class="info-local">        <img          [src]="getImageUrl(partido.logo_local)"          alt="logo_local"          class="logo"        />        <h3>{{ partido.local }}</h3>      </div>      <div class="info-partido">        <strong class="fecha">{{ partido.fecha }}</strong>        <strong class="hora">{{ partido.hora }}</strong>        <span class="jornada">{{ partido.jornada }}</span>      </div>      <div class="info-visitante">        <h3>{{ partido.visitante }}</h3>        <img          [src]="getImageUrl(partido.logo_visitante)"          alt="logo_visitante"          class="logo"        />      </div>    </div>  </div></div></div>'
+    var COMPONENTS = [{'name': 'AccesibilidadComponent', 'selector': 'app-accesibilidad'},{'name': 'AnunciosComponent', 'selector': 'app-anuncios'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CalendarioComponent', 'selector': 'app-calendario'},{'name': 'CampoComponent', 'selector': 'app-campo'},{'name': 'CarouselComponent', 'selector': 'app-carousel'},{'name': 'ClubComponent', 'selector': 'app-club'},{'name': 'ContactoComponent', 'selector': 'app-contacto'},{'name': 'CookieModalComponent', 'selector': 'app-cookie-modal'},{'name': 'EntradasComponent', 'selector': 'app-entradas'},{'name': 'EquipoComponent', 'selector': 'app-equipo'},{'name': 'EquiposComponent', 'selector': 'app-equipos'},{'name': 'FefaComponent', 'selector': 'app-fefa'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'FotosComponent', 'selector': 'app-fotos'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'LegalComponent', 'selector': 'app-legal'},{'name': 'MainComponent', 'selector': 'app-main'},{'name': 'MapaComponent', 'selector': 'app-mapa'},{'name': 'NoticiasComponent', 'selector': 'app-noticias'},{'name': 'NoticiasToMainComponent', 'selector': 'app-noticias-to-main'},{'name': 'PoliticaPrivacidadComponent', 'selector': 'app-politica-privacidad'},{'name': 'PrivacidadComponent', 'selector': 'app-privacidad'},{'name': 'VideosComponent', 'selector': 'app-videos'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'CalendarioComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'CalendarioComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script>
+               $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               checkToggle(darkModeState);
+               if ($darkModeToggleSwitchers.length > 0) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].addEventListener('change', function (event) {
+                              darkModeState = !darkModeState;
+                              toggleDarkMode(darkModeState);
+                         });
+                    }
+               }
+          </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

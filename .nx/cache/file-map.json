@@ -1,0 +1,1515 @@
+{
+  "version": "6.0",
+  "nxVersion": "19.1.1",
+  "deps": {
+    "@angular/animations": "^18.0.0",
+    "@angular/common": "^18.0.0",
+    "@angular/compiler": "^18.0.0",
+    "@angular/core": "^18.0.0",
+    "@angular/forms": "^18.0.0",
+    "@angular/platform-browser": "^18.0.0",
+    "@angular/platform-browser-dynamic": "^18.0.0",
+    "@angular/router": "^18.0.0",
+    "ngx-cookie-service": "^18.0.0",
+    "rxjs": "~7.8.0",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.14.3",
+    "@angular-devkit/build-angular": "^18.0.1",
+    "@angular-devkit/core": "^18.0.1",
+    "@angular-devkit/schematics": "^18.0.1",
+    "@angular/cli": "^18.0.1",
+    "@angular/compiler-cli": "^18.0.0",
+    "@nx/angular": "19.1.1",
+    "@nx/workspace": "19.1.1",
+    "@schematics/angular": "^18.0.1",
+    "@types/jasmine": "~5.1.0",
+    "jasmine-core": "~5.1.0",
+    "karma": "~6.4.0",
+    "karma-chrome-launcher": "~3.2.0",
+    "karma-coverage": "~2.2.0",
+    "karma-jasmine": "~5.1.0",
+    "karma-jasmine-html-reporter": "~2.1.0",
+    "nx": "19.1.1",
+    "typescript": "~5.4.2"
+  },
+  "pathMappings": {},
+  "nxJsonPlugins": [],
+  "fileMap": {
+    "nonProjectFiles": [],
+    "projectFileMap": {
+      "potros-angular": [
+        {
+          "file": ".editorconfig",
+          "hash": "17241496168097493888"
+        },
+        {
+          "file": ".gitignore",
+          "hash": "14865116334678837508"
+        },
+        {
+          "file": ".vscode/extensions.json",
+          "hash": "14075834438752640208"
+        },
+        {
+          "file": ".vscode/launch.json",
+          "hash": "17406702432687230417"
+        },
+        {
+          "file": ".vscode/tasks.json",
+          "hash": "10093397977228577162"
+        },
+        {
+          "file": "README.md",
+          "hash": "4726477644607986711"
+        },
+        {
+          "file": "documentation/components/AccesibilidadComponent.html",
+          "hash": "5150847135654789056"
+        },
+        {
+          "file": "documentation/components/AnunciosComponent.html",
+          "hash": "7450760546989560175"
+        },
+        {
+          "file": "documentation/components/AppComponent.html",
+          "hash": "5319481004420707529"
+        },
+        {
+          "file": "documentation/components/CalendarioComponent.html",
+          "hash": "17290061853608041780"
+        },
+        {
+          "file": "documentation/components/CampoComponent.html",
+          "hash": "8758312508193497714"
+        },
+        {
+          "file": "documentation/components/CarouselComponent.html",
+          "hash": "2204711494742555315"
+        },
+        {
+          "file": "documentation/components/ClubComponent.html",
+          "hash": "204790810985084068"
+        },
+        {
+          "file": "documentation/components/ContactoComponent.html",
+          "hash": "4942021768306884654"
+        },
+        {
+          "file": "documentation/components/CookieModalComponent.html",
+          "hash": "11707593989836820280"
+        },
+        {
+          "file": "documentation/components/EntradasComponent.html",
+          "hash": "9992462839323069691"
+        },
+        {
+          "file": "documentation/components/EquipoComponent.html",
+          "hash": "14580799076012500146"
+        },
+        {
+          "file": "documentation/components/EquiposComponent.html",
+          "hash": "12595553376023076604"
+        },
+        {
+          "file": "documentation/components/FefaComponent.html",
+          "hash": "1027394274673599002"
+        },
+        {
+          "file": "documentation/components/FooterComponent.html",
+          "hash": "12791554818406358780"
+        },
+        {
+          "file": "documentation/components/FotosComponent.html",
+          "hash": "17135597650371617555"
+        },
+        {
+          "file": "documentation/components/HeaderComponent.html",
+          "hash": "14212221544532791285"
+        },
+        {
+          "file": "documentation/components/LegalComponent.html",
+          "hash": "15428998245752883250"
+        },
+        {
+          "file": "documentation/components/MainComponent.html",
+          "hash": "12894031078822647761"
+        },
+        {
+          "file": "documentation/components/MapaComponent.html",
+          "hash": "3255203530837261709"
+        },
+        {
+          "file": "documentation/components/NoticiasComponent.html",
+          "hash": "4351437024939699269"
+        },
+        {
+          "file": "documentation/components/NoticiasToMainComponent.html",
+          "hash": "7844609794015507051"
+        },
+        {
+          "file": "documentation/components/PoliticaPrivacidadComponent.html",
+          "hash": "11800474137544898115"
+        },
+        {
+          "file": "documentation/components/PrivacidadComponent.html",
+          "hash": "4405317949634621912"
+        },
+        {
+          "file": "documentation/components/VideosComponent.html",
+          "hash": "17819764302482929588"
+        },
+        {
+          "file": "documentation/coverage.html",
+          "hash": "7510972181601693951"
+        },
+        {
+          "file": "documentation/dependencies.html",
+          "hash": "16555350545667941165"
+        },
+        {
+          "file": "documentation/fonts/ionicons.eot",
+          "hash": "11954292315687035285"
+        },
+        {
+          "file": "documentation/fonts/ionicons.svg",
+          "hash": "3340431163026388236"
+        },
+        {
+          "file": "documentation/fonts/ionicons.ttf",
+          "hash": "9482225794616543832"
+        },
+        {
+          "file": "documentation/fonts/ionicons.woff",
+          "hash": "10215852456567241679"
+        },
+        {
+          "file": "documentation/fonts/ionicons.woff2",
+          "hash": "11311683446494265812"
+        },
+        {
+          "file": "documentation/fonts/roboto-v15-latin-300.eot",
+          "hash": "16970012345764992539"
+        },
+        {
+          "file": "documentation/fonts/roboto-v15-latin-300.svg",
+          "hash": "16621530187070219625"
+        },
+        {
+          "file": "documentation/fonts/roboto-v15-latin-300.ttf",
+          "hash": "6723283691141535943"
+        },
+        {
+          "file": "documentation/fonts/roboto-v15-latin-300.woff",
+          "hash": "5551725997763169280"
+        },
+        {
+          "file": "documentation/fonts/roboto-v15-latin-300.woff2",
+          "hash": "14268032398072346110"
+        },
+        {
+          "file": "documentation/fonts/roboto-v15-latin-700.eot",
+          "hash": "16058052300924999321"
+        },
+        {
+          "file": "documentation/fonts/roboto-v15-latin-700.svg",
+          "hash": "11747120382012311933"
+        },
+        {
+          "file": "documentation/fonts/roboto-v15-latin-700.ttf",
+          "hash": "5352514732871671459"
+        },
+        {
+          "file": "documentation/fonts/roboto-v15-latin-700.woff",
+          "hash": "5844094029798307855"
+        },
+        {
+          "file": "documentation/fonts/roboto-v15-latin-700.woff2",
+          "hash": "1410963700615895184"
+        },
+        {
+          "file": "documentation/fonts/roboto-v15-latin-italic.eot",
+          "hash": "15098770303203122150"
+        },
+        {
+          "file": "documentation/fonts/roboto-v15-latin-italic.svg",
+          "hash": "12774300922482266867"
+        },
+        {
+          "file": "documentation/fonts/roboto-v15-latin-italic.ttf",
+          "hash": "4417700308891305617"
+        },
+        {
+          "file": "documentation/fonts/roboto-v15-latin-italic.woff",
+          "hash": "5050951999862935083"
+        },
+        {
+          "file": "documentation/fonts/roboto-v15-latin-italic.woff2",
+          "hash": "6682708430513662803"
+        },
+        {
+          "file": "documentation/fonts/roboto-v15-latin-regular.eot",
+          "hash": "4556119219014855615"
+        },
+        {
+          "file": "documentation/fonts/roboto-v15-latin-regular.svg",
+          "hash": "661617242628878322"
+        },
+        {
+          "file": "documentation/fonts/roboto-v15-latin-regular.ttf",
+          "hash": "6355862180977459781"
+        },
+        {
+          "file": "documentation/fonts/roboto-v15-latin-regular.woff",
+          "hash": "1398560205593287051"
+        },
+        {
+          "file": "documentation/fonts/roboto-v15-latin-regular.woff2",
+          "hash": "6009251489912774712"
+        },
+        {
+          "file": "documentation/graph/dependencies.svg",
+          "hash": "17277114676488850317"
+        },
+        {
+          "file": "documentation/images/compodoc-vectorise-inverted.png",
+          "hash": "5020586271611239710"
+        },
+        {
+          "file": "documentation/images/compodoc-vectorise-inverted.svg",
+          "hash": "9691278676200660925"
+        },
+        {
+          "file": "documentation/images/compodoc-vectorise.png",
+          "hash": "6670940543257439260"
+        },
+        {
+          "file": "documentation/images/compodoc-vectorise.svg",
+          "hash": "3594014934509636990"
+        },
+        {
+          "file": "documentation/images/coverage-badge-documentation.svg",
+          "hash": "5291836764592823527"
+        },
+        {
+          "file": "documentation/images/favicon.ico",
+          "hash": "8237334056690247575"
+        },
+        {
+          "file": "documentation/index.html",
+          "hash": "17734322441754079189"
+        },
+        {
+          "file": "documentation/injectables/CalendarService.html",
+          "hash": "8193345605630569723"
+        },
+        {
+          "file": "documentation/injectables/InstagramService.html",
+          "hash": "18394814298204307541"
+        },
+        {
+          "file": "documentation/injectables/NewsService.html",
+          "hash": "4305789409161031328"
+        },
+        {
+          "file": "documentation/injectables/TeamService.html",
+          "hash": "2739801042265879212"
+        },
+        {
+          "file": "documentation/injectables/YouTubeService.html",
+          "hash": "4574489916592574771"
+        },
+        {
+          "file": "documentation/interfaces/Calendar.html",
+          "hash": "15509297514323610152"
+        },
+        {
+          "file": "documentation/interfaces/Instagram.html",
+          "hash": "3638983016644528715"
+        },
+        {
+          "file": "documentation/interfaces/News.html",
+          "hash": "15190438376263373723"
+        },
+        {
+          "file": "documentation/interfaces/Team.html",
+          "hash": "15236473663672638896"
+        },
+        {
+          "file": "documentation/js/compodoc.js",
+          "hash": "10684543567999230723"
+        },
+        {
+          "file": "documentation/js/lazy-load-graphs.js",
+          "hash": "18104119365023483720"
+        },
+        {
+          "file": "documentation/js/libs/EventDispatcher.js",
+          "hash": "341132572343249511"
+        },
+        {
+          "file": "documentation/js/libs/bootstrap-native.js",
+          "hash": "17689809211153264657"
+        },
+        {
+          "file": "documentation/js/libs/clipboard.min.js",
+          "hash": "341809361052209031"
+        },
+        {
+          "file": "documentation/js/libs/custom-elements-es5-adapter.js",
+          "hash": "3080178796027856086"
+        },
+        {
+          "file": "documentation/js/libs/custom-elements.min.js",
+          "hash": "1008185804685308610"
+        },
+        {
+          "file": "documentation/js/libs/d3.v3.min.js",
+          "hash": "3067344638421829603"
+        },
+        {
+          "file": "documentation/js/libs/deep-iterator.js",
+          "hash": "17034728201294668941"
+        },
+        {
+          "file": "documentation/js/libs/es6-shim.min.js",
+          "hash": "14466809616348507839"
+        },
+        {
+          "file": "documentation/js/libs/htmlparser.js",
+          "hash": "12898806473533619279",
+          "deps": [
+            [
+              "npm:stream",
+              "dynamic"
+            ]
+          ]
+        },
+        {
+          "file": "documentation/js/libs/innersvg.js",
+          "hash": "14049310177573401809"
+        },
+        {
+          "file": "documentation/js/libs/lit-html.js",
+          "hash": "6258091497474886715"
+        },
+        {
+          "file": "documentation/js/libs/prism.js",
+          "hash": "16252263252489834593"
+        },
+        {
+          "file": "documentation/js/libs/promise.min.js",
+          "hash": "9671625068078925510"
+        },
+        {
+          "file": "documentation/js/libs/svg-pan-zoom.min.js",
+          "hash": "7581361919641813320"
+        },
+        {
+          "file": "documentation/js/libs/tablesort.min.js",
+          "hash": "14721979311067848234"
+        },
+        {
+          "file": "documentation/js/libs/tablesort.number.min.js",
+          "hash": "3202589431264698402"
+        },
+        {
+          "file": "documentation/js/libs/vis.min.js",
+          "hash": "690286842441916556"
+        },
+        {
+          "file": "documentation/js/libs/zepto.min.js",
+          "hash": "14779589039182381899"
+        },
+        {
+          "file": "documentation/js/menu-wc.js",
+          "hash": "15637091350430609480"
+        },
+        {
+          "file": "documentation/js/menu-wc_es5.js",
+          "hash": "6447144808595313631"
+        },
+        {
+          "file": "documentation/js/menu.js",
+          "hash": "10421674651287702357"
+        },
+        {
+          "file": "documentation/js/routes.js",
+          "hash": "5571022418870747754"
+        },
+        {
+          "file": "documentation/js/search/lunr.min.js",
+          "hash": "12108969974796811302"
+        },
+        {
+          "file": "documentation/js/search/search-lunr.js",
+          "hash": "15719610168440482435"
+        },
+        {
+          "file": "documentation/js/search/search.js",
+          "hash": "12521831444426479092"
+        },
+        {
+          "file": "documentation/js/search/search_index.js",
+          "hash": "17040486692545388441"
+        },
+        {
+          "file": "documentation/js/sourceCode.js",
+          "hash": "11920356499394899358"
+        },
+        {
+          "file": "documentation/js/svg-pan-zoom.controls.js",
+          "hash": "7242360966241421800"
+        },
+        {
+          "file": "documentation/js/tabs.js",
+          "hash": "5129870167565559261"
+        },
+        {
+          "file": "documentation/js/tree.js",
+          "hash": "13847996334257071471"
+        },
+        {
+          "file": "documentation/miscellaneous/variables.html",
+          "hash": "2021974690139384518"
+        },
+        {
+          "file": "documentation/modules.html",
+          "hash": "4168528035454081427"
+        },
+        {
+          "file": "documentation/overview.html",
+          "hash": "591045099411036499"
+        },
+        {
+          "file": "documentation/properties.html",
+          "hash": "8827794508174095148"
+        },
+        {
+          "file": "documentation/styles/bootstrap-card.css",
+          "hash": "8425753481203753724"
+        },
+        {
+          "file": "documentation/styles/bootstrap.min.css",
+          "hash": "1773960718099424813"
+        },
+        {
+          "file": "documentation/styles/compodoc.css",
+          "hash": "16238163968371789829"
+        },
+        {
+          "file": "documentation/styles/dark.css",
+          "hash": "5273445974341221538"
+        },
+        {
+          "file": "documentation/styles/ionicons.min.css",
+          "hash": "2220568294046488706"
+        },
+        {
+          "file": "documentation/styles/laravel.css",
+          "hash": "15113996174915406928"
+        },
+        {
+          "file": "documentation/styles/material.css",
+          "hash": "15807253854462718523"
+        },
+        {
+          "file": "documentation/styles/original.css",
+          "hash": "1881841684982186916"
+        },
+        {
+          "file": "documentation/styles/postmark.css",
+          "hash": "12743018665122170840"
+        },
+        {
+          "file": "documentation/styles/prism.css",
+          "hash": "15012979331926537787"
+        },
+        {
+          "file": "documentation/styles/readthedocs.css",
+          "hash": "4324259331469061412"
+        },
+        {
+          "file": "documentation/styles/reset.css",
+          "hash": "9398766951126602820"
+        },
+        {
+          "file": "documentation/styles/stripe.css",
+          "hash": "11195358147291901967"
+        },
+        {
+          "file": "documentation/styles/style.css",
+          "hash": "73213024445309292"
+        },
+        {
+          "file": "documentation/styles/tablesort.css",
+          "hash": "5331184185500011181"
+        },
+        {
+          "file": "documentation/styles/vagrant.css",
+          "hash": "5511005555385148674"
+        },
+        {
+          "file": "nx.json",
+          "hash": "9644860107296787308"
+        },
+        {
+          "file": "package-lock.json",
+          "hash": "15556088250579581449"
+        },
+        {
+          "file": "package.json",
+          "hash": "3114542642190227107",
+          "deps": [
+            "npm:@angular/animations",
+            "npm:@angular/common",
+            "npm:@angular/compiler",
+            "npm:@angular/core",
+            "npm:@angular/forms",
+            "npm:@angular/platform-browser",
+            "npm:@angular/platform-browser-dynamic",
+            "npm:@angular/router",
+            "npm:ngx-cookie-service",
+            "npm:rxjs",
+            "npm:tslib",
+            "npm:zone.js",
+            "npm:@angular-devkit/build-angular",
+            "npm:@angular-devkit/core",
+            "npm:@angular-devkit/schematics",
+            "npm:@angular/cli",
+            "npm:@angular/compiler-cli",
+            "npm:@nx/angular",
+            "npm:@nx/workspace",
+            "npm:@schematics/angular",
+            "npm:@types/jasmine",
+            "npm:jasmine-core",
+            "npm:karma",
+            "npm:karma-chrome-launcher",
+            "npm:karma-coverage",
+            "npm:karma-jasmine",
+            "npm:karma-jasmine-html-reporter",
+            "npm:nx",
+            "npm:typescript"
+          ]
+        },
+        {
+          "file": "project.json",
+          "hash": "17155289651185457445"
+        },
+        {
+          "file": "src/app/app.component.css",
+          "hash": "9252004254019538834"
+        },
+        {
+          "file": "src/app/app.component.html",
+          "hash": "2935190852325420200"
+        },
+        {
+          "file": "src/app/app.component.spec.ts",
+          "hash": "1396118790501116312",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/app.component.ts",
+          "hash": "6679451144444364047",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/router",
+            "npm:@angular/common",
+            "npm:ngx-cookie-service"
+          ]
+        },
+        {
+          "file": "src/app/app.config.ts",
+          "hash": "2062440497635055990",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/router",
+            "npm:@angular/platform-browser",
+            "npm:@angular/common"
+          ]
+        },
+        {
+          "file": "src/app/app.routes.ts",
+          "hash": "15108265764515051618",
+          "deps": [
+            "npm:@angular/router"
+          ]
+        },
+        {
+          "file": "src/app/components/calendario/calendario.component.css",
+          "hash": "9311967937598971985"
+        },
+        {
+          "file": "src/app/components/calendario/calendario.component.html",
+          "hash": "7315892690681296058"
+        },
+        {
+          "file": "src/app/components/calendario/calendario.component.spec.ts",
+          "hash": "7327274399786494575",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/components/calendario/calendario.component.ts",
+          "hash": "2170946245231147243",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common"
+          ]
+        },
+        {
+          "file": "src/app/components/campo/campo.component.css",
+          "hash": "1034963867163393613"
+        },
+        {
+          "file": "src/app/components/campo/campo.component.html",
+          "hash": "16479587684140745169"
+        },
+        {
+          "file": "src/app/components/campo/campo.component.spec.ts",
+          "hash": "9130916243100359605",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/components/campo/campo.component.ts",
+          "hash": "11629204134257895151",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common"
+          ]
+        },
+        {
+          "file": "src/app/components/cookie-modal/cookie-modal.component.css",
+          "hash": "13232803406097981711"
+        },
+        {
+          "file": "src/app/components/cookie-modal/cookie-modal.component.html",
+          "hash": "5520339909972956631"
+        },
+        {
+          "file": "src/app/components/cookie-modal/cookie-modal.component.spec.ts",
+          "hash": "9529101495687350251",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/components/cookie-modal/cookie-modal.component.ts",
+          "hash": "7344435799918201584",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common",
+            "npm:ngx-cookie-service",
+            "npm:@angular/router"
+          ]
+        },
+        {
+          "file": "src/app/components/entradas/entradas.component.css",
+          "hash": "16129322230671021676"
+        },
+        {
+          "file": "src/app/components/entradas/entradas.component.html",
+          "hash": "3151274306531850783"
+        },
+        {
+          "file": "src/app/components/entradas/entradas.component.spec.ts",
+          "hash": "15740169311534175724",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/components/entradas/entradas.component.ts",
+          "hash": "1381120483157174223",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/components/equipo/equipo.component.css",
+          "hash": "9417794882200231194"
+        },
+        {
+          "file": "src/app/components/equipo/equipo.component.html",
+          "hash": "14552067275305169535"
+        },
+        {
+          "file": "src/app/components/equipo/equipo.component.spec.ts",
+          "hash": "8615990205174965868",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/components/equipo/equipo.component.ts",
+          "hash": "10814336930921813277",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common"
+          ]
+        },
+        {
+          "file": "src/app/components/footer/club/club.component.css",
+          "hash": "2609768245858747965"
+        },
+        {
+          "file": "src/app/components/footer/club/club.component.html",
+          "hash": "7276876186550096163"
+        },
+        {
+          "file": "src/app/components/footer/club/club.component.spec.ts",
+          "hash": "35578272201052351",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/components/footer/club/club.component.ts",
+          "hash": "10007494238804970499",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/router"
+          ]
+        },
+        {
+          "file": "src/app/components/footer/equipos/equipos.component.css",
+          "hash": "14465979214108710545"
+        },
+        {
+          "file": "src/app/components/footer/equipos/equipos.component.html",
+          "hash": "606181086759049884"
+        },
+        {
+          "file": "src/app/components/footer/equipos/equipos.component.spec.ts",
+          "hash": "10353686338579125608",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/components/footer/equipos/equipos.component.ts",
+          "hash": "9952569782428423216",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/components/footer/fefa/fefa.component.css",
+          "hash": "2609768245858747965"
+        },
+        {
+          "file": "src/app/components/footer/fefa/fefa.component.html",
+          "hash": "14951799548529725704"
+        },
+        {
+          "file": "src/app/components/footer/fefa/fefa.component.spec.ts",
+          "hash": "13057768007966118616",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/components/footer/fefa/fefa.component.ts",
+          "hash": "12582941447734690896",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/components/footer/footer.component.css",
+          "hash": "712301757720101282"
+        },
+        {
+          "file": "src/app/components/footer/footer.component.html",
+          "hash": "16539857740466898846"
+        },
+        {
+          "file": "src/app/components/footer/footer.component.spec.ts",
+          "hash": "17110653851772412011",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/components/footer/footer.component.ts",
+          "hash": "16846092377077710568",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/components/footer/legal/accesibilidad/accesibilidad.component.css",
+          "hash": "16913992148354952190"
+        },
+        {
+          "file": "src/app/components/footer/legal/accesibilidad/accesibilidad.component.html",
+          "hash": "18178325305220012276"
+        },
+        {
+          "file": "src/app/components/footer/legal/accesibilidad/accesibilidad.component.spec.ts",
+          "hash": "17882188996700085803",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/components/footer/legal/accesibilidad/accesibilidad.component.ts",
+          "hash": "5483911363942914629",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/components/footer/legal/anuncios/anuncios.component.css",
+          "hash": "3285699253842876269"
+        },
+        {
+          "file": "src/app/components/footer/legal/anuncios/anuncios.component.html",
+          "hash": "6696794362279410848"
+        },
+        {
+          "file": "src/app/components/footer/legal/anuncios/anuncios.component.spec.ts",
+          "hash": "15584789525329269166",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/components/footer/legal/anuncios/anuncios.component.ts",
+          "hash": "4319985162234414604",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/components/footer/legal/contacto/contacto.component.css",
+          "hash": "18218222590387337772"
+        },
+        {
+          "file": "src/app/components/footer/legal/contacto/contacto.component.html",
+          "hash": "7894673874051707704"
+        },
+        {
+          "file": "src/app/components/footer/legal/contacto/contacto.component.spec.ts",
+          "hash": "12420359477467132925",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/components/footer/legal/contacto/contacto.component.ts",
+          "hash": "11794289652799825764",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/components/footer/legal/legal.component.css",
+          "hash": "1125616454160182134"
+        },
+        {
+          "file": "src/app/components/footer/legal/legal.component.html",
+          "hash": "16740655342195836086"
+        },
+        {
+          "file": "src/app/components/footer/legal/legal.component.spec.ts",
+          "hash": "6738571980069348635",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/components/footer/legal/legal.component.ts",
+          "hash": "16209292725784796076",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/router"
+          ]
+        },
+        {
+          "file": "src/app/components/footer/legal/mapa/mapa.component.css",
+          "hash": "17995069926964038926"
+        },
+        {
+          "file": "src/app/components/footer/legal/mapa/mapa.component.html",
+          "hash": "6317970214645771814"
+        },
+        {
+          "file": "src/app/components/footer/legal/mapa/mapa.component.spec.ts",
+          "hash": "3695491682384068083",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/components/footer/legal/mapa/mapa.component.ts",
+          "hash": "4168444629249796567",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/components/footer/legal/politica-privacidad/politica-privacidad.component.css",
+          "hash": "2668191882449320438"
+        },
+        {
+          "file": "src/app/components/footer/legal/politica-privacidad/politica-privacidad.component.html",
+          "hash": "12618558008742015116"
+        },
+        {
+          "file": "src/app/components/footer/legal/politica-privacidad/politica-privacidad.component.spec.ts",
+          "hash": "7041236415542073089",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/components/footer/legal/politica-privacidad/politica-privacidad.component.ts",
+          "hash": "5207993722571613501",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/components/footer/legal/privacidad/privacidad.component.css",
+          "hash": "16816094845923521390"
+        },
+        {
+          "file": "src/app/components/footer/legal/privacidad/privacidad.component.html",
+          "hash": "7551343625492891935"
+        },
+        {
+          "file": "src/app/components/footer/legal/privacidad/privacidad.component.spec.ts",
+          "hash": "2192318376273824764",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/components/footer/legal/privacidad/privacidad.component.ts",
+          "hash": "6717210529462884398",
+          "deps": [
+            "npm:@angular/core",
+            "npm:ngx-cookie-service",
+            "npm:@angular/forms"
+          ]
+        },
+        {
+          "file": "src/app/components/fotos/fotos.component.css",
+          "hash": "38653948776294192"
+        },
+        {
+          "file": "src/app/components/fotos/fotos.component.html",
+          "hash": "8336778794188737738"
+        },
+        {
+          "file": "src/app/components/fotos/fotos.component.spec.ts",
+          "hash": "7480206523380692406",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/components/fotos/fotos.component.ts",
+          "hash": "9196615909952558389",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common"
+          ]
+        },
+        {
+          "file": "src/app/components/header/header.component.css",
+          "hash": "1402652743869361350"
+        },
+        {
+          "file": "src/app/components/header/header.component.html",
+          "hash": "14253895093865351040"
+        },
+        {
+          "file": "src/app/components/header/header.component.spec.ts",
+          "hash": "1303285520994821276",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/components/header/header.component.ts",
+          "hash": "4983275768678135991",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/router",
+            "npm:@angular/common"
+          ]
+        },
+        {
+          "file": "src/app/components/main/carousel/carousel.component.css",
+          "hash": "8696184347989090119"
+        },
+        {
+          "file": "src/app/components/main/carousel/carousel.component.html",
+          "hash": "14770692252064692409"
+        },
+        {
+          "file": "src/app/components/main/carousel/carousel.component.spec.ts",
+          "hash": "4082842285508798545",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/components/main/carousel/carousel.component.ts",
+          "hash": "6878308204184160726",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common"
+          ]
+        },
+        {
+          "file": "src/app/components/main/main.component.css",
+          "hash": "13763017047503927997"
+        },
+        {
+          "file": "src/app/components/main/main.component.html",
+          "hash": "6119219264314796141"
+        },
+        {
+          "file": "src/app/components/main/main.component.spec.ts",
+          "hash": "11475824256879530110",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/components/main/main.component.ts",
+          "hash": "13682287874638917799",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/router"
+          ]
+        },
+        {
+          "file": "src/app/components/noticias/noticias.component.css",
+          "hash": "1246341709174468"
+        },
+        {
+          "file": "src/app/components/noticias/noticias.component.html",
+          "hash": "4513949158810878463"
+        },
+        {
+          "file": "src/app/components/noticias/noticias.component.spec.ts",
+          "hash": "8080899006542619469",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/components/noticias/noticias.component.ts",
+          "hash": "5443277975899863290",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common",
+            "npm:@angular/router"
+          ]
+        },
+        {
+          "file": "src/app/components/noticiasToMain/noticiasToMain.component.css",
+          "hash": "1866349776276549142"
+        },
+        {
+          "file": "src/app/components/noticiasToMain/noticiasToMain.component.html",
+          "hash": "18105375723588497607"
+        },
+        {
+          "file": "src/app/components/noticiasToMain/noticiasToMain.component.spec.ts",
+          "hash": "15675966630695700571",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/components/noticiasToMain/noticiasToMain.component.ts",
+          "hash": "14428697707496922350",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common",
+            "npm:@angular/router"
+          ]
+        },
+        {
+          "file": "src/app/components/videos/videos.component.css",
+          "hash": "6991942049770394743"
+        },
+        {
+          "file": "src/app/components/videos/videos.component.html",
+          "hash": "17948804061125649464"
+        },
+        {
+          "file": "src/app/components/videos/videos.component.spec.ts",
+          "hash": "16628921637249273731",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/components/videos/videos.component.ts",
+          "hash": "4142282424422186574",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common",
+            "npm:@angular/platform-browser"
+          ]
+        },
+        {
+          "file": "src/app/services/calendar.service.spec.ts",
+          "hash": "11488554356008936791",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/services/calendar.service.ts",
+          "hash": "2276931089994975733",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "src/app/services/instagram.service.spec.ts",
+          "hash": "12797619567359086902",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/services/instagram.service.ts",
+          "hash": "4613674277272139899",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "src/app/services/news.service.spec.ts",
+          "hash": "11591005914935697868",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/services/news.service.ts",
+          "hash": "17291271789327672978",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "src/app/services/team.service.spec.ts",
+          "hash": "6506882306404367011",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/services/team.service.ts",
+          "hash": "12724637226303357159",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "src/app/services/youtube.service.spec.ts",
+          "hash": "17762742792094938087",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/services/youtube.service.ts",
+          "hash": "3304690594093297696",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "src/assets/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "src/assets/Logo_corsarios.png",
+          "hash": "11752864070799195791"
+        },
+        {
+          "file": "src/assets/banner.png",
+          "hash": "16622032366151858172"
+        },
+        {
+          "file": "src/assets/closeup-american-football-helmet-min.jpg",
+          "hash": "11643145690254372503"
+        },
+        {
+          "file": "src/assets/elola/elola1.jpg",
+          "hash": "12520669100355337999"
+        },
+        {
+          "file": "src/assets/elola/elola2.jpg",
+          "hash": "17431641778896871250"
+        },
+        {
+          "file": "src/assets/elola/elola3.jpg",
+          "hash": "1802315316808807284"
+        },
+        {
+          "file": "src/assets/elola/elola4.jpg",
+          "hash": "11630683991322166208"
+        },
+        {
+          "file": "src/assets/favicon/android-chrome-192x192.png",
+          "hash": "2548524206053554347"
+        },
+        {
+          "file": "src/assets/favicon/android-chrome-512x512.png",
+          "hash": "1430835593859837035"
+        },
+        {
+          "file": "src/assets/favicon/apple-touch-icon.png",
+          "hash": "9618453284187111997"
+        },
+        {
+          "file": "src/assets/favicon/favicon-16x16.png",
+          "hash": "7912324301884223713"
+        },
+        {
+          "file": "src/assets/favicon/favicon-32x32.png",
+          "hash": "13215702439440841351"
+        },
+        {
+          "file": "src/assets/favicon/favicon.ico",
+          "hash": "6838484807619041670"
+        },
+        {
+          "file": "src/assets/favicon/site.webmanifest",
+          "hash": "11205980641497128048"
+        },
+        {
+          "file": "src/assets/freeaccess.png",
+          "hash": "5534138571013720801"
+        },
+        {
+          "file": "src/assets/hamburguer-btn.png",
+          "hash": "8448033477036806908"
+        },
+        {
+          "file": "src/assets/images/carousel1.jpg",
+          "hash": "11833533400137717620"
+        },
+        {
+          "file": "src/assets/images/carousel2.jpg",
+          "hash": "16313951171640099192"
+        },
+        {
+          "file": "src/assets/images/carousel3.jpg",
+          "hash": "221389289798936776"
+        },
+        {
+          "file": "src/assets/images/carousel4.jpg",
+          "hash": "14390151400677415225"
+        },
+        {
+          "file": "src/assets/instagram-logo.png",
+          "hash": "3113339559968928838"
+        },
+        {
+          "file": "src/assets/logo.jpg",
+          "hash": "6602661795624683452"
+        },
+        {
+          "file": "src/assets/logoEdit.png",
+          "hash": "5853568186379594500"
+        },
+        {
+          "file": "src/assets/logoText.png",
+          "hash": "5488114152440794065"
+        },
+        {
+          "file": "src/assets/mockups/PlantillaJugadores.png",
+          "hash": "12777666184814081695"
+        },
+        {
+          "file": "src/assets/mockups/SITIO-EN-CONSTRUCCION.jpg",
+          "hash": "4401547651386567218"
+        },
+        {
+          "file": "src/assets/mockups/calendario.png",
+          "hash": "7839737116076443082"
+        },
+        {
+          "file": "src/assets/mockups/fotos1.png",
+          "hash": "15687013929948066305"
+        },
+        {
+          "file": "src/assets/mockups/fotos2.png",
+          "hash": "9421317261250414925"
+        },
+        {
+          "file": "src/assets/mockups/headerTienda.png",
+          "hash": "9772437802962018399"
+        },
+        {
+          "file": "src/assets/mockups/moreNews.png",
+          "hash": "17708105008671347453"
+        },
+        {
+          "file": "src/assets/mockups/tiendaMockup.png",
+          "hash": "8034210067760893987"
+        },
+        {
+          "file": "src/assets/noticias/img1.png",
+          "hash": "14294665232222231919"
+        },
+        {
+          "file": "src/assets/noticias/img2.png",
+          "hash": "14753006478938633023"
+        },
+        {
+          "file": "src/assets/old-assets v1.0.0/banner.png",
+          "hash": "18373668656303139632"
+        },
+        {
+          "file": "src/assets/old-assets v1.0.0/logoEdit.png",
+          "hash": "617939202470819318"
+        },
+        {
+          "file": "src/assets/socialmedia-1.png",
+          "hash": "18284884470063234847"
+        },
+        {
+          "file": "src/assets/socialmedia-2.png",
+          "hash": "13749209976558925932"
+        },
+        {
+          "file": "src/assets/teams/bluedevils.png",
+          "hash": "69681264960863478"
+        },
+        {
+          "file": "src/assets/teams/cordobabulls.png",
+          "hash": "5916418254864247064"
+        },
+        {
+          "file": "src/assets/teams/corsarios.png",
+          "hash": "15262382375726192713"
+        },
+        {
+          "file": "src/assets/teams/jerezjaguars.png",
+          "hash": "11431448642947410469"
+        },
+        {
+          "file": "src/assets/teams/legendsoflionsofficial.png",
+          "hash": "540679684880997827"
+        },
+        {
+          "file": "src/assets/teams/montillacircus.png",
+          "hash": "5963926355246924144"
+        },
+        {
+          "file": "src/assets/teams/outlawflag.png",
+          "hash": "326117223805885517"
+        },
+        {
+          "file": "src/assets/teams/phoenixfootballgrx.png",
+          "hash": "14329281734168445547"
+        },
+        {
+          "file": "src/assets/teams/pionerslh.png",
+          "hash": "10215391154439887037"
+        },
+        {
+          "file": "src/assets/teams/potros.png",
+          "hash": "6531626899776808540"
+        },
+        {
+          "file": "src/assets/teams/valkiriasfootball.png",
+          "hash": "13816041180971764694"
+        },
+        {
+          "file": "src/assets/youtube.png",
+          "hash": "15216779700531844347"
+        },
+        {
+          "file": "src/favicon.ico",
+          "hash": "3988961587069885523"
+        },
+        {
+          "file": "src/index.html",
+          "hash": "14664504715972366512"
+        },
+        {
+          "file": "src/main.ts",
+          "hash": "8097082331101244784",
+          "deps": [
+            "npm:@angular/platform-browser",
+            "npm:@angular/router",
+            "npm:@angular/common"
+          ]
+        },
+        {
+          "file": "src/styles.css",
+          "hash": "13245123420262475916"
+        },
+        {
+          "file": "tsconfig.app.json",
+          "hash": "13119632651406065538"
+        },
+        {
+          "file": "tsconfig.json",
+          "hash": "7125748741374097320"
+        },
+        {
+          "file": "tsconfig.spec.json",
+          "hash": "5122839733245053999"
+        },
+        {
+          "file": "static/main.js",
+          "hash": "5893687636714354689"
+        },
+        {
+          "file": "static/environment.js",
+          "hash": "1393575028530285077"
+        },
+        {
+          "file": "static/styles.js",
+          "hash": "2671659144868877892"
+        },
+        {
+          "file": "static/styles.css",
+          "hash": "16874162949139034409"
+        },
+        {
+          "file": "static/favicon.ico",
+          "hash": "9303420814833116677"
+        },
+        {
+          "file": "static/runtime.js",
+          "hash": "9652903316845995179"
+        },
+        {
+          "file": "dependency-graph.html",
+          "hash": "12560290355241016586"
+        }
+      ]
+    }
+  }
+}

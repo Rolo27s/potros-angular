@@ -1,0 +1,527 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>potros-angular documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+          <script>
+               // Blocking script to avoid flickering dark mode
+               // Dark mode toggle button
+               var useDark = window.matchMedia('(prefers-color-scheme: dark)');
+               var darkModeState = useDark.matches;
+               var $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               var $darkModeToggles = document.querySelectorAll('.dark-mode-switch');
+               var darkModeStateLocal = localStorage.getItem('compodoc_darkmode-state');
+
+               function checkToggle(check) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].checked = check;
+                    }
+               }
+
+               function toggleDarkMode(state) {
+                    if (window.localStorage) {
+                         localStorage.setItem('compodoc_darkmode-state', state);
+                    }
+
+                    checkToggle(state);
+
+                    const hasClass = document.body.classList.contains('dark');
+
+                    if (state) {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.add('dark');
+                         }
+                         if (!hasClass) {
+                              document.body.classList.add('dark');
+                         }
+                    } else {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.remove('dark');
+                         }
+                         if (hasClass) {
+                              document.body.classList.remove('dark');
+                         }
+                    }
+               }
+
+               useDark.addEventListener('change', function (evt) {
+                    toggleDarkMode(evt.matches);
+               });
+               if (darkModeStateLocal) {
+                    darkModeState = darkModeStateLocal === 'true';
+               }
+               toggleDarkMode(darkModeState);
+          </script>
+
+        <div class="navbar navbar-default navbar-fixed-top d-md-none p-0">
+               <div class="d-flex">
+                    <a href="../" class="navbar-brand">potros-angular documentation</a>
+                    <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+               </div>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="d-none d-md-block menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Components</li>
+  <li class="breadcrumb-item"
+  >
+  ContactoComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" class="nav-link"
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li class="nav-item">
+            <a href="#templateData" class="nav-link"
+                role="tab" id="templateData-tab" data-bs-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li class="nav-item">
+            <a href="#tree" class="nav-link"
+                role="tab" id="tree-tab" data-bs-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/components/footer/legal/contacto/contacto.component.ts</code>
+</p>
+
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                <code>OnInit</code>
+    </p>
+
+
+<section data-compodoc="block-metadata">
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-contacto</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">standalone</td>
+                <td class="col-md-9"><code>true</code></td>
+            </tr>
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./contacto.component.html</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">styleUrl</td>
+                <td class="col-md-9"><code>./contacto.component.css</code></td>
+            </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-index">
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#initializeForm" >initializeForm</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+
+
+
+
+
+    <section data-compodoc="block-methods">
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="initializeForm"></a>
+                    <span class="name">
+                        <span ><b>initializeForm</b></span>
+                        <a href="#initializeForm"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>initializeForm()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="15"
+                                    class="link-to-prism">src/app/components/footer/legal/contacto/contacto.component.ts:15</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="11"
+                                    class="link-to-prism">src/app/components/footer/legal/contacto/contacto.component.ts:11</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+
+@Component({
+  selector: &#x27;app-contacto&#x27;,
+  standalone: true,
+  imports: [],
+  templateUrl: &#x27;./contacto.component.html&#x27;,
+  styleUrl: &#x27;./contacto.component.css&#x27;
+})
+export class ContactoComponent implements OnInit {
+  ngOnInit(): void {
+    this.initializeForm();
+  }
+
+  initializeForm(): void {
+    const form &#x3D; document.getElementById(&quot;contactForm&quot;) as HTMLFormElement;
+    const nameInput &#x3D; document.getElementById(&quot;name&quot;) as HTMLInputElement;
+    const emailInput &#x3D; document.getElementById(&quot;email&quot;) as HTMLInputElement;
+    const messageInput &#x3D; document.getElementById(&quot;message&quot;) as HTMLTextAreaElement;
+    const nameError &#x3D; document.getElementById(&quot;nameError&quot;)!;
+    const emailError &#x3D; document.getElementById(&quot;emailError&quot;)!;
+    const messageError &#x3D; document.getElementById(&quot;messageError&quot;)!;
+    const successMessage &#x3D; document.getElementById(&quot;successMessage&quot;)!;
+  
+    const validDomains &#x3D; [&quot;.es&quot;, &quot;.com&quot;, &quot;.org&quot;, &quot;.net&quot;];
+  
+    form.addEventListener(&quot;submit&quot;, function (event) {
+      event.preventDefault();
+      nameError.textContent &#x3D; &quot;&quot;;
+      emailError.textContent &#x3D; &quot;&quot;;
+      messageError.textContent &#x3D; &quot;&quot;;
+      let isValid &#x3D; true;
+      if (!nameInput.value.trim() || nameInput.value.trim().length &lt; 4 || !/^[a-zA-Z\s]+$/.test(nameInput.value.trim())) {
+        nameError.textContent &#x3D; &quot;Por favor ingrese un nombre válido (al menos 4 caracteres y solo letras).&quot;;
+        isValid &#x3D; false;
+      }
+      if (!emailInput.value.trim() || !isValidEmail(emailInput.value.trim())) {
+        emailError.textContent &#x3D; &quot;Por favor ingrese un correo electrónico válido.&quot;;
+        isValid &#x3D; false;
+      } else {
+        const domain &#x3D; emailInput.value.trim().substring(emailInput.value.trim().lastIndexOf(&quot;.&quot;));
+        if (!validDomains.includes(domain)) {
+          emailError.textContent &#x3D; &quot;Por favor ingrese un correo electrónico con un dominio válido (.es, .com, .org, .net).&quot;;
+          isValid &#x3D; false;
+        }
+      }
+      if (!messageInput.value.trim() || messageInput.value.trim().length &lt; 8 || messageInput.value.trim().length &gt; 255) {
+        messageError.textContent &#x3D; &quot;Por favor ingrese un mensaje válido (entre 8 y 255 caracteres).&quot;;
+        isValid &#x3D; false;
+      }
+      if (isValid) {
+        successMessage.style.display &#x3D; &quot;block&quot;;
+        setTimeout(function () {
+          form.reset();
+          successMessage.style.display &#x3D; &quot;none&quot;;
+          window.location.href &#x3D; &quot;/../../index.html&quot;;
+        }, 3000);
+      }
+    });
+  
+    function isValidEmail(email: string): boolean {
+      const emailRegex &#x3D; /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return emailRegex.test(email);
+    }
+  }
+  
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;main&gt;
+    &lt;div class&#x3D;&quot;container&quot;&gt;
+        &lt;h1&gt;Contacto&lt;/h1&gt;
+        &lt;p&gt;Si tienes alguna pregunta o necesitas más información, no dudes en contactarnos. Completa el formulario a continuación y te responderemos lo antes posible.&lt;/p&gt;
+        &lt;form id&#x3D;&quot;contactForm&quot;&gt;
+            &lt;div class&#x3D;&quot;form-group&quot;&gt;
+                &lt;label for&#x3D;&quot;name&quot;&gt;Nombre:&lt;/label&gt;
+                &lt;input type&#x3D;&quot;text&quot; id&#x3D;&quot;name&quot; name&#x3D;&quot;name&quot; required /&gt;
+                &lt;div id&#x3D;&quot;nameError&quot; class&#x3D;&quot;error&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;form-group&quot;&gt;
+                &lt;label for&#x3D;&quot;email&quot;&gt;Correo Electrónico:&lt;/label&gt;
+                &lt;input type&#x3D;&quot;email&quot; id&#x3D;&quot;email&quot; name&#x3D;&quot;email&quot; required /&gt;
+                &lt;div id&#x3D;&quot;emailError&quot; class&#x3D;&quot;error&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;form-group&quot;&gt;
+                &lt;label for&#x3D;&quot;message&quot;&gt;Mensaje:&lt;/label&gt;
+                &lt;textarea id&#x3D;&quot;message&quot; name&#x3D;&quot;message&quot; rows&#x3D;&quot;4&quot; required&gt;&lt;/textarea&gt;
+                &lt;div id&#x3D;&quot;messageError&quot; class&#x3D;&quot;error&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;button type&#x3D;&quot;submit&quot;&gt;Enviar Mensaje&lt;/button&gt;
+        &lt;/form&gt;
+        &lt;div id&#x3D;&quot;successMessage&quot; class&#x3D;&quot;success-message&quot;&gt;
+            ¡Formulario enviado con éxito!&lt;br /&gt;
+            Te llevamos de vuelta con Potros 😉
+        &lt;/div&gt;
+        &lt;p&gt;También puedes contactarnos directamente a través de nuestro correo electrónico: &lt;a href&#x3D;&quot;mailto:info@fuengirolapotros.com&quot;&gt;info&amp;#64;fuengirolapotros.com&lt;/a&gt;&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/main&gt;
+</code></pre>
+    </div>
+
+
+    <div class="tab-pane fade " id="tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><main>    <div class="container">        <h1>Contacto</h1>        <p>Si tienes alguna pregunta o necesitas más información, no dudes en contactarnos. Completa el formulario a continuación y te responderemos lo antes posible.</p>        <form id="contactForm">            <div class="form-group">                <label for="name">Nombre:</label>                <input type="text" id="name" name="name" required />                <div id="nameError" class="error"></div>            </div>            <div class="form-group">                <label for="email">Correo Electrónico:</label>                <input type="email" id="email" name="email" required />                <div id="emailError" class="error"></div>            </div>            <div class="form-group">                <label for="message">Mensaje:</label>                <textarea id="message" name="message" rows="4" required></textarea>                <div id="messageError" class="error"></div>            </div>            <button type="submit">Enviar Mensaje</button>        </form>        <div id="successMessage" class="success-message">            ¡Formulario enviado con éxito!<br />            Te llevamos de vuelta con Potros 😉        </div>        <p>También puedes contactarnos directamente a través de nuestro correo electrónico: <a href="mailto:info@fuengirolapotros.com">info&#64;fuengirolapotros.com</a></p>    </div></main></div>'
+    var COMPONENTS = [{'name': 'AccesibilidadComponent', 'selector': 'app-accesibilidad'},{'name': 'AnunciosComponent', 'selector': 'app-anuncios'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CalendarioComponent', 'selector': 'app-calendario'},{'name': 'CampoComponent', 'selector': 'app-campo'},{'name': 'CarouselComponent', 'selector': 'app-carousel'},{'name': 'ClubComponent', 'selector': 'app-club'},{'name': 'ContactoComponent', 'selector': 'app-contacto'},{'name': 'CookieModalComponent', 'selector': 'app-cookie-modal'},{'name': 'EntradasComponent', 'selector': 'app-entradas'},{'name': 'EquipoComponent', 'selector': 'app-equipo'},{'name': 'EquiposComponent', 'selector': 'app-equipos'},{'name': 'FefaComponent', 'selector': 'app-fefa'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'FotosComponent', 'selector': 'app-fotos'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'LegalComponent', 'selector': 'app-legal'},{'name': 'MainComponent', 'selector': 'app-main'},{'name': 'MapaComponent', 'selector': 'app-mapa'},{'name': 'NoticiasComponent', 'selector': 'app-noticias'},{'name': 'NoticiasToMainComponent', 'selector': 'app-noticias-to-main'},{'name': 'PoliticaPrivacidadComponent', 'selector': 'app-politica-privacidad'},{'name': 'PrivacidadComponent', 'selector': 'app-privacidad'},{'name': 'VideosComponent', 'selector': 'app-videos'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'ContactoComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'ContactoComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script>
+               $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               checkToggle(darkModeState);
+               if ($darkModeToggleSwitchers.length > 0) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].addEventListener('change', function (event) {
+                              darkModeState = !darkModeState;
+                              toggleDarkMode(darkModeState);
+                         });
+                    }
+               }
+          </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

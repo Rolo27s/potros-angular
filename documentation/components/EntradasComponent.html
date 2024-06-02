@@ -1,0 +1,371 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>potros-angular documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+          <script>
+               // Blocking script to avoid flickering dark mode
+               // Dark mode toggle button
+               var useDark = window.matchMedia('(prefers-color-scheme: dark)');
+               var darkModeState = useDark.matches;
+               var $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               var $darkModeToggles = document.querySelectorAll('.dark-mode-switch');
+               var darkModeStateLocal = localStorage.getItem('compodoc_darkmode-state');
+
+               function checkToggle(check) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].checked = check;
+                    }
+               }
+
+               function toggleDarkMode(state) {
+                    if (window.localStorage) {
+                         localStorage.setItem('compodoc_darkmode-state', state);
+                    }
+
+                    checkToggle(state);
+
+                    const hasClass = document.body.classList.contains('dark');
+
+                    if (state) {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.add('dark');
+                         }
+                         if (!hasClass) {
+                              document.body.classList.add('dark');
+                         }
+                    } else {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.remove('dark');
+                         }
+                         if (hasClass) {
+                              document.body.classList.remove('dark');
+                         }
+                    }
+               }
+
+               useDark.addEventListener('change', function (evt) {
+                    toggleDarkMode(evt.matches);
+               });
+               if (darkModeStateLocal) {
+                    darkModeState = darkModeStateLocal === 'true';
+               }
+               toggleDarkMode(darkModeState);
+          </script>
+
+        <div class="navbar navbar-default navbar-fixed-top d-md-none p-0">
+               <div class="d-flex">
+                    <a href="../" class="navbar-brand">potros-angular documentation</a>
+                    <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+               </div>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="d-none d-md-block menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Components</li>
+  <li class="breadcrumb-item"
+  >
+  EntradasComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" class="nav-link"
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li class="nav-item">
+            <a href="#templateData" class="nav-link"
+                role="tab" id="templateData-tab" data-bs-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li class="nav-item">
+            <a href="#tree" class="nav-link"
+                role="tab" id="tree-tab" data-bs-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/components/entradas/entradas.component.ts</code>
+</p>
+
+
+
+
+
+
+<section data-compodoc="block-metadata">
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-entradas</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">standalone</td>
+                <td class="col-md-9"><code>true</code></td>
+            </tr>
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./entradas.component.html</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">styleUrl</td>
+                <td class="col-md-9"><code>./entradas.component.css</code></td>
+            </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+
+
+
+
+
+
+
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component } from &#x27;@angular/core&#x27;;
+
+@Component({
+  selector: &#x27;app-entradas&#x27;,
+  standalone: true,
+  imports: [],
+  templateUrl: &#x27;./entradas.component.html&#x27;,
+  styleUrl: &#x27;./entradas.component.css&#x27;
+})
+export class EntradasComponent {
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;h1&gt;ENTRADA GRATIS&lt;/h1&gt;
+&lt;h2&gt;¡Bienvenidos al emocionante mundo del &lt;b&gt;fútbol americano&lt;/b&gt;!&lt;/h2&gt;
+&lt;p&gt;
+   En nuestro equipo,
+  creemos firmemente en compartir la pasión por este deporte con nuestra
+  comunidad. 
+ &lt;br&gt; Para reunir a la mayor afición posible hemos decidido mantener un &lt;b&gt;acceso gratuito&lt;/b&gt; para ver
+  nuestros partidos.
+&lt;/p&gt;
+
+&lt;div class&#x3D;&quot;flex-container&quot;&gt;
+  &lt;img src&#x3D;&quot;assets/freeaccess.png&quot; alt&#x3D;&quot;free access&quot; /&gt;
+&lt;/div&gt;
+
+&lt;p&gt;
+  Entendemos que en nuestra región no existe una gran afición al fútbol
+  americano, pero eso no nos detiene en nuestro &lt;b&gt;compromiso de promover este
+    deporte&lt;/b&gt; y ofrecer entretenimiento de calidad a nuestros espectadores. Queremos
+  que cada persona que desee disfrutar de un emocionante partido pueda hacerlo
+  sin preocupaciones económicas.
+&lt;/p&gt;
+
+&lt;p&gt;
+  Al ofrecer &lt;b&gt;entrada gratuita&lt;/b&gt;, queremos eliminar cualquier barrera que pueda
+  existir para que las personas se acerquen y conozcan este deporte apasionante.
+  Nuestro objetivo es &lt;b&gt;fomentar una comunidad unida&lt;/b&gt; y comprometida con el fútbol
+  americano, donde todos se sientan bienvenidos y parte de algo especial.
+&lt;/p&gt;
+
+&lt;p&gt;
+  Nos comprometemos a brindar un &lt;b&gt;ambiente seguro y emocionante&lt;/b&gt; en cada uno de
+  nuestros encuentros. Ya sea que seas un aficionado de toda la vida o
+  simplemente estés buscando una nueva experiencia, te invitamos a unirte a
+  nosotros en las gradas y disfrutar de la emoción del fútbol americano
+  provincial.
+&lt;/p&gt;
+
+&lt;p&gt;
+  En nuestro equipo, la &lt;b&gt;pasión&lt;/b&gt; por el deporte y el &lt;b&gt;compromiso&lt;/b&gt; con nuestra
+  &lt;b&gt;comunidad&lt;/b&gt; son nuestros pilares fundamentales. Te garantizamos que cada partido
+  será una experiencia inolvidable, llena de emoción, camaradería y, lo más
+  importante, &lt;b&gt;¡diversión para toda la familia!&lt;/b&gt;
+&lt;/p&gt;
+</code></pre>
+    </div>
+
+
+    <div class="tab-pane fade " id="tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><h1>ENTRADA GRATIS</h1><h2>¡Bienvenidos al emocionante mundo del <b>fútbol americano</b>!</h2><p>   En nuestro equipo,  creemos firmemente en compartir la pasión por este deporte con nuestra  comunidad.  <br> Para reunir a la mayor afición posible hemos decidido mantener un <b>acceso gratuito</b> para ver  nuestros partidos.</p><div class="flex-container">  <img src="assets/freeaccess.png" alt="free access" /></div><p>  Entendemos que en nuestra región no existe una gran afición al fútbol  americano, pero eso no nos detiene en nuestro <b>compromiso de promover este    deporte</b> y ofrecer entretenimiento de calidad a nuestros espectadores. Queremos  que cada persona que desee disfrutar de un emocionante partido pueda hacerlo  sin preocupaciones económicas.</p><p>  Al ofrecer <b>entrada gratuita</b>, queremos eliminar cualquier barrera que pueda  existir para que las personas se acerquen y conozcan este deporte apasionante.  Nuestro objetivo es <b>fomentar una comunidad unida</b> y comprometida con el fútbol  americano, donde todos se sientan bienvenidos y parte de algo especial.</p><p>  Nos comprometemos a brindar un <b>ambiente seguro y emocionante</b> en cada uno de  nuestros encuentros. Ya sea que seas un aficionado de toda la vida o  simplemente estés buscando una nueva experiencia, te invitamos a unirte a  nosotros en las gradas y disfrutar de la emoción del fútbol americano  provincial.</p><p>  En nuestro equipo, la <b>pasión</b> por el deporte y el <b>compromiso</b> con nuestra  <b>comunidad</b> son nuestros pilares fundamentales. Te garantizamos que cada partido  será una experiencia inolvidable, llena de emoción, camaradería y, lo más  importante, <b>¡diversión para toda la familia!</b></p></div>'
+    var COMPONENTS = [{'name': 'AccesibilidadComponent', 'selector': 'app-accesibilidad'},{'name': 'AnunciosComponent', 'selector': 'app-anuncios'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CalendarioComponent', 'selector': 'app-calendario'},{'name': 'CampoComponent', 'selector': 'app-campo'},{'name': 'CarouselComponent', 'selector': 'app-carousel'},{'name': 'ClubComponent', 'selector': 'app-club'},{'name': 'ContactoComponent', 'selector': 'app-contacto'},{'name': 'CookieModalComponent', 'selector': 'app-cookie-modal'},{'name': 'EntradasComponent', 'selector': 'app-entradas'},{'name': 'EquipoComponent', 'selector': 'app-equipo'},{'name': 'EquiposComponent', 'selector': 'app-equipos'},{'name': 'FefaComponent', 'selector': 'app-fefa'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'FotosComponent', 'selector': 'app-fotos'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'LegalComponent', 'selector': 'app-legal'},{'name': 'MainComponent', 'selector': 'app-main'},{'name': 'MapaComponent', 'selector': 'app-mapa'},{'name': 'NoticiasComponent', 'selector': 'app-noticias'},{'name': 'NoticiasToMainComponent', 'selector': 'app-noticias-to-main'},{'name': 'PoliticaPrivacidadComponent', 'selector': 'app-politica-privacidad'},{'name': 'PrivacidadComponent', 'selector': 'app-privacidad'},{'name': 'VideosComponent', 'selector': 'app-videos'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'EntradasComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'EntradasComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script>
+               $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               checkToggle(darkModeState);
+               if ($darkModeToggleSwitchers.length > 0) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].addEventListener('change', function (event) {
+                              darkModeState = !darkModeState;
+                              toggleDarkMode(darkModeState);
+                         });
+                    }
+               }
+          </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
