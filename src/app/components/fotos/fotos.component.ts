@@ -10,7 +10,7 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./fotos.component.css']
 })
 export class FotosComponent implements OnInit {
-  private URL_BASE = 'http://127.0.0.1:8000';
+  private URL_BASE = 'https://fuengirolapotros.up.railway.app';
   instagramList: Instagram[] = [];
   defaultInstagramList: Instagram[] = [
     {

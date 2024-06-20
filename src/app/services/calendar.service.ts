@@ -17,7 +17,7 @@ export interface Calendar {
   providedIn: 'root'
 })
 export class CalendarService {
-  private URL_BASE = 'http://127.0.0.1:8000'
+  private URL_BASE = 'https://fuengirolapotros.up.railway.app/home'
   private apiUrl = this.URL_BASE + '/calendario/'; // url local. Modificar para producción.
 
   constructor(private http: HttpClient) { }

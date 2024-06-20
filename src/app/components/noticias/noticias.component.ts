@@ -11,7 +11,7 @@ import { ActivatedRoute } from '@angular/router';
   imports: [CommonModule]
 })
 export class NoticiasComponent implements OnInit {
-  private URL_BASE = 'http://127.0.0.1:8000';
+  private URL_BASE = 'https://fuengirolapotros.up.railway.app';
   news!: News;
 
   getURLBASE(): string {

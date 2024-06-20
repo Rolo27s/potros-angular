@@ -10,7 +10,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './equipo.component.css'
 })
 export class EquipoComponent implements OnInit {
-  private URL_BASE = 'http://127.0.0.1:8000';
+  private URL_BASE = 'https://fuengirolapotros.up.railway.app';
   team!: Team;
 
   getURLBASE(): string {

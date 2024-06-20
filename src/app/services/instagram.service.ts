@@ -13,7 +13,7 @@ export interface Instagram {
   providedIn: 'root'
 })
 export class InstagramService {
-  private URL_BASE = 'http://127.0.0.1:8000'
+  private URL_BASE = 'https://fuengirolapotros.up.railway.app/home'
   private apiUrl = this.URL_BASE + '/instagram/'; // url local. Modificar para producción.
 
   constructor(private http: HttpClient) { }
