@@ -107,7 +107,7 @@ p {
 
 /* Parte de CSS para el turismo */
 section {
-  margin-bottom: 40px; 
+  margin: 40px 0px; 
 }
 
 h3 {
@@ -133,7 +133,11 @@ a:hover {
   display: block;
   margin: 12px;
 }
-
+#map {
+  max-width: none;
+  display: flex;
+  justify-content: center;
+}
 @media (max-width:800px) {
   .modal-content {
     border-radius: 10px;
