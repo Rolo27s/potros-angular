@@ -83,3 +83,16 @@ article {
     border-radius: 5px;
   }
 }
+
+@media (max-width: 750px) {
+  .news-item h2 {
+    font-size: .75em;
+  }
+  .news-item p {
+    font-size: .65em;
+    line-height: 1.4;
+  }
+  .news-item span {
+    font-size: 0.65em;
+  }
+}

@@ -6,6 +6,7 @@
   padding: 15px;
   background-color: #f9f9f9;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 75ch;
 }
 
 /* Estilo para el título de la noticia */
@@ -49,7 +50,7 @@
   display: block; /* Hace que la imagen sea un bloque para que pueda centrarse */
   margin: 25px auto; /* Auto-margen horizontal para centrar la imagen */
   max-width: 100%; /* Asegura que la imagen no sea más ancha que su contenedor */
-  width: 75%;
+  width: 90%;
   border-radius: 10px;
   box-shadow: 5px 5px 5px #999;
 }

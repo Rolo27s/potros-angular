@@ -1,23 +1,24 @@
-<div class="next-mach">
+<div *ngIf="next_existe" class="next-mach">
   <div class="next-mach_date">
     <p>
-      SEMANA 11
-      <span class="fecha-hora">• DOM 11/19 • 12:00 PM GMT+1</span>
+      {{ next_fecha }}
+      <span class="fecha-hora">a las {{ next_hora }} GMT+1</span>
     </p>
+    <p>{{ next_jornada }}</p>
   </div>
   <div class="next-mach_visiting">
-    <img src="../../../assets/Logo_corsarios.png" alt="Logo visiting team" />
+    <img [src]="next_logo_visitante" alt="Logo visiting team" />
     <div class="next-mach_visiting_info">
-      <h2 id="Visiting_team">MALAGA CORSAIRS</h2>
-      <span>4-5</span>
+      <h2 id="Visiting_team">{{ next_visitante }}</h2>
+      <span><!-- Estadisticas de Victorias - Derrotas, del equipo visitante  --></span>
     </div>
   </div>
   <div class="next-mach_home">
     <div class="next-mach_home_info">
-      <h2 id="Home_team">FUENGIROLA POTROS</h2>
-      <span>3-6</span>
+      <h2 id="Home_team">{{ next_local }}</h2>
+      <span><!-- Estadisticas de Victorias - Derrotas, del equipo local  --></span>
     </div>
-    <img src="../../../assets/logoEdit.png" alt="Logo home team" />
+    <img [src]="next_logo_local" alt="Logo home team" />
   </div>
   <div class="next-mach_home"></div>
   <div class="next-mach_socialmedia">
@@ -35,9 +36,37 @@
       <button class="button-class11 button-size">Ver en Twitch</button>
     </a>
     <a routerLink="/entradas">
-      <button class="button-class21 button-size">Comprar Entradas</button>
+      <button class="button-class21 button-size">Ver en presencial</button>
     </a>
     <a routerLink="/socios">
+      <button class="button-class31 button-size">+ Información</button>
+    </a>
+  </div>
+</div>
+
+<div *ngIf="!next_existe" class="next-mach">
+  <p class="next-mach_date">
+    Próximo partido por definir
+  </p>
+  <div class="next-mach_home"></div>
+  <div class="next-mach_socialmedia">
+    <a target="_blank" href="https://www.youtube.com/@fefa_spain/streams">
+      <img
+        src="../../../assets/youtube.png"
+        alt="youtube"
+        style="width: 30px; height: 30px"
+      />
+      <span>LIVE YT</span>
+    </a>
+  </div>
+  <div class="next-mach_buttons">
+    <a target="_blank" href="https://www.twitch.tv/100yardas">
+      <button class="button-class11 button-size">Ver en Twitch</button>
+    </a>
+    <a routerLink="/entradas">
+      <button class="button-class21 button-size">Ver en presencial</button>
+    </a>
+    <a routerLink="/noticias">
       <button class="button-class31 button-size">+ Información</button>
     </a>
   </div>
