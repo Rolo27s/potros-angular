@@ -1,67 +1,76 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
+import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-contacto',
   standalone: true,
-  imports: [],
+  imports: [CommonModule, ReactiveFormsModule],
   templateUrl: './contacto.component.html',
   styleUrl: './contacto.component.css'
 })
-export class ContactoComponent implements OnInit {
-  ngOnInit(): void {
-    this.initializeForm();
+export class ContactoComponent {
+  YOUR_SERVICE_ID:string = "service_0953697";
+  YOUR_TEMPLATE_ID:string = "template_czvosdk";
+  YOUR_PUBLIC_KEY:string = "iS5SsWqJeiu-TshLq";
+
+  form: FormGroup;
+  formSubmitted = false;
+
+  constructor(private fb: FormBuilder, private router: Router) {
+    this.form = this.fb.group({
+      name: ['', [Validators.required, Validators.minLength(4), Validators.pattern('^[a-zA-Z\\s]+$')]],
+      email: ['', [Validators.required, Validators.email]],
+      message: ['', [Validators.required, Validators.minLength(8), Validators.maxLength(255)]]
+    });
   }
 
-  initializeForm(): void {
-    const form = document.getElementById("contactForm") as HTMLFormElement;
-    const nameInput = document.getElementById("name") as HTMLInputElement;
-    const emailInput = document.getElementById("email") as HTMLInputElement;
-    const messageInput = document.getElementById("message") as HTMLTextAreaElement;
-    const nameError = document.getElementById("nameError")!;
-    const emailError = document.getElementById("emailError")!;
-    const messageError = document.getElementById("messageError")!;
-    const successMessage = document.getElementById("successMessage")!;
-  
-    const validDomains = [".es", ".com", ".org", ".net"];
-  
-    form.addEventListener("submit", function (event) {
-      event.preventDefault();
-      nameError.textContent = "";
-      emailError.textContent = "";
-      messageError.textContent = "";
-      let isValid = true;
-      if (!nameInput.value.trim() || nameInput.value.trim().length < 4 || !/^[a-zA-Z\s]+$/.test(nameInput.value.trim())) {
-        nameError.textContent = "Por favor ingrese un nombre válido (al menos 4 caracteres y solo letras).";
-        isValid = false;
-      }
-      if (!emailInput.value.trim() || !isValidEmail(emailInput.value.trim())) {
-        emailError.textContent = "Por favor ingrese un correo electrónico válido.";
-        isValid = false;
-      } else {
-        const domain = emailInput.value.trim().substring(emailInput.value.trim().lastIndexOf("."));
-        if (!validDomains.includes(domain)) {
-          emailError.textContent = "Por favor ingrese un correo electrónico con un dominio válido (.es, .com, .org, .net).";
-          isValid = false;
-        }
-      }
-      if (!messageInput.value.trim() || messageInput.value.trim().length < 8 || messageInput.value.trim().length > 255) {
-        messageError.textContent = "Por favor ingrese un mensaje válido (entre 8 y 255 caracteres).";
-        isValid = false;
-      }
-      if (isValid) {
-        successMessage.style.display = "block";
-        setTimeout(function () {
-          form.reset();
-          successMessage.style.display = "none";
-          window.location.href = "/../../index.html";
-        }, 3000);
-      }
-    });
-  
-    function isValidEmail(email: string): boolean {
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      return emailRegex.test(email);
+  get name() { return this.form.get('name'); }
+  get email() { return this.form.get('email'); }
+  get message() { return this.form.get('message'); }
+
+  handleFormSubmission(): void {
+    if (this.form.valid) {
+      console.log('Form is valid');
+      const formData = this.form.value;
+
+      const templateParams:Record<string, any> = {
+        name: formData.name,
+        email: formData.email,
+        message: formData.message
+      };
+
+      this.sendEmail(templateParams);
+      
+    } else {
+      console.log('Form is invalid');
+      this.printFormErrors();
     }
   }
-  
+
+  private printFormErrors(): void {
+    Object.keys(this.form.controls).forEach(controlName => {
+      const control = this.form.get(controlName);
+      if (control && control.invalid && control.touched) {
+        console.log(`${controlName} is invalid. Errors: ${JSON.stringify(control.errors)}`);
+      }
+    });
+  }
+
+  private sendEmail(templateParams: Record<string, any>): void {
+    emailjs.send(this.YOUR_SERVICE_ID, this.YOUR_TEMPLATE_ID, templateParams, this.YOUR_PUBLIC_KEY)
+      .then((result: EmailJSResponseStatus) => {
+        console.log('Email sent successfully', result.text);
+        this.formSubmitted = true;
+        setTimeout(() => {
+          this.form.reset();
+          this.formSubmitted = false;
+          this.router.navigate(['/']); // Redirect to the index page
+        }, 1000);
+      }, (error) => {
+        console.error('Email sending failed', error.text || error);
+      });
+  }
 }

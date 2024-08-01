@@ -12,7 +12,7 @@ export interface Team {
   estadistica2: string;
   edad: number;
   experiencia: number;
-  estado: string;
+  pais: string;
 }
 
 @Injectable({
@@ -20,7 +20,7 @@ export interface Team {
 })
 export class TeamService {
   private URL_BASE = 'https://fuengirolapotros.up.railway.app/home'
-  private apiUrl = this.URL_BASE + '/equipo/'; // url local. Modificar para producción.
+  private apiUrl = this.URL_BASE + '/equipo/';
 
   constructor(private http: HttpClient) { }
 

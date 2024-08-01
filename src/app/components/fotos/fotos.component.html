@@ -2,8 +2,8 @@
     <div *ngFor="let item of instagramList" class="grid-item" (click)="showImage(getImageUrl(item.imagen))">
       <img [src]="getImageUrl(item.imagen)" alt="{{item.descripcion}}">
       <div class="description">
-        <p>{{item.fecha}}</p>
         <p>{{item.descripcion}}</p>
+        <p class="fecha">{{item.fecha}}</p>
       </div>
     </div>
   </div>

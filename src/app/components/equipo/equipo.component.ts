@@ -22,27 +22,27 @@ export class EquipoComponent implements OnInit {
   defaultTeamList: Team[] = [
     {
       id: 1,
-      foto_jugador: "/media/imagenes/equipo/jugador1_UUQTUpn.png",
-      nombre_jugador: "Jayden Reed",
-      dorsal: "11",
-      posicion: "WR",
-      estadistica1: "5-11",
-      estadistica2: "187",
+      foto_jugador: "/assets/perfil-vacio.jpg",
+      nombre_jugador: "Jugador 1",
+      dorsal: "Dorsal 1",
+      posicion: "Posicion 1",
+      estadistica1: "Stat 1",
+      estadistica2: "Stat 2",
       edad: 24,
       experiencia: 2,
-      estado: "Michigan State"
+      pais: "España"
     },
     {      
       id: 2,
-      foto_jugador: "/media/imagenes/equipo/jugador2_lAn9S0H.png",
-      nombre_jugador: "Carrington Valentine",
-      dorsal: "37",
-      posicion: "CB",
-      estadistica1: "6-0",
-      estadistica2: "189",
-      edad: 22,
+      foto_jugador: "/assets/perfil-vacio.jpg",
+      nombre_jugador: "Jugador 2",
+      dorsal: "Dorsal 2",
+      posicion: "Posicion 2",
+      estadistica1: "Stat 1",
+      estadistica2: "Stat 2",
+      edad: 24,
       experiencia: 2,
-      estado: "Kentucky"
+      pais: "España"
     }
   ];
 

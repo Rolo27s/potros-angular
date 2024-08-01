@@ -14,7 +14,9 @@ export class CarouselComponent implements OnInit, OnDestroy {
     'carousel1.jpg',
     'carousel2.jpg',
     'carousel3.jpg',
-    'carousel4.jpg'
+    'carousel4.jpg',
+    'carousel5.jpg',
+    'carousel6.jpg',
   ];
   intervalId: any;
 

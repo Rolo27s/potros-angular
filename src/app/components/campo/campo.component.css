@@ -39,7 +39,9 @@
 
 .grid-container-elola img {
   width: 100%;
-  border-radius: 8px;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 6px;
 }
 
 .polideportivo p:first-of-type {
