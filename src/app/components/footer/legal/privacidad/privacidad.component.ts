@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { CookieService } from 'ngx-cookie-service';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-privacidad',
@@ -12,17 +12,24 @@ import { ReactiveFormsModule } from '@angular/forms';
   styleUrls: ['./privacidad.component.css']
 })
 export class PrivacidadComponent implements OnInit {
-  cookies = [
-    { categoria: 'cookies-esenciales', estado: 'aceptadas' },
-    { categoria: 'cookies-de-rendimiento', estado: 'denegadas' },
-    { categoria: 'cookies-de-publicidad', estado: 'permitidas' },
-    { categoria: 'cookies-de-redes-sociales', estado: 'aceptadas' }
-  ];
+  privacyForm: FormGroup;
 
-  constructor(private cookieService: CookieService, private router: Router) {}
+  constructor(
+    private fb: FormBuilder,
+    private cookieService: CookieService,
+    private router: Router
+  ) {
+    this.privacyForm = this.fb.group({
+      'cookies-esenciales': [''],
+      'cookies-de-rendimiento': [''],
+      'cookies-de-publicidad': [''],
+      'cookies-de-redes-sociales': ['']
+    });
+  }
 
   ngOnInit(): void {
     this.setInitialCookies();
+    this.loadCookiesIntoForm();
   }
 
   setInitialCookies() {
@@ -32,6 +39,15 @@ export class PrivacidadComponent implements OnInit {
     this.setCookieIfNotExists('cookies-de-redes-sociales', 'aceptadas');
   }
 
+  loadCookiesIntoForm() {
+    this.privacyForm.patchValue({
+      'cookies-esenciales': this.getCookieValue('cookies-esenciales'),
+      'cookies-de-rendimiento': this.getCookieValue('cookies-de-rendimiento'),
+      'cookies-de-publicidad': this.getCookieValue('cookies-de-publicidad'),
+      'cookies-de-redes-sociales': this.getCookieValue('cookies-de-redes-sociales')
+    });
+  }
+
   setCookieIfNotExists(name: string, value: string) {
     if (!this.cookieService.check(name)) {
       this.cookieService.set(name, value);
@@ -39,23 +55,18 @@ export class PrivacidadComponent implements OnInit {
   }
 
   getCookieValue(name: string): string {
-    return this.cookieService.get(name) ?? this.cookies.find(c => c.categoria === name)?.estado ?? '';
+    return this.cookieService.get(name) ?? '';
   }
 
-  updateCookie(name: string, event: Event) {
-    const value = (event.target as HTMLSelectElement).value;
+  updateCookie(name: string, value: string) {
     this.cookieService.set(name, value);
   }
 
   submitForm() {
-    // Obtén el formulario y sus datos
-    const form = document.getElementById('cookie-form') as HTMLFormElement;
-    if (form) {
-      const formData = new FormData(form);
-      formData.forEach((value, name) => {
-        this.updateCookie(name, { target: { value: String(value) } } as unknown as Event);
-      });
-    }
+    // Update cookies based on form values
+    Object.keys(this.privacyForm.value).forEach((key) => {
+      this.updateCookie(key, this.privacyForm.value[key]);
+    });
 
     // Redirigir a la página principal
     this.router.navigate(['/']).then(() => {

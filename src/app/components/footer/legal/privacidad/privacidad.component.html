@@ -1,15 +1,10 @@
 <div class="container">
   <h1>Mis Elecciones de Privacidad</h1>
-  <form (ngSubmit)="submitForm()" id="cookie-form">
+  <form [formGroup]="privacyForm" (ngSubmit)="submitForm()">
     <div class="cookie-config">
       <div class="cookie-config-item">
         <label for="cookies-esenciales">cookies-esenciales:</label>
-        <select
-          id="cookies-esenciales"
-          name="cookies-esenciales"
-          [value]="getCookieValue('cookies-esenciales')"
-          (change)="updateCookie('cookies-esenciales', $event)"
-        >
+        <select id="cookies-esenciales" formControlName="cookies-esenciales">
           <option value="aceptadas">aceptadas</option>
           <option value="denegadas">denegadas</option>
           <option value="permitidas">permitidas</option>
@@ -19,9 +14,7 @@
         <label for="cookies-de-rendimiento">cookies-de-rendimiento:</label>
         <select
           id="cookies-de-rendimiento"
-          name="cookies-de-rendimiento"
-          [value]="getCookieValue('cookies-de-rendimiento')"
-          (change)="updateCookie('cookies-de-rendimiento', $event)"
+          formControlName="cookies-de-rendimiento"
         >
           <option value="aceptadas">aceptadas</option>
           <option value="denegadas">denegadas</option>
@@ -32,9 +25,7 @@
         <label for="cookies-de-publicidad">cookies-de-publicidad:</label>
         <select
           id="cookies-de-publicidad"
-          name="cookies-de-publicidad"
-          [value]="getCookieValue('cookies-de-publicidad')"
-          (change)="updateCookie('cookies-de-publicidad', $event)"
+          formControlName="cookies-de-publicidad"
         >
           <option value="aceptadas">aceptadas</option>
           <option value="denegadas">denegadas</option>
@@ -47,9 +38,7 @@
         >
         <select
           id="cookies-de-redes-sociales"
-          name="cookies-de-redes-sociales"
-          [value]="getCookieValue('cookies-de-redes-sociales')"
-          (change)="updateCookie('cookies-de-redes-sociales', $event)"
+          formControlName="cookies-de-redes-sociales"
         >
           <option value="aceptadas">aceptadas</option>
           <option value="denegadas">denegadas</option>
