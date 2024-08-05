@@ -7,6 +7,9 @@ import { FefaComponent } from './fefa/fefa.component';
 // Parte legal
 import { LegalComponent } from './legal/legal.component';
 
+
+import { RouterLink, Router } from '@angular/router';
+
 @Component({
   selector: 'app-footer',
   standalone: true,
@@ -14,7 +17,9 @@ import { LegalComponent } from './legal/legal.component';
     ClubComponent, 
     EquiposComponent, 
     FefaComponent, 
-    LegalComponent],
+    LegalComponent,
+    RouterLink,
+  ],
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.css']
 })
@@ -25,7 +30,7 @@ export class FooterComponent implements OnInit, AfterViewInit {
     'border-bottom': 'none' // Default: no border
   };
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
     // On init things. Empty by the moment.

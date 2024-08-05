@@ -38,5 +38,7 @@ export const routes: Routes = [
     { path: 'privacidad', component: PrivacidadComponent },
     
     // Ruta de navegacion en caso de ruta vacia
-    { path: '', redirectTo: '/main', pathMatch: 'full' }
+    { path: '', redirectTo: '/main', pathMatch: 'full' },
+    // Redirige ruta no encontrada a ruta vacia
+    { path: '**', redirectTo: ''},
 ];

@@ -1,68 +1,68 @@
-<main>
-  <div class="container">
-    <h1>Mis Elecciones de Privacidad</h1>
-    <form (ngSubmit)="submitForm($event)" id="cookie-form">
-      <div class="cookie-config">
-        <div class="cookie-config-item">
-          <label for="cookies-esenciales">cookies-esenciales:</label>
-          <select
-            id="cookies-esenciales"
-            name="cookies-esenciales"
-            [value]="getCookieValue('cookies-esenciales')"
-            (change)="updateCookie('cookies-esenciales', $event)"
-          >
-            <option value="aceptadas">aceptadas</option>
-            <option value="denegadas">denegadas</option>
-            <option value="permitidas">permitidas</option>
-          </select>
-        </div>
-        <div class="cookie-config-item">
-          <label for="cookies-de-rendimiento">cookies-de-rendimiento:</label>
-          <select
-            id="cookies-de-rendimiento"
-            name="cookies-de-rendimiento"
-            [value]="getCookieValue('cookies-de-rendimiento')"
-            (change)="updateCookie('cookies-de-rendimiento', $event)"
-          >
-            <option value="aceptadas">aceptadas</option>
-            <option value="denegadas">denegadas</option>
-            <option value="permitidas">permitidas</option>
-          </select>
-        </div>
-        <div class="cookie-config-item">
-          <label for="cookies-de-publicidad">cookies-de-publicidad:</label>
-          <select
-            id="cookies-de-publicidad"
-            name="cookies-de-publicidad"
-            [value]="getCookieValue('cookies-de-publicidad')"
-            (change)="updateCookie('cookies-de-publicidad', $event)"
-          >
-            <option value="aceptadas">aceptadas</option>
-            <option value="denegadas">denegadas</option>
-            <option value="permitidas">permitidas</option>
-          </select>
-        </div>
-        <div class="cookie-config-item">
-          <label for="cookies-de-redes-sociales">cookies-de-redes-sociales:</label>
-          <select
-            id="cookies-de-redes-sociales"
-            name="cookies-de-redes-sociales"
-            [value]="getCookieValue('cookies-de-redes-sociales')"
-            (change)="updateCookie('cookies-de-redes-sociales', $event)"
-          >
-            <option value="aceptadas">aceptadas</option>
-            <option value="denegadas">denegadas</option>
-            <option value="permitidas">permitidas</option>
-          </select>
-        </div>
+<div class="container">
+  <h1>Mis Elecciones de Privacidad</h1>
+  <form (ngSubmit)="submitForm()" id="cookie-form">
+    <div class="cookie-config">
+      <div class="cookie-config-item">
+        <label for="cookies-esenciales">cookies-esenciales:</label>
+        <select
+          id="cookies-esenciales"
+          name="cookies-esenciales"
+          [value]="getCookieValue('cookies-esenciales')"
+          (change)="updateCookie('cookies-esenciales', $event)"
+        >
+          <option value="aceptadas">aceptadas</option>
+          <option value="denegadas">denegadas</option>
+          <option value="permitidas">permitidas</option>
+        </select>
       </div>
-      <button type="submit">Guardar Configuración</button>
-    </form>
-    <p class="details">
-      <strong>Información Adicional:</strong>
-      A pesar de facilitar la manipulacion de Cookies en este menu, puedes
-      revisar y cambiar tus preferencias de cookies en cualquier momento desde
-      la configuración de privacidad de tu navegador o dispositivo.
-    </p>
-  </div>
-</main>
+      <div class="cookie-config-item">
+        <label for="cookies-de-rendimiento">cookies-de-rendimiento:</label>
+        <select
+          id="cookies-de-rendimiento"
+          name="cookies-de-rendimiento"
+          [value]="getCookieValue('cookies-de-rendimiento')"
+          (change)="updateCookie('cookies-de-rendimiento', $event)"
+        >
+          <option value="aceptadas">aceptadas</option>
+          <option value="denegadas">denegadas</option>
+          <option value="permitidas">permitidas</option>
+        </select>
+      </div>
+      <div class="cookie-config-item">
+        <label for="cookies-de-publicidad">cookies-de-publicidad:</label>
+        <select
+          id="cookies-de-publicidad"
+          name="cookies-de-publicidad"
+          [value]="getCookieValue('cookies-de-publicidad')"
+          (change)="updateCookie('cookies-de-publicidad', $event)"
+        >
+          <option value="aceptadas">aceptadas</option>
+          <option value="denegadas">denegadas</option>
+          <option value="permitidas">permitidas</option>
+        </select>
+      </div>
+      <div class="cookie-config-item">
+        <label for="cookies-de-redes-sociales"
+          >cookies-de-redes-sociales:</label
+        >
+        <select
+          id="cookies-de-redes-sociales"
+          name="cookies-de-redes-sociales"
+          [value]="getCookieValue('cookies-de-redes-sociales')"
+          (change)="updateCookie('cookies-de-redes-sociales', $event)"
+        >
+          <option value="aceptadas">aceptadas</option>
+          <option value="denegadas">denegadas</option>
+          <option value="permitidas">permitidas</option>
+        </select>
+      </div>
+    </div>
+    <button type="submit">Guardar Configuración</button>
+  </form>
+  <p class="details">
+    <strong>Información Adicional:</strong>
+    A pesar de facilitar la manipulacion de Cookies en este menu, puedes revisar
+    y cambiar tus preferencias de cookies en cualquier momento desde la
+    configuración de privacidad de tu navegador o dispositivo.
+  </p>
+</div>

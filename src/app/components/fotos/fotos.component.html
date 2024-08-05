@@ -1,16 +1,19 @@
 <div class="grid-container">
-    <div *ngFor="let item of instagramList" class="grid-item" (click)="showImage(getImageUrl(item.imagen))">
-      <img [src]="getImageUrl(item.imagen)" alt="{{item.descripcion}}">
-      <div class="description">
-        <p>{{item.descripcion}}</p>
-        <p class="fecha">{{item.fecha}}</p>
-      </div>
+  <div
+    *ngFor="let item of instagramList"
+    class="grid-item"
+    (click)="showImage(getImageUrl(item.imagen))"
+  >
+    <img [src]="getImageUrl(item.imagen)" alt="{{ item.descripcion }}" />
+    <div class="description">
+      <p>{{ item.descripcion }}</p>
+      <p class="fecha">{{ item.fecha }}</p>
     </div>
   </div>
-  
-  <!-- Modal para mostrar la imagen ampliada -->
-  <div class="modal" [class.active]="modalActive" (click)="hideImage()">
-    <span class="close" (click)="hideImage()">&times;</span>
-    <img [src]="modalImageUrl" alt="Ampliacion" class="modal-content" />
-  </div>
-  
+</div>
+
+<!-- Modal para mostrar la imagen ampliada -->
+<div class="modal" [class.active]="modalActive" (click)="hideImage()">
+  <span class="close" (click)="hideImage()">&times;</span>
+  <img [src]="modalImageUrl" alt="Ampliacion" class="modal-content" />
+</div>

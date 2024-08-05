@@ -1,38 +1,71 @@
-<main>
-    <div class="container">
-      <h1>Contacto</h1>
-      <p>Si tienes alguna pregunta o necesitas más información, no dudes en contactarnos. Completa el formulario a continuación y te responderemos lo antes posible.</p>
-      <form [formGroup]="form" (ngSubmit)="handleFormSubmission()">
-        <div class="form-group">
-          <label for="name">Nombre:</label>
-          <input type="text" id="name" formControlName="name" />
-          <div id="nameError" class="error" *ngIf="form.get('name')?.invalid && form.get('name')?.touched">
-            <div *ngIf="form.get('name')?.errors?.['required']">Por favor ingrese un nombre.</div>
-            <div *ngIf="form.get('name')?.errors?.['minlength']">Por favor ingrese un nombre válido (al menos 4 caracteres y solo letras).</div>
-          </div>
+<div class="container">
+  <h1>Contacto</h1>
+  <p>
+    Si tienes alguna pregunta o necesitas más información, no dudes en
+    contactarnos. Completa el formulario a continuación y te responderemos lo
+    antes posible.
+  </p>
+  <form [formGroup]="form" (ngSubmit)="handleFormSubmission()">
+    <div class="form-group">
+      <label for="name">Nombre:</label>
+      <input type="text" id="name" formControlName="name" />
+      <div
+        id="nameError"
+        class="error"
+        *ngIf="form.get('name')?.invalid && form.get('name')?.touched"
+      >
+        <div *ngIf="form.get('name')?.errors?.['required']">
+          Por favor ingrese un nombre.
         </div>
-        <div class="form-group">
-          <label for="email">Correo Electrónico:</label>
-          <input type="email" id="email" formControlName="email" />
-          <div id="emailError" class="error" *ngIf="form.get('email')?.invalid && form.get('email')?.touched">
-            <div *ngIf="form.get('email')?.errors?.['required']">Por favor ingrese un correo electrónico.</div>
-            <div *ngIf="form.get('email')?.errors?.['email']">Por favor ingrese un correo electrónico válido.</div>
-          </div>
+        <div *ngIf="form.get('name')?.errors?.['minlength']">
+          Por favor ingrese un nombre válido (al menos 4 caracteres y solo
+          letras).
         </div>
-        <div class="form-group">
-          <label for="message">Mensaje:</label>
-          <textarea id="message" formControlName="message" rows="4"></textarea>
-          <div id="messageError" class="error" *ngIf="form.get('message')?.invalid && form.get('message')?.touched">
-            <div *ngIf="form.get('message')?.errors?.['required']">Por favor ingrese un mensaje.</div>
-            <div *ngIf="form.get('message')?.errors?.['minlength']">Por favor ingrese un mensaje válido (entre 8 y 255 caracteres).</div>
-          </div>
-        </div>
-        <button type="submit">Enviar Mensaje</button>
-      </form>
-      <div id="successMessage" class="success-message" *ngIf="formSubmitted">
-        ¡Formulario enviado con éxito!<br />
-        Te llevamos de vuelta con Potros 😉
       </div>
-      <p>También puedes contactarnos directamente a través de nuestro correo electrónico: <a href="mailto:cdpotrosfutbolamericano@gmail.com">cdpotrosfutbolamericano&#64;gmail.com</a></p>
     </div>
-  </main>
+    <div class="form-group">
+      <label for="email">Correo Electrónico:</label>
+      <input type="email" id="email" formControlName="email" />
+      <div
+        id="emailError"
+        class="error"
+        *ngIf="form.get('email')?.invalid && form.get('email')?.touched"
+      >
+        <div *ngIf="form.get('email')?.errors?.['required']">
+          Por favor ingrese un correo electrónico.
+        </div>
+        <div *ngIf="form.get('email')?.errors?.['email']">
+          Por favor ingrese un correo electrónico válido.
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="message">Mensaje:</label>
+      <textarea id="message" formControlName="message" rows="4"></textarea>
+      <div
+        id="messageError"
+        class="error"
+        *ngIf="form.get('message')?.invalid && form.get('message')?.touched"
+      >
+        <div *ngIf="form.get('message')?.errors?.['required']">
+          Por favor ingrese un mensaje.
+        </div>
+        <div *ngIf="form.get('message')?.errors?.['minlength']">
+          Por favor ingrese un mensaje válido (entre 8 y 255 caracteres).
+        </div>
+      </div>
+    </div>
+    <button type="submit">Enviar Mensaje</button>
+  </form>
+  <div id="successMessage" class="success-message" *ngIf="formSubmitted">
+    ¡Formulario enviado con éxito!<br />
+    Te llevamos de vuelta con Potros 😉
+  </div>
+  <p>
+    También puedes contactarnos directamente a través de nuestro correo
+    electrónico:
+    <a href="mailto:cdpotrosfutbolamericano@fuengirolapotros.es"
+      >cdpotrosfutbolamericano&#64;fuengirolapotros.es</a
+    >
+  </p>
+</div>

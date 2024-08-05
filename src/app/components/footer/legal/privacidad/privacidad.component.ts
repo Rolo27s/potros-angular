@@ -1,11 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { CookieService } from 'ngx-cookie-service';
+import { Router } from '@angular/router';
+import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-privacidad',
   standalone: true,
-  imports: [ReactiveFormsModule],
+  imports: [CommonModule, ReactiveFormsModule],
   templateUrl: './privacidad.component.html',
   styleUrls: ['./privacidad.component.css']
 })
@@ -17,7 +19,7 @@ export class PrivacidadComponent implements OnInit {
     { categoria: 'cookies-de-redes-sociales', estado: 'aceptadas' }
   ];
 
-  constructor(private cookieService: CookieService) { }
+  constructor(private cookieService: CookieService, private router: Router) {}
 
   ngOnInit(): void {
     this.setInitialCookies();
@@ -45,9 +47,8 @@ export class PrivacidadComponent implements OnInit {
     this.cookieService.set(name, value);
   }
 
-  submitForm(event: Event) {
-    event.preventDefault(); // Prevenir la recarga de la página
-
+  submitForm() {
+    // Obtén el formulario y sus datos
     const form = document.getElementById('cookie-form') as HTMLFormElement;
     if (form) {
       const formData = new FormData(form);
@@ -55,5 +56,12 @@ export class PrivacidadComponent implements OnInit {
         this.updateCookie(name, { target: { value: String(value) } } as unknown as Event);
       });
     }
+
+    // Redirigir a la página principal
+    this.router.navigate(['/']).then(() => {
+      console.log("Form de cookies enviado y redirigido a la página principal");
+    }).catch((error) => {
+      console.error("Error al redirigir:", error);
+    });
   }
 }
