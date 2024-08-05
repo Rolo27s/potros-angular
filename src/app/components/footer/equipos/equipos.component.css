@@ -8,7 +8,7 @@
 }
 
 .footer-container-2 a img {
-  width: 125px;
+  width: 100px;
 }
 
 img {
@@ -23,5 +23,8 @@ img:hover {
 @media (max-width: 900px) {
   .footer-container-2 {
     grid-template-columns: repeat(3, 1fr);
+  }
+  .footer-container-2 a img {
+    width: 75px;
   }
 }
