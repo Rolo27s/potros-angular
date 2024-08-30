@@ -1,20 +1,29 @@
 <footer>
-    <ul class="footer-container-1">
-        <li class="footer-container-1-CLUB">
-            <a (click)="cargarComponente1()">CLUB LINK</a>
-        </li>
-        <li class="footer-container-1-EQUIPOS">
-            <a (click)="cargarComponente2()">EQUIPOS LOCALES</a>
-        </li>
-        <li class="footer-container-1-FEFA">
-            <a (click)="cargarComponente3()">MAS SITIOS FEFA</a>
-        </li>
-    </ul>
+  <ul class="footer-container-1">
+    <li class="footer-container-1-CLUB">
+      <a (click)="cargarComponente1()">CLUB LINK</a>
+    </li>
+    <li class="footer-container-1-EQUIPOS">
+      <a (click)="cargarComponente2()">EQUIPOS LOCALES</a>
+    </li>
+    <li class="footer-container-1-FEFA">
+      <a (click)="cargarComponente3()">MAS SITIOS FEFA</a>
+    </li>
+  </ul>
 
-    <!-- Parte dinámica del footer -->
-    <div #contenedorComponentes></div>
+  <!-- Parte dinámica del footer -->
+  <div #contenedorComponentes></div>
 
-    <!-- LEGAL -->
-    <app-legal></app-legal>
-    
+  <!-- LEGAL -->
+  <app-legal></app-legal>
+  
+  <div class="logo-container">
+    <a href="https://www.fuengirola.es/">
+      <img
+        id="logo-ayuntamiento"
+        src="/assets/logo_ayuntamiento.png"
+        alt="ayuntamiento"
+      />
+    </a>
+  </div>
 </footer>

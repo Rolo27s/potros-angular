@@ -69,6 +69,20 @@ footer {
   background-color: var(--color-principal);
 }
 
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-container a {
+  padding: 1em;
+}
+
+#logo-ayuntamiento {
+  max-width: 300px;
+}
+
 @media (max-width: 1115px) {
   .footer-container-1,  .footer-container-3 {
       flex-direction: column;
