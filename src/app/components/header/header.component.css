@@ -94,14 +94,19 @@ figure:hover {
   padding-left: 2em;
   justify-content: left;
   align-items: center;
-  background-color: var(--color-principal);
+  gap: 1em;
+  background: linear-gradient(
+    to bottom, 
+    rgba(6, 52, 45, 1), 
+    rgba(238, 238, 238, 0.3)
+);
 }
 
 .logo-container a {
   padding: 1em;
 }
 
-#logo-ayuntamiento {
+#logo-ayuntamiento, #logo-oleoronda {
   max-width: 300px;
 }
 
