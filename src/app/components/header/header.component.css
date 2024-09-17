@@ -7,20 +7,17 @@ header {
   width: 100%;
 }
 
-figure {
-  transition: all .3s ease;
-}
-figure:hover {
-  filter: brightness(0.9);
-}
-
 .header-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 64px;
-  background-color: var(--color-principal);
+  background-color: #14332c;
   padding: 0 2rem;
+  /* This properties to sticky is not working */
+  position: sticky;
+  top: 175px;
+  z-index: 1000;
 }
 
 .header-nav ul {
@@ -63,7 +60,6 @@ figure:hover {
 .banner {
   width: 100%;
   height: 175px;
-  overflow: hidden;
 }
 
 .banner-img {
@@ -92,18 +88,25 @@ figure:hover {
 .logo-container {
   display: flex;
   padding-left: 2em;
-  justify-content: left;
+  justify-content: space-between;
   align-items: center;
   gap: 1em;
-  background: linear-gradient(
-    to bottom, 
-    rgba(6, 52, 45, 1), 
-    rgba(238, 238, 238, 0.3)
-);
+  background-image: url(/assets/banner.png);
+  background-repeat:round;
 }
 
 .logo-container a {
   padding: 1em;
+  z-index: 1;
+}
+
+.logo-container a img {
+  transition: all 1s ease;
+}
+
+.logo-container a img:hover {
+  filter: brightness(2);
+  transform: translateY(4px);
 }
 
 #logo-ayuntamiento, #logo-oleoronda {
@@ -149,7 +152,7 @@ figure:hover {
 }
 
 .dropdown-menu a:hover {
-  background-color: rgba(0, 87, 36, 0.8);
+  background-color: rgba(4, 32, 16, 0.8);
 }
 
 .hidden {
