@@ -10,12 +10,29 @@
 }
 
 /* FONTS */
+@font-face {
+  font-family: 'Sportypo'; /* Your font name */
+  src: url('/assets/fonts/Sportypo-Reguler-Demo.ttf') format('truetype'), /* TrueType Font */
+       url('/assets/fonts/sportypo-reguler-demo-webfont.woff') format('woff'); /* Web Open Font Format */
+  font-weight: normal;
+  font-style: normal;
+}
+
+.sportypo {
+  font-family: "Sportypo", "Bruno Ace SC", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+  font-size: 4em;
+  line-height: 1;
+  color: #EEE;
+}
+
 .bruno-ace-sc-regular {
   font-family: "Bruno Ace SC", sans-serif;
   font-weight: 600;
   font-style: italic;
   font-size: 5em;
-  line-height: 0.9;
+  line-height: 1;
   color: #EEE;
 }
 
@@ -27,6 +44,7 @@
     color: #EEE;
     text-align: center;
     min-width: 345px;
+    line-height: 1;
     padding-right: 0.5em;
   }
 
@@ -93,14 +111,14 @@ footer {
 }
 
 @media (max-width:1470px) {
-    .bruno-ace-sc-regular {
-        font-size: 3.5em;
+    .bruno-ace-sc-regular, .sportypo {
+        font-size: 3em;
     }
 }
 
 @media (max-width:1300px) {
-    .bruno-ace-sc-regular {
-        font-size: 2em;
+    .bruno-ace-sc-regular, .sportypo {
+        font-size: 1.5em;
     }
 }
 

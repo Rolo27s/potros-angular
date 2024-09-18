@@ -11,9 +11,10 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 64px;
+  height: 44px;
   background-color: #14332c;
-  padding: 0 2rem;
+  padding: 0 .25rem;
+  border-top: 1px solid #222;
   /* This properties to sticky is not working */
   position: sticky;
   top: 175px;
@@ -26,7 +27,7 @@ header {
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  padding: 0 1rem;
+  padding: 0 0.5em;
 }
 
 .header-nav ul li a {
