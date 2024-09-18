@@ -1,67 +1,112 @@
-:root{
-    /* PALETA DE COLORES */
-    --color-principal: #06342D;
-    --color-secundario-1: #005523;
-    --color-secundario-2: #FAB41E;
-    --color-detalle-1: #C9DF8A;
-    --color-detalle-2: #F0F7DA;
-    --color-apoyo-1: #111111;
-    --color-apoyo-2: #EEEEEE;
+:root {
+  /* PALETA DE COLORES */
+  --color-principal: #06342d;
+  --color-secundario-1: #005523;
+  --color-secundario-2: #fab41e;
+  --color-detalle-1: #c9df8a;
+  --color-detalle-2: #f0f7da;
+  --color-apoyo-1: #111111;
+  --color-apoyo-2: #eeeeee;
+}
+
+/* FONTS */
+.bruno-ace-sc-regular {
+  font-family: "Bruno Ace SC", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+  font-size: 5em;
+  line-height: 0.9;
+  color: #EEE;
+}
+
+.bruno-ace-sc-regular-description {
+    font-family: "Bruno Ace SC", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 1.25em;
+    color: #EEE;
+    text-align: center;
+    min-width: 345px;
+    padding-right: 0.5em;
+  }
+
+.rubik-mono-one-regular {
+  font-family: "Rubik Mono One", monospace;
+  font-weight: 400;
+  font-style: normal;
 }
 
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: Helvetica, sans-serif, Arial;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Helvetica, sans-serif, Arial;
 }
 
 html {
-    background-color: #EEEEEE;
+  background-color: #eeeeee;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
 }
 
 img {
-    width: 100%;
+  width: 100%;
 }
 
 a {
-    text-decoration: none;
-    color: #151515;
-    font-weight: 600;
+  text-decoration: none;
+  color: #151515;
+  font-weight: 600;
 }
 
 a:hover {
-    cursor: pointer;
-    color: #333333;
+  cursor: pointer;
+  color: #333333;
 }
 
 main {
-    max-width: 1250px;
-    margin: 30px 50px;
+  max-width: 1250px;
+  margin: 30px 50px;
 }
 
 h1 {
-    text-align: center;
+  text-align: center;
 }
 
 footer {
-    width: 100%;
+  width: 100%;
 }
-
 
 /* --------------------------------------------- */
 /* --- RESPONSIVE DESIGN CSS --- */
 /* --------------------------------------------- */
-@media (max-width: 1115px) {
-    main {
-        margin: 30px 20px;
-        width: 90%;
+@media (max-width:1625px) {
+    .bruno-ace-sc-regular-description {
+        font-size: 1em;
+        min-width: 200px;
     }
+}
+
+@media (max-width:1470px) {
+    .bruno-ace-sc-regular {
+        font-size: 3.5em;
+    }
+}
+
+@media (max-width:1300px) {
+    .bruno-ace-sc-regular {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 1115px) {
+  main {
+    margin: 30px 20px;
+    width: 90%;
+  }
 }
