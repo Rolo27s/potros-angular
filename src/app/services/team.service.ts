@@ -8,8 +8,8 @@ export interface Team {
   nombre_jugador: string;
   dorsal: string;
   posicion: string;
-  estadistica1: string;
-  estadistica2: string;
+  altura: string;
+  peso: string;
   edad: number;
   experiencia: number;
   pais: string;
@@ -19,13 +19,12 @@ export interface Team {
   providedIn: 'root'
 })
 export class TeamService {
-  private URL_BASE = 'https://fuengirolapotros.up.railway.app/home'
-  private apiUrl = this.URL_BASE + '/equipo/';
+  private readonly jsonUrl = 'assets/data/equipo.json';
 
-  constructor(private http: HttpClient) { }
+  constructor(private readonly http: HttpClient) { }
 
   getTeam(): Observable<Team[]> {
-    return this.http.get<Team[]>(this.apiUrl);
+    return this.http.get<Team[]>(this.jsonUrl);
   }
 
 }

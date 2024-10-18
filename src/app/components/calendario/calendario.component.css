@@ -1,8 +1,16 @@
 /* calendario.component.css */
-.center-calendario{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.center-calendario {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  display: none; /* Actualmente sin visualizar por falta de contenido - UPDATEAR CON INFO */
+}
+
+.estado-temporal {
+  font-size: 22px;
+  font-weight: 600;
+  background-color: yellow;
+  padding: 0.5em 1em;
 }
 
 .calendario-item {
@@ -66,23 +74,24 @@
 }
 
 @media (max-width: 725px) {
-    .calendario-item {
-      width: auto;
-    }
-
-    .partido-content .info-local,
-    .partido-content .info-visitante, 
-    .fecha, .jornada {
-        font-size: 0.65em;
-    }
-
-    .hora {
-        font-size: 1em;
-    }
-
-    .logo {
-        width: 40px;
-        height: 40px;
-        margin-right: 4px;
-      }
+  .calendario-item {
+    width: auto;
   }
+
+  .partido-content .info-local,
+  .partido-content .info-visitante,
+  .fecha,
+  .jornada {
+    font-size: 0.65em;
+  }
+
+  .hora {
+    font-size: 1em;
+  }
+
+  .logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 4px;
+  }
+}

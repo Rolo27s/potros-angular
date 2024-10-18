@@ -15,15 +15,11 @@ export interface News {
   providedIn: 'root'
 })
 export class NewsService {
-  private URL_BASE = 'https://fuengirolapotros.up.railway.app/home'
-  private apiUrl = this.URL_BASE + '/noticias/'; // url local. Modificar para producción.
+  private readonly jsonUrl = 'assets/data/noticias.json';
 
-  
-
-  constructor(private http: HttpClient) { }
+  constructor(private readonly http: HttpClient) { }
 
   getNews(): Observable<News[]> {
-    return this.http.get<News[]>(this.apiUrl);
+    return this.http.get<News[]>(this.jsonUrl);
   }
-
 }

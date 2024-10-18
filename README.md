@@ -29,5 +29,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## 18 de Octubre de 2024
 
 Cambio importante debido a planteamiento de mantenimiento de sitio web. En lugar de existir un backend en Python subido a Railway, se va a gestionar todo desde el front
-El último commit que contendrá código de vinculación con el back es el `id:67e7491, added new font and modify some styles`.
+El último commit que contendrá código de vinculación con el back es el `id:8393c5b, Comienzo de proyecto sin BackEnd`.
 En caso de querer volver a plantear el proyecto con BackEnd, hacer rollback a ese punto.

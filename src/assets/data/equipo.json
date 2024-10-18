@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "foto_jugador": "unknown.png",
+    "nombre_jugador": "Jugador 1",
+    "dorsal": "Dorsal 1",
+    "posicion": "Posicion 1",
+    "altura": "Altura 1",
+    "peso": "Peso 2",
+    "edad": 24,
+    "experiencia": 2,
+    "pais": "España"
+  },
+  {
+    "id": 2,
+    "foto_jugador": "unknown.png",
+    "nombre_jugador": "Jugador 2",
+    "dorsal": "Dorsal 2",
+    "posicion": "Posicion 2",
+    "altura": "Altura 1",
+    "peso": "Peso 2",
+    "edad": 22,
+    "experiencia": 1,
+    "pais": "España"
+  }
+]

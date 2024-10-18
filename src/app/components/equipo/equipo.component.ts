@@ -10,43 +10,11 @@ import { CommonModule } from '@angular/common';
   styleUrl: './equipo.component.css'
 })
 export class EquipoComponent implements OnInit {
-  private URL_BASE = 'https://fuengirolapotros.up.railway.app';
   team!: Team;
-
-  getURLBASE(): string {
-    return this.URL_BASE;
-  }
 
   teamList: Team[] = [];
 
-  defaultTeamList: Team[] = [
-    {
-      id: 1,
-      foto_jugador: "/assets/perfil-vacio.jpg",
-      nombre_jugador: "Jugador 1",
-      dorsal: "Dorsal 1",
-      posicion: "Posicion 1",
-      estadistica1: "Stat 1",
-      estadistica2: "Stat 2",
-      edad: 24,
-      experiencia: 2,
-      pais: "España"
-    },
-    {      
-      id: 2,
-      foto_jugador: "/assets/perfil-vacio.jpg",
-      nombre_jugador: "Jugador 2",
-      dorsal: "Dorsal 2",
-      posicion: "Posicion 2",
-      estadistica1: "Stat 1",
-      estadistica2: "Stat 2",
-      edad: 24,
-      experiencia: 2,
-      pais: "España"
-    }
-  ];
-
-  constructor(private teamService: TeamService) { }
+  constructor(private readonly teamService: TeamService) { }
 
   ngOnInit(): void {
     // Servicio completo
@@ -56,14 +24,14 @@ export class EquipoComponent implements OnInit {
       },
       error: error => {
         console.error('Error fetching team, using default data', error);
-        this.teamList = this.defaultTeamList;
       }
     });
 
   }
 
+  // Las imágenes ahora estarán en la carpeta assets
   getImageUrl(imagePath: string): string {
-    return `${this.URL_BASE}${imagePath}`;
+    return `assets/images/equipo/${imagePath}`;  // Nueva ruta para las imágenes locales
   }
 
 }

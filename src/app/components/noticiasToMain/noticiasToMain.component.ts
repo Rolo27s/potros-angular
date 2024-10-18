@@ -12,35 +12,9 @@ import { RouterModule, Router } from '@angular/router';
   imports: [CommonModule, RouterModule, NoticiasComponent]
 })
 export class NoticiasToMainComponent implements OnInit {
-  private URL_BASE = 'https://fuengirolapotros.up.railway.app';
-
-  getURLBASE(): string {
-    return this.URL_BASE;
-  }
-
   newsList: News[] = [];
 
-  // En caso de fallo de conexion con API, se usará esta información (consistencia)
-  defaultNewsList: News[] = [
-    {
-      id: 1,
-      titulo: "TRIPLE CORONA",
-      cuerpo1: "Segunda cita de altura en una semana para los Fuengirola Potros ...",
-      cuerpo2: "En el segundo cuarto los Potros, ayer de blanco por primera vez en su historia ...",
-      fecha: "2018-02-22",
-      imagen: "/media/imagenes/noticias/img1.png"
-    },
-    {
-      id: 2,
-      titulo: "TRIPLE CORONA",
-      cuerpo1: "Los Fuengirola Potros renovaron su título de campeones de la Liga Andaluza de Fútbol Americano ...",
-      cuerpo2: "El partido dio comienzo con posesión para los locales ...",
-      fecha: "2022-04-12",
-      imagen: "/media/imagenes/noticias/img2.png"
-    }
-  ];
-
-  constructor(private newsService: NewsService, private router: Router) { }
+  constructor(private readonly newsService: NewsService, private readonly router: Router) { }
 
   ngOnInit(): void {
     this.newsService.getNews().subscribe({
@@ -49,13 +23,13 @@ export class NoticiasToMainComponent implements OnInit {
       },
       error: error => {
         console.error('Error fetching news, using default data', error);
-        this.newsList = this.defaultNewsList;
       }
     });
   }
 
+  // Las imágenes ahora estarán en la carpeta assets
   getImageUrl(imagePath: string): string {
-    return `${this.URL_BASE}${imagePath}`;
+    return `assets/images/noticias/${imagePath}`;  // Nueva ruta para las imágenes locales
   }
 
   // Se guarda el formato almacenado en la base de datos (saltos de linea)
@@ -63,7 +37,7 @@ export class NoticiasToMainComponent implements OnInit {
     return text.replace(/\n/g, '<br>');
   }
 
-  // navegacion hasta la noticia seleccionada
+  // Navegación hasta la noticia seleccionada
   onSelectNews(id: number): void {
     this.router.navigate(['/noticia', id]);
   }
