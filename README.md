@@ -25,3 +25,9 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## 18 de Octubre de 2024
+
+Cambio importante debido a planteamiento de mantenimiento de sitio web. En lugar de existir un backend en Python subido a Railway, se va a gestionar todo desde el front
+El último commit que contendrá código de vinculación con el back es el `id:67e7491, added new font and modify some styles`.
+En caso de querer volver a plantear el proyecto con BackEnd, hacer rollback a ese punto.
