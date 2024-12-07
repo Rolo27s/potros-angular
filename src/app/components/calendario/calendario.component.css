@@ -1,16 +1,13 @@
-/* calendario.component.css */
+.info-fefa-lnfa2{
+  text-align: center;
+  padding: 1em;
+  text-shadow: 2px 2px 6px #2a5337;
+}
+
 .center-calendario {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  display: none; /* Actualmente sin visualizar por falta de contenido - UPDATEAR CON INFO */
-}
-
-.estado-temporal {
-  font-size: 22px;
-  font-weight: 600;
-  background-color: yellow;
-  padding: 0.5em 1em;
 }
 
 .calendario-item {
@@ -19,7 +16,7 @@
   margin-bottom: 20px;
   overflow: hidden;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  width: 800px;
+  width: 1200px;
 }
 
 .partido-content {
@@ -40,9 +37,10 @@
 }
 
 .logo {
-  width: 50px;
-  height: 50px;
+  width: 150px;
+  height: 150px;
   margin-right: 10px;
+  margin-left: 10px;
 }
 
 .fecha {
@@ -71,6 +69,18 @@
     width: 600px;
     margin: 10px auto;
   }
+  .logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 6px;
+    margin-left: 6px;
+  }
+  .partido-content .info-local,
+  .partido-content .info-visitante,
+  .fecha,
+  .jornada {
+    font-size: 0.75em;
+  }
 }
 
 @media (max-width: 725px) {
@@ -82,11 +92,11 @@
   .partido-content .info-visitante,
   .fecha,
   .jornada {
-    font-size: 0.65em;
+    font-size: 0.4em;
   }
 
   .hora {
-    font-size: 1em;
+    font-size: .5em;
   }
 
   .logo {

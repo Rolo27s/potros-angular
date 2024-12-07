@@ -12,9 +12,6 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class NoticiasComponent implements OnInit {
   news!: News;
-
-
-
   newsList: News[] = [];
   selectedNews: News | undefined;
 

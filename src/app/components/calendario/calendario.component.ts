@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CalendarService, Calendar } from '../../services/calendar.service';
 import { CommonModule } from '@angular/common';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-calendario',
@@ -10,39 +11,11 @@ import { CommonModule } from '@angular/common';
   styleUrl: './calendario.component.css'
 })
 export class CalendarioComponent implements OnInit {
-  private URL_BASE = 'https://fuengirolapotros.up.railway.app';
   calendar!: Calendar;
-
-  getURLBASE(): string {
-    return this.URL_BASE;
-  }
-
   calendarList: Calendar[] = [];
+  selectedCalendar: Calendar | undefined;
 
-  defaultCalendarList: Calendar[] = [
-    {
-      id: 1,
-      fecha: '2024-06-01',
-      local: 'Equipo A',
-      logo_local: 'imagenes/calendario/logo1.png',
-      hora: '09:00',
-      logo_visitante: 'imagenes/calendario/logo2.png',
-      visitante: 'Equipo B',
-      jornada: 'Jornada-1'
-    },
-    {
-      id: 2,
-      fecha: '2024-06-02',
-      local: 'Equipo C',
-      logo_local: 'imagenes/calendario/logo3.png',
-      hora: '16:00',
-      logo_visitante: 'imagenes/calendario/logo4.png',
-      visitante: 'Equipo D',
-      jornada: 'Jornada-2'
-    }
-  ];
-
-  constructor(private calendarService: CalendarService) { }
+  constructor(private readonly route: ActivatedRoute, private readonly calendarService: CalendarService) { }
 
   ngOnInit(): void {
     // Servicio completo
@@ -52,14 +25,39 @@ export class CalendarioComponent implements OnInit {
       },
       error: error => {
         console.error('Error fetching calendar, using default data', error);
-        this.calendarList = this.defaultCalendarList;
       }
     });
 
+    // Creo que esto no hace falta porque es la navegacion por ID
+    this.route.paramMap.subscribe(params => {
+      const id = params.get('id');
+      this.calendarService.getCalendar().subscribe({
+        next: (data: Calendar[]) => {
+          this.calendarList = data;
+
+          if (id) {
+            // Filtrar la lista de noticias para encontrar la que coincida con el ID
+            this.selectedCalendar = this.calendarList.find(calendar => calendar.id === +id);
+            // Hacer scroll hacia la noticia seleccionada
+            if (this.selectedCalendar) {
+              const element = document.getElementById(`news-${this.selectedCalendar.id}`);
+              if (element) {
+                element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              }
+            }
+          }
+        },
+        error: error => {
+          console.error('Error fetching calendar, using default data', error);
+        }
+      });
+      
+      
+    });
   }
 
   getImageUrl(imagePath: string): string {
-    return `${this.URL_BASE}${imagePath}`;
+    return `${imagePath}`;  // Nueva ruta para las imágenes locales
   }
 
 }

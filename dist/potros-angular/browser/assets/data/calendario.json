@@ -1,0 +1,72 @@
+[
+    {
+        "id": 1,
+        "fecha": "2025 - 01 - 12",
+        "local": "Fuengirola Potros",
+        "logo_local": "assets/teams/potros.png",
+        "hora": "12:00",
+        "logo_visitante": "assets/teams/knights.png",
+        "visitante": "Alcobendas Cavaliers",
+        "jornada": "Jornada 01"
+      },
+      {
+        "id": 2,
+        "fecha": "2025 - 01 - 26",
+        "local": "Fuengirola Potros",
+        "logo_local": "assets/teams/potros.png",
+        "hora": "12:00",
+        "logo_visitante": "assets/teams/bluedevils.png",
+        "visitante": "Mairena Blue Devils",
+        "jornada": "Jornada 02"
+      },
+      {
+        "id": 3,
+        "fecha": "2025 - 02 - 09",
+        "local": "Canarias Canes",
+        "logo_local": "assets/teams/teldecanes.png",
+        "hora": "11:00",
+        "logo_visitante": "assets/teams/potros.png",
+        "visitante": "Fuengirola Potros",
+        "jornada": "Jornada 03"
+      },
+      {
+        "id": 4,
+        "fecha": "2025 - 02 - 15",
+        "local": "Alcobendas Cavaliers",
+        "logo_local": "assets/teams/knights.png",
+        "hora": "TBD",
+        "logo_visitante": "assets/teams/potros.png",
+        "visitante": "Fuengirola Potros",
+        "jornada": "Jornada 04"
+      },
+      {
+        "id": 5,
+        "fecha": "2025 - 03 - 09",
+        "local": "Mairena Blue Devils",
+        "logo_local": "assets/teams/bluedevils.png",
+        "hora": "11:00",
+        "logo_visitante": "assets/teams/potros.png",
+        "visitante": "Fuengirola Potros",
+        "jornada": "Jornada 05"
+      },
+      {
+        "id": 6,
+        "fecha": "2025 - 03 - 22",
+        "local": "Fuengirola Potros",
+        "logo_local": "assets/teams/potros.png",
+        "hora": "TBD",
+        "logo_visitante": "assets/teams/teldecanes.png",
+        "visitante": "Canarias Canes",
+        "jornada": "Jornada 06"
+      },
+      {
+        "id": 7,
+        "fecha": "2025 - 04 - 20",
+        "local": "Fuengirola Potros",
+        "logo_local": "assets/teams/potros.png",
+        "hora": "12:00",
+        "logo_visitante": "assets/teams/firebats.png",
+        "visitante": " Valencia Firebats",
+        "jornada": "Jornada 07"
+      }
+]

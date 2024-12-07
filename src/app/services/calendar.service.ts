@@ -17,13 +17,12 @@ export interface Calendar {
   providedIn: 'root'
 })
 export class CalendarService {
-  private URL_BASE = 'https://fuengirolapotros.up.railway.app/home'
-  private apiUrl = this.URL_BASE + '/calendario/'; // url local. Modificar para producción.
+  private readonly jsonUrl = 'assets/data/calendario.json';
 
-  constructor(private http: HttpClient) { }
+  constructor(private readonly http: HttpClient) { }
 
   getCalendar(): Observable<Calendar[]> {
-    return this.http.get<Calendar[]>(this.apiUrl);
+    return this.http.get<Calendar[]>(this.jsonUrl);
   }
 
 }
