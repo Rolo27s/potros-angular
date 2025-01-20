@@ -66,6 +66,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 1001;
 }
 
 .modal-content {
@@ -74,6 +75,7 @@
   border-radius: 20px;
   overflow: hidden;
   object-fit: contain; /* Asegura que la imagen mantenga su proporción original */
+  z-index: 1001;
 }
 
 .close {
@@ -89,6 +91,7 @@
 .close:hover {
   color: #ccc;
 }
+
 
 @media (max-width: 800px) {
   .modal-content {

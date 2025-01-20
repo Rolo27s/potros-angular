@@ -7,7 +7,9 @@ export interface Calendar {
   fecha: string;
   local: string;
   logo_local: string;
+  marcador_local: number;
   hora: string;
+  marcador_visitante: number;
   logo_visitante: string;
   visitante: string;
   jornada: string;

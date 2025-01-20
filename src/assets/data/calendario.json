@@ -4,7 +4,9 @@
         "fecha": "2025 - 01 - 12",
         "local": "Fuengirola Potros",
         "logo_local": "assets/teams/potros.png",
+        "marcador_local": 22,
         "hora": "12:00",
+        "marcador_visitante": 26,
         "logo_visitante": "assets/teams/knights.png",
         "visitante": "Alcobendas Cavaliers",
         "jornada": "Jornada 01"

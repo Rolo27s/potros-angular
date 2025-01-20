@@ -33,7 +33,15 @@
 }
 
 .partido-content .info-partido {
+  display: flex;
   text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.marcador_local, .marcador_visitante {
+  padding: 40px;
+  font-size: 44px;
 }
 
 .logo {
@@ -94,7 +102,10 @@
   .jornada {
     font-size: 0.4em;
   }
-
+  .marcador_local, .marcador_visitante {
+    padding: 16px;
+    font-size: 18px;
+  }
   .hora {
     font-size: .5em;
   }

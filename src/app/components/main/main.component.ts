@@ -28,7 +28,9 @@ export class MainComponent implements OnInit {
       fecha: '2024-06-01',
       local: 'Equipo A',
       logo_local: 'imagenes/calendario/logo1.png',
+      marcador_local: 0,
       hora: '09:00',
+      marcador_visitante: 0,
       logo_visitante: 'imagenes/calendario/logo2.png',
       visitante: 'Equipo B',
       jornada: 'Jornada-1'
@@ -38,7 +40,9 @@ export class MainComponent implements OnInit {
       fecha: '2024-06-02',
       local: 'Equipo C',
       logo_local: 'imagenes/calendario/logo3.png',
+      marcador_local: 0,
       hora: '16:00',
+      marcador_visitante: 0,
       logo_visitante: 'imagenes/calendario/logo4.png',
       visitante: 'Equipo D',
       jornada: 'Jornada-2'

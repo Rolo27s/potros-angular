@@ -10,26 +10,14 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./fotos.component.css']
 })
 export class FotosComponent implements OnInit {
-  private URL_BASE = 'https://fuengirolapotros.up.railway.app';
+  private URL_BASE = '';
   instagramList: Instagram[] = [];
   defaultInstagramList: Instagram[] = [
     {
       id: 1,
-      imagen: "/media/imagenes/instagram/inst1_WpKmuDK.png",
-      fecha: "2024-06-01",
-      descripcion: "Descripcion inst1"
-    },
-    {
-      id: 2,
-      imagen: "/media/imagenes/instagram/inst2_1OToP6i.png",
-      fecha: "2024-06-01",
-      descripcion: "Descripcion inst2"
-    },
-    {
-      id: 3,
-      imagen: "/media/imagenes/instagram/inst3_4Cenf6E.png",
-      fecha: "2024-06-01",
-      descripcion: "Descripcion inst3"
+      imagen: "/assets/images/instagram/calendarJ120250120.png",
+      fecha: "2025-01-12",
+      descripcion: "Calendario Jornada 1"
     }
   ];
 
