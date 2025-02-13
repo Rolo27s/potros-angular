@@ -16,7 +16,9 @@
         "fecha": "2025 - 01 - 26",
         "local": "Fuengirola Potros",
         "logo_local": "assets/teams/potros.png",
+        "marcador_local": 7,
         "hora": "12:00",
+        "marcador_visitante": 0,
         "logo_visitante": "assets/teams/bluedevils.png",
         "visitante": "Mairena Blue Devils",
         "jornada": "Jornada 02"
@@ -26,7 +28,9 @@
         "fecha": "2025 - 02 - 09",
         "local": "Canarias Canes",
         "logo_local": "assets/teams/teldecanes.png",
+        "marcador_local": 0,
         "hora": "11:00",
+        "marcador_visitante": 34,
         "logo_visitante": "assets/teams/potros.png",
         "visitante": "Fuengirola Potros",
         "jornada": "Jornada 03"

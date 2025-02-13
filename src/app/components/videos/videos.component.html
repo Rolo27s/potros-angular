@@ -1,5 +1,16 @@
 <h1>Videos Federación Española de Fútbol Americano</h1>
 <div class="video-container">
+  <iframe src="https://www.youtube.com/embed/upxK5XnydUw?si=Q_qTaCpJYRlO3Fvv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <video controls class="video-full">
+    <source src="../../../assets/video/localTv.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <video controls class="video-full">
+    <source src="../../../assets/video/flagMention.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  
   <div *ngFor="let video of videos">
     <iframe
       [src]="video.url"

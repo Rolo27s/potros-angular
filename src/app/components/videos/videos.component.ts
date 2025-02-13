@@ -37,7 +37,19 @@ export class VideosComponent implements OnInit {
   ngOnInit(): void {
     // Intentar cargar videos desde la API de YouTube
     this.loadVideos();
+  
+    const interval = setInterval(() => {
+      const vsc = document.querySelector('.vsc-controller');
+      if (vsc) {
+        vsc.remove(); // Removes the element
+        console.log("Removed .vsc-controller"); // Debugging
+      }
+    }, 500); // Check every 500ms
+  
+    // Stop checking after 5 seconds to optimize performance
+    setTimeout(() => clearInterval(interval), 5000);
   }
+  
 
   loadVideos() {
     if (this.loading && this.backupVideos.length > 0 && this.reloadCount < this.maxReloads) {
