@@ -7,6 +7,11 @@ table {
     margin-bottom: 2em;
 }
 
+thead {
+    background-color: rgb(49, 49, 49);
+    color: rgb(136, 224, 165);
+}
+
 .team-table {
   width: 100%;
   border-collapse: collapse;
@@ -21,11 +26,7 @@ table {
 
 .team-table td:nth-of-type(2),
 .team-table td:nth-of-type(9) {
-  text-align: left;
-}
-
-.team-table th {
-  background-color: #f9f9f9;
+  text-align: center;
 }
 
 .team-table tbody tr:nth-child(even) {
@@ -33,7 +34,7 @@ table {
 }
 
 .team-table tbody tr:nth-child(odd) {
-  background-color: #cccaca;
+  background-color: #d2e4d1;
 }
 
 .team-table tbody tr:hover {
@@ -41,9 +42,48 @@ table {
 }
 
 .player-image {
-  width: 75px;
+  width: 188px;
   height: auto;
-  border-radius: 20%;
+  border-radius: 5%;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.info-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.info-table th,
+.info-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.info-table th:nth-of-type(2),
+.info-table td:nth-of-type(2) {
+    text-align: center;
+}
+
+
+
+.info-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.info-table tbody tr:nth-child(odd) {
+  background-color: #d2e4d1;
+}
+
+.info-table tbody tr:hover {
+  background-color: var(--color-detalle-2);
+}
+
+td {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: 600;
+  font-size: 1.5em;
+  padding: 0.5em;
 }
 
 @media (max-width: 900px) {
@@ -83,40 +123,7 @@ table {
   }
 
   .player-image {
-    width: 52px;
+    width: 100px;
     border-radius: 10%;
   }
-}
-
-.info-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-.info-table th,
-.info-table td {
-  border: 1px solid #ddd;
-  padding: 8px;
-  text-align: left;
-}
-
-.info-table th:nth-of-type(2),
-.info-table td:nth-of-type(2) {
-    text-align: center;
-}
-
-.info-table th {
-  background-color: #cccaca;
-}
-
-.info-table tbody tr:nth-child(even) {
-  background-color: #f9f9f9;
-}
-
-.info-table tbody tr:nth-child(odd) {
-  background-color: #cccaca;
-}
-
-.info-table tbody tr:hover {
-  background-color: var(--color-detalle-2);
 }

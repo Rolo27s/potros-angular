@@ -6,13 +6,12 @@ export interface Team {
   id: number;
   foto_jugador: string;
   nombre_jugador: string;
+  apellido_jugador: string;
   dorsal: string;
   posicion: string;
-  altura: string;
-  peso: string;
+  fecha_nacimiento: string;
   edad: number;
-  experiencia: number;
-  pais: string;
+  nacionalidad: string;
 }
 
 @Injectable({

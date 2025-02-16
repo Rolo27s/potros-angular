@@ -6,13 +6,11 @@
     <tr>
       <th>Foto</th>
       <th>Nombre</th>
+      <th>Apellidos</th>
       <th>Dorsal</th>
       <th>Posición</th>
-      <th>Altura</th>
-      <th>Peso</th>
       <th>Edad</th>
-      <th>Experiencia</th>
-      <th>Pais</th>
+      <th>Nacionalidad</th>
     </tr>
   </thead>
   <tbody>
@@ -25,25 +23,24 @@
         />
       </td>
       <td>{{ jugador.nombre_jugador }}</td>
+      <td>{{ jugador.apellido_jugador }}</td>
       <td>{{ jugador.dorsal }}</td>
       <td>{{ jugador.posicion }}</td>
-      <td>{{ jugador.altura }}</td>
-      <td>{{ jugador.peso }}</td>
       <td>{{ jugador.edad }}</td>
-      <td>{{ jugador.experiencia }}</td>
-      <td>{{ jugador.pais }}</td>
+      <td>{{ jugador.nacionalidad }}</td>
     </tr>
   </tbody>
 </table>
 
 <h2>Cuerpo Técnico</h2>
 <table class="info-table">
-  <tbody>
+  <thead>
     <tr>
       <th>Nombre</th>
       <th>Posición</th>
       <th>País</th>
     </tr>
+  <tbody>
     <tr>
       <td>Brian Ortegren</td>
       <td>Head Coach</td>

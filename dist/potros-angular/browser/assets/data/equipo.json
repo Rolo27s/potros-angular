@@ -1,26 +1,308 @@
 [
   {
     "id": 1,
-    "foto_jugador": "unknown.png",
-    "nombre_jugador": "Jugador 1",
-    "dorsal": "Dorsal 1",
-    "posicion": "Posicion 1",
-    "altura": "Altura 1",
-    "peso": "Peso 2",
-    "edad": 24,
-    "experiencia": 2,
-    "pais": "España"
+    "foto_jugador": "image1_resized.png",
+    "nombre_jugador": "David",
+    "apellido_jugador": "Cid Soriano",
+    "dorsal": "77",
+    "posicion": "OL",
+    "fecha_nacimiento": "1980-06-14",
+    "nacionalidad": "Española"
   },
   {
     "id": 2,
-    "foto_jugador": "unknown.png",
-    "nombre_jugador": "Jugador 2",
-    "dorsal": "Dorsal 2",
-    "posicion": "Posicion 2",
-    "altura": "Altura 1",
-    "peso": "Peso 2",
-    "edad": 22,
-    "experiencia": 1,
-    "pais": "España"
+    "foto_jugador": "image2_resized.png",
+    "nombre_jugador": "Luis",
+    "apellido_jugador": "Gallardo Pino",
+    "dorsal": "70",
+    "posicion": "OL",
+    "fecha_nacimiento": "1981-12-11",
+    "nacionalidad": "Española"
+  },
+  {
+    "id": 3,
+    "foto_jugador": "image3_resized.png",
+    "nombre_jugador": "Alvaro",
+    "apellido_jugador": "Rodriguez Muñoz",
+    "dorsal": "87",
+    "posicion": "TE",
+    "fecha_nacimiento": "2001-04-11",
+    "nacionalidad": "Española"
+  },
+  {
+    "id": 4,
+    "foto_jugador": "image4_resized.png",
+    "nombre_jugador": "Christopher James",
+    "apellido_jugador": "Winrow",
+    "dorsal": "2",
+    "posicion": "WR",
+    "fecha_nacimiento": "1993-02-28",
+    "nacionalidad": "Britanica"
+  },
+  {
+    "id": 5,
+    "foto_jugador": "image5_resized.png",
+    "nombre_jugador": "Antonio Joseph",
+    "apellido_jugador": "Scola JR",
+    "dorsal": "13",
+    "posicion": "DB",
+    "fecha_nacimiento": "1986-08-12",
+    "nacionalidad": "Estadounidense"
+  },
+  {
+    "id": 6,
+    "foto_jugador": "image6_resized.png",
+    "nombre_jugador": "Ismael",
+    "apellido_jugador": "Boumhir Lendinez",
+    "dorsal": "55",
+    "posicion": "S",
+    "fecha_nacimiento": "1996-09-19",
+    "nacionalidad": "Española"
+  },
+  {
+    "id": 7,
+    "foto_jugador": "image7_resized.png",
+    "nombre_jugador": "Andrés",
+    "apellido_jugador": "Morales Villasana",
+    "dorsal": "74",
+    "posicion": "DL",
+    "fecha_nacimiento": "2004-05-30",
+    "nacionalidad": "Española"
+  },
+  {
+    "id": 8,
+    "foto_jugador": "image8_resized.png",
+    "nombre_jugador": "Alvaro",
+    "apellido_jugador": "Cuevas Serrino",
+    "dorsal": "19",
+    "posicion": "CB",
+    "fecha_nacimiento": "2001-01-29",
+    "nacionalidad": "Española"
+  },
+  {
+    "id": 9,
+    "foto_jugador": "image9_resized.png",
+    "nombre_jugador": "Leonardo Rafael",
+    "apellido_jugador": "Ardoy Espin",
+    "dorsal": "82",
+    "posicion": "CB",
+    "fecha_nacimiento": "1992-07-24",
+    "nacionalidad": "Española"
+  },
+  {
+    "id": 10,
+    "foto_jugador": "image10_resized.png",
+    "nombre_jugador": "Juan Naor",
+    "apellido_jugador": "Kaddosh Peña",
+    "dorsal": "12",
+    "posicion": "CB",
+    "fecha_nacimiento": "1999-10-12",
+    "nacionalidad": "Española"
+  },
+  {
+    "id": 11,
+    "foto_jugador": "image11_resized.png",
+    "nombre_jugador": "Francsico Javier",
+    "apellido_jugador": "Carmona Marin",
+    "dorsal": "8",
+    "posicion": "DB",
+    "fecha_nacimiento": "1995-09-13",
+    "nacionalidad": "Española"
+  },
+  {
+    "id": 12,
+    "foto_jugador": "image12_resized.png",
+    "nombre_jugador": "Juan Carlos",
+    "apellido_jugador": "Cortes Luque",
+    "dorsal": "89",
+    "posicion": "RB",
+    "fecha_nacimiento": "1989-02-08",
+    "nacionalidad": "Española"
+  },
+  {
+    "id": 13,
+    "foto_jugador": "image13_resized.png",
+    "nombre_jugador": "Carlos",
+    "apellido_jugador": "Chaves Jimenez",
+    "dorsal": "91",
+    "posicion": "QB",
+    "fecha_nacimiento": "1989-07-05",
+    "nacionalidad": "Española"
+  },
+  {
+    "id": 14,
+    "foto_jugador": "image14_resized.png",
+    "nombre_jugador": "Carlos J",
+    "apellido_jugador": "Elena Morales",
+    "dorsal": "49",
+    "posicion": "LB",
+    "fecha_nacimiento": "1989-09-11",
+    "nacionalidad": "Española"
+  },
+  {
+    "id": 15,
+    "foto_jugador": "image15_resized.png",
+    "nombre_jugador": "Javier",
+    "apellido_jugador": "Romero Ferrera",
+    "dorsal": "17",
+    "posicion": "WR",
+    "fecha_nacimiento": "1990-10-08",
+    "nacionalidad": "Española"
+  },
+  {
+    "id": 16,
+    "foto_jugador": "image16_resized.png",
+    "nombre_jugador": "Jose Luis",
+    "apellido_jugador": "López Pérez",
+    "dorsal": "39",
+    "posicion": "LB",
+    "fecha_nacimiento": "1990-10-17",
+    "nacionalidad": "Española"
+  },
+  {
+    "id": 17,
+    "foto_jugador": "image17_resized.png",
+    "nombre_jugador": "Alvaro",
+    "apellido_jugador": "Figueredo López",
+    "dorsal": "61",
+    "posicion": "OL",
+    "fecha_nacimiento": "1985-07-04",
+    "nacionalidad": "Española"
+  },
+  {
+    "id": 18,
+    "foto_jugador": "image18_resized.png",
+    "nombre_jugador": "Jose Antonio",
+    "apellido_jugador": "Molina López",
+    "dorsal": "76",
+    "posicion": "DL",
+    "fecha_nacimiento": "1984-07-30",
+    "nacionalidad": "Española"
+  },
+  {
+    "id": 19,
+    "foto_jugador": "image19_resized.png",
+    "nombre_jugador": "Amiel Karen",
+    "apellido_jugador": "Moise Pierre",
+    "dorsal": "99",
+    "posicion": "DL",
+    "fecha_nacimiento": "1995-11-03",
+    "nacionalidad": "Haiti"
+  },
+  {
+    "id": 20,
+    "foto_jugador": "image20_resized.png",
+    "nombre_jugador": "Juan Manuel",
+    "apellido_jugador": "Soler Cortes",
+    "dorsal": "22",
+    "posicion": "TE",
+    "fecha_nacimiento": "1991-10-24",
+    "nacionalidad": "Española"
+  },
+  {
+    "id": 21,
+    "foto_jugador": "image21_resized.png",
+    "nombre_jugador": "Antonio",
+    "apellido_jugador": "Gálvez Leal",
+    "dorsal": "66",
+    "posicion": "OL",
+    "fecha_nacimiento": "1983-03-29",
+    "nacionalidad": "Española"
+  },
+  {
+    "id": 22,
+    "foto_jugador": "image22_resized.png",
+    "nombre_jugador": "Juan Jose",
+    "apellido_jugador": "Ayala Flores",
+    "dorsal": "96",
+    "posicion": "DL",
+    "fecha_nacimiento": "2002-08-28",
+    "nacionalidad": "Española"
+  },
+  {
+    "id": 23,
+    "foto_jugador": "image23_resized.png",
+    "nombre_jugador": "Ernesto",
+    "apellido_jugador": "Gil Aragon",
+    "dorsal": "59",
+    "posicion": "OL",
+    "fecha_nacimiento": "1988-05-09",
+    "nacionalidad": "Española"
+  },
+  {
+    "id": 24,
+    "foto_jugador": "image24_resized.png",
+    "nombre_jugador": "Jose Alberto",
+    "apellido_jugador": "Ayala Flores",
+    "dorsal": "69",
+    "posicion": "OL",
+    "fecha_nacimiento": "1996-01-27",
+    "nacionalidad": "Española"
+  },
+  {
+    "id": 25,
+    "foto_jugador": "image25_resized.png",
+    "nombre_jugador": "Francisco",
+    "apellido_jugador": "Mariscal Luque",
+    "dorsal": "54",
+    "posicion": "DL",
+    "fecha_nacimiento": "1994-11-03",
+    "nacionalidad": "Española"
+  },
+  {
+    "id": 26,
+    "foto_jugador": "image26_resized.png",
+    "nombre_jugador": "Mario Andres",
+    "apellido_jugador": "Heberthardt Marchant",
+    "dorsal": "88",
+    "posicion": "DL",
+    "fecha_nacimiento": "1979-12-03",
+    "nacionalidad": "Britanica"
+  },
+  {
+    "id": 27,
+    "foto_jugador": "image27_resized.png",
+    "nombre_jugador": "Viktor",
+    "apellido_jugador": "Martín Ivanov",
+    "dorsal": "72",
+    "posicion": "DL",
+    "fecha_nacimiento": "2000-01-08",
+    "nacionalidad": "Bulgara"
+  },
+  {
+    "id": 28,
+    "foto_jugador": "image28_resized.png",
+    "nombre_jugador": "Pablo",
+    "apellido_jugador": "Moreno Quero",
+    "nacionalidad": "Española"
+  },
+  {
+    "id": 29,
+    "foto_jugador": "image29_resized.png",
+    "nombre_jugador": "Miguel",
+    "apellido_jugador": "Del Valle Villalobos",
+    "dorsal": "90",
+    "posicion": "TE",
+    "fecha_nacimiento": "1990-07-23",
+    "nacionalidad": "Española"
+  },
+  {
+    "id": 30,
+    "foto_jugador": "image30_resized.png",
+    "nombre_jugador": "Alvaro De Paula",
+    "apellido_jugador": "Gutierrez Peña",
+    "dorsal": "98",
+    "fecha_nacimiento": "2001-12-07",
+    "nacionalidad": "Española"
+  }, 
+  {
+    "id": 31,
+    "foto_jugador": "image31_resized.png",
+    "nombre_jugador": "William Christopher",
+    "apellido_jugador": "Young",
+    "dorsal": "7",
+    "posicion": "RB",
+    "fecha_nacimiento": "1994-07-29",
+    "nacionalidad": "Estadounidense"
   }
 ]
