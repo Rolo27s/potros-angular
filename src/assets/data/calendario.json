@@ -37,10 +37,12 @@
       },
       {
         "id": 4,
-        "fecha": "2025 - 02 - 15",
+        "fecha": "2025 - 02 - 16",
         "local": "Alcobendas Cavaliers",
         "logo_local": "assets/teams/knights.png",
+        "marcador_local": 33,
         "hora": "TBD",
+        "marcador_visitante": 20,
         "logo_visitante": "assets/teams/potros.png",
         "visitante": "Fuengirola Potros",
         "jornada": "Jornada 04"
@@ -50,14 +52,16 @@
         "fecha": "2025 - 03 - 09",
         "local": "Mairena Blue Devils",
         "logo_local": "assets/teams/bluedevils.png",
+        "marcador_local": 0,
         "hora": "11:00",
+        "marcador_visitante": 28,
         "logo_visitante": "assets/teams/potros.png",
         "visitante": "Fuengirola Potros",
         "jornada": "Jornada 05"
       },
       {
         "id": 6,
-        "fecha": "2025 - 03 - 22",
+        "fecha": "2025 - 03 - 23",
         "local": "Fuengirola Potros",
         "logo_local": "assets/teams/potros.png",
         "hora": "TBD",
