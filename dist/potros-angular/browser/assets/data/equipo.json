@@ -304,5 +304,24 @@
     "posicion": "RB",
     "fecha_nacimiento": "1994-07-29",
     "nacionalidad": "Estadounidense"
+  },{
+    "id": 32,
+    "foto_jugador": "image32_resized.png",
+    "nombre_jugador": "Pablo",
+    "apellido_jugador": "Aguilera Rodríguez",
+    "dorsal": "6",
+    "posicion": "WR",
+    "fecha_nacimiento": "2006-04-06",
+    "nacionalidad": "Española"
+  },
+  {
+    "id": 33,
+    "foto_jugador": "image33_resized.png",
+    "nombre_jugador": "Ignacio Abraham",
+    "apellido_jugador": "Geremich",
+    "dorsal": "52",
+    "posicion": "DL",
+    "fecha_nacimiento": "1994-05-24",
+    "nacionalidad": "Argentina"
   }
 ]
