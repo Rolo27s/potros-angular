@@ -177,6 +177,13 @@ header {
   display: none;
 }
 
+.msg-dev{
+  background-color: #222;
+  color: red;
+  text-align: center;
+  z-index: 9999;
+}
+
 @media (max-width:1625px) {
   #logo-ayuntamiento{
     object-fit: scale-down;
@@ -215,5 +222,13 @@ header {
   #li-hamburguer-btn {
     order: 3;
     display: block;
+  }
+  .msg-dev{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    font-size: 0.8em;
   }
 }

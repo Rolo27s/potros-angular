@@ -64,8 +64,10 @@
         "fecha": "2025 - 03 - 23",
         "local": "Fuengirola Potros",
         "logo_local": "assets/teams/potros.png",
+        "marcador_local": 1,
         "hora": "TBD",
         "logo_visitante": "assets/teams/teldecanes.png",
+        "marcador_visitante": 0,
         "visitante": "Canarias Canes",
         "jornada": "Jornada 06"
       },
@@ -74,8 +76,10 @@
         "fecha": "2025 - 04 - 20",
         "local": "Fuengirola Potros",
         "logo_local": "assets/teams/potros.png",
+        "marcador_local": 14,
         "hora": "12:00",
         "logo_visitante": "assets/teams/firebats.png",
+        "marcador_visitante": 21,
         "visitante": " Valencia Firebats",
         "jornada": "Jornada 07"
       }
